@@ -37,7 +37,7 @@
 	        <a class="nav-link text-light" href="#">About</a>
 		  </li>
 		  <li class="nav-item">
-		  <a class="nav-link text-light" href="#"><img src="<?= base_url();?>assets/img/log.png" width="30" alt="">  Muhammad Sidiq</a>
+		  <a class="nav-link text-light" href="#"><img src="<?= base_url();?>assets/img/log.png" width="30" alt="">  Muhammad Ridlwan</a>
 		  </li>
 		  <li class="nav-item">
 		  <a class="nav-link text-light" href="#"><img src="<?= base_url();?>assets/img/cart.png" width="25" alt=""></a>
