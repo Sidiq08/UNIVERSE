@@ -31,7 +31,7 @@
 	        <a class="nav-link text-light" href="<?= base_url(); ?>/mahasiswa">Shop</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link text-light" href="<?= base_url(); ?>/peoples">Peoples</a>
+	        <a class="nav-link text-light" href="<?= base_url(); ?>/peoples">ORANG</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link text-light" href="#">About</a>
