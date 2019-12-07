@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Halaman <?php echo $judul; ?></title>
+	<title>Halaman <?php echo $title; ?></title>
 	<style>
 		.badge{
 			margin-left : 3px;
@@ -9,6 +9,8 @@
 	</style>
 	<link rel="stylesheet" href="<?= base_url();?>assets/css/bootstrap.css">
 	<link rel="stylesheet" href="<?= base_url();?>assets/css/style.css">
+	<link href="<?= base_url(); ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
+	
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -35,7 +37,7 @@
 	        <a class="nav-link text-light" href="#">About</a>
 		  </li>
 		  <li class="nav-item">
-		  <a class="nav-link text-light" href="#"><img src="<?= base_url();?>assets/img/log.png" width="30" alt="" class="mr-2">Login</a>
+		  <a class="nav-link text-light" href="<?= base_url(); ?>auth"><img src="<?= base_url();?>assets/img/log.png" width="30" alt="" class="mr-2">Login</a>
 		  </li>
 		  <li class="nav-item">
 		  <a class="nav-link text-light" href="#"><img src="<?= base_url();?>assets/img/cart.png" width="25" alt=""></a>
