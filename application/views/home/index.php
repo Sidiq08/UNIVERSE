@@ -6,7 +6,7 @@
           <form>
             <div class="form-row">
               <div class="col-12 col-md-2 mr-5">
-                 <img src="<?= base_url();?>assets/img/logo.png" alt="" height="50">
+                 <img src="<?= base_url();?>assets/img/Asset 3.png" alt="" height="50">
               </div>
               <div class="col-12 col-md-7 mb-2 mb-md-0">
               <input type="text" class="form-control form-control-lg" placeholder="Jenis kaos . . .">
