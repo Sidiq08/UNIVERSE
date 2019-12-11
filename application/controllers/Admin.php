@@ -6,12 +6,13 @@ class  Admin extends CI_Controller{
         $data['title'] = 'Dashboard';
         $data['user'] = $this->db->get_where('user', ['email'=> $this->session->userdata('email')])->row_array();
 
+        
         $this->load->view('template/admin_header' , $data);
-       
-        // $this->load->view('template/topbar' , $data);
-        $this->load->view('admin/index', $data);
         $this->load->view('template/sidebar' , $data);
-        $this->load->view('template/admin_footer' , $data);
+        $this->load->view('template/topbar' , $data);
+        $this->load->view('admin/index', $data);
+        $this->load->view('template/footer' , $data);
+        
     }
 
     public function logout(){
