@@ -16,6 +16,7 @@
   h6 {
     font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
+    color: #212529;
   }
   
   header.masthead {
@@ -125,3 +126,36 @@
     padding-bottom: 4rem;
   }
   
+  .text-center {
+    text-align: center!important;
+  }
+
+  .align-items-center {
+    align-items: center!important;
+  }
+
+  .justify-content-between {
+    justify-content: space-between!important;
+  }
+
+  .flex-nowrap {
+    flex-wrap: nowrap!important;
+  }
+
+  .row {
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .blog-header {
+    line-height: 1;
+  }
+
+  .bg-dark {
+    color : #343a40;
+  }
+
+  .navbar {
+    color:black;
+  }
