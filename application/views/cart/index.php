@@ -1,7 +1,7 @@
-<div class="bg-light py-3">
+<div class="bg-light py-3 my-3">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Cart</strong></div>
+          <div class="col-md-12 mb-0"><a href="<?= base_url();?>/Home" class="text-success">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Cart</strong></div>
         </div>
       </div>
     </div>
@@ -13,7 +13,7 @@
             <div class="site-blocks-table">
               <table class="table table-bordered">
                 <thead>
-                  <tr>
+                  <tr class="text-center text-bold">
                     <th class="product-thumbnail">Image</th>
                     <th class="product-name">Product</th>
                     <th class="product-price">Price</th>
@@ -28,7 +28,7 @@
                       <img src="<?= base_url();?>assets/img/celana1.jpg" alt="Image" class="img-fluid">
                     </td>
                     <td class="product-name">
-                      <h2 class="h5 text-black">Celana Kurang Keceeeh   </h2>
+                      <h2 class="h5 text-black">Celana Kurang Keceeeh</h2>
                     </td>
                     <td>$49.00</td>
                     <td>
@@ -125,7 +125,7 @@
                 </div>
 
                 <div class="row">
-                  <div class="col-md-12">
+                  <div class="col-md-12 my-3">
                     <button class="btn btn-primary btn-lg btn-block" onclick="window.location='checkout.html'">Proceed To Checkout</button>
                   </div>
                 </div>

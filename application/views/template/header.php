@@ -12,12 +12,12 @@
 		}
 	</style>
 	<link rel="stylesheet" href="<?= base_url();?>assets/css/bootstrap.css">
-	<link rel="stylesheet" href="<?= base_url();?>assets/css/style.css">
-	<link href="<?= base_url(); ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/sb-admin-2.min.css">
 	<link rel="stylesheet" href="<?= base_url();?>assets/css/spectre.min.css">
-    <link rel="stylesheet" href="<?= base_url();?>assets/css/spectre-icons.min.css">
-    <link rel="stylesheet" href="<?= base_url();?>assets/css/spectre-exp.min.css">
-    <link rel="stylesheet" href="<?= base_url();?>assets/css/docs.min.css">
+    	<link rel="stylesheet" href="<?= base_url();?>assets/css/spectre-icons.min.css">
+    	<link rel="stylesheet" href="<?= base_url();?>assets/css/spectre-exp.min.css">
+    	<link rel="stylesheet" href="<?= base_url();?>assets/css/docs.min.css">
+    	<link rel="stylesheet" href="<?= base_url();?>assets/css/style.css">
 	
 </head>
 <body>
