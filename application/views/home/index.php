@@ -1,85 +1,128 @@
-  <header class="masthead text-white text-center">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
-            <div class="form-row">
-              <div class="col-12 col-md-2 mr-5">
-                 <img src="<?= base_url();?>assets/img/Asset 3.png" alt="" height="50">
-              </div>
-              <div class="col-12 col-md-7 mb-2 mb-md-0">
-              <input type="text" class="form-control form-control-lg" placeholder="Jenis kaos . . .">
-              </div>
-              <div class="col-12 col-md-2">
-                <button type="submit" class="btn btn-block btn-lg btn-primary">Cari</button>
-              </div>
-            </div>
-          </form>
+
+<div id="carouselExampleIndicators" class="carousel slide carousel-awal" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="container mt-5">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="" src="<?= base_url();?>assets/img/aril1.jpg" alt="">
+    </div>
+    <div class="carousel-item">
+    <img class="" src="<?= base_url();?>assets/img/aril2.jpg" alt="">
+    </div>
+    <div class="carousel-item">
+    <img class="" src="<?= base_url();?>assets/img/aril3.jpg" alt="">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+
+
+
+<!-- <div class="row pt-4 pb-2 py-md-5 px-md-5 mx-md-5 mt-3" id="home-products">
+  <div class="col text-center pb-4">
+    <h2 class="libre-baskerville-italic text-brown">
+      <span class="py-4 pl-4 pr-4 pl-md-0 pr-md-5 home-underline">Artikel Terlaris</span>
+    </h2>
+
+    <div class="col-lg-4">
+      <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+          <div class="features-icons-icon d-flex">
+            <i class="icon-layers m-auto text-primary"></i>
+          </div>
+          <img class="mb-2" src="<?= base_url();?>assets/img/celana1.jpg" alt="">
+          <h3 class="mb-2">Katun combat</h3>
+          <p class="lead mb-0">Rp. 150.000</p>
         </div>
       </div>
+    <div class="col-lg-4">
+      <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+          <div class="features-icons-icon d-flex">
+            <i class="icon-layers m-auto text-primary"></i>
+          </div>
+          <img class="mb-2" src="<?= base_url();?>assets/img/celana1.jpg" alt="">
+          <h3 class="mb-2">Katun combat</h3>
+          <p class="lead mb-0">Rp. 150.000</p>
+        </div>
+      </div>
+    </div> -->
+
+<!-- <div class="row product-menu mx-1 mx-md-5">
+      <div class="col-4 col-md text-center p-0">
+        <a href="" class="btn btn-link link-grey">
+          <h1 class="h3 product-menu-text">Celana</h1>
+        </a>
+      </div>
     </div>
-  </header>
+    <div class="row product-menu mx-1 mx-md-5">
+      <div class="col-4 col-md text-center p-0">
+        <a href="" class="btn btn-link link-grey">
+          <h1 class="h3 product-menu-text">Baju</h1>
+        </a>
+      </div>
+    </div>
+    <div class="row product-menu mx-1 mx-md-5">
+      <div class="col-4 col-md text-center p-0">
+        <a href="" class="btn btn-link link-grey">
+          <h1 class="h3 product-menu-text">Kacamata</h1>
+        </a>
+      </div>
+    </div> -->
+
 
   <!-- Icons Grid -->
-<section class="features-icons bg-light text-center">
-    <div class="container">
-      <div class="row">
+
+
+    <!-- <div class="container bg-light"> -->
+      <section class="features-icons bg-light text-center">        
+        <div class="col text-center pb-4 mt-4">
+          <h2 class="libre-baskerville-italic text-brown">
+            <span class="py-4 pl-4 pr-4 pl-md-0 pr-md-5 home-underline">Artikel Terlaris</span>
+          </h2>
+        <div class="row mt-5">
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
+            <!-- <div class="features-icons-icon d-flex">
               <i class="icon-screen-desktop m-auto text-primary"></i>
-            </div>
-            <figure class="figure">
-            <div class="figure-img">
-              <img src="<?= base_url();?>assets/img/model/2.png" class="figure-img img-fluid" width="150">
-              <a href="" class="d-flex justify-content-center">
-                <img src="img/detail.png" class="align-self-center">
-              </a>
-            </div>
-            <figcaption class="figure-caption text-center">
-              <h5>Baju Oblong</h5>
-              <p>IDR 100.000</p>
-            </figcaption>
-          </figure>
+
+            </div> -->
+            <img class="mb-2" src="<?= base_url();?>assets/img/celana1.jpg" alt="">
+            <h3 class="mb-2">Katun combat</h3>
+            <p class="lead mb-0">Rp. 150.000</p>
+>>>>>>> e6412627359c38efda1c779f78f3f5fdae8ba386
           </div>
         </div>
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
+            <!-- <div class="features-icons-icon d-flex">
               <i class="icon-layers m-auto text-primary"></i>
-            </div>
-            <figure class="figure">
-            <div class="figure-img">
-              <img src="<?= base_url();?>assets/img/model/2.png" class="figure-img img-fluid" width="150">
-              <a href="" class="d-flex justify-content-center">
-                <img src="img/detail.png" class="align-self-center">
-              </a>
-            </div>
-            <figcaption class="figure-caption text-center">
-              <h5>Baju Keren</h5>
-              <p>IDR 120.000</p>
-            </figcaption>
-          </figure>
+            </div> -->
+            <img class="mb-2" src="<?= base_url();?>assets/img/celana1.jpg" alt="">
+            <h3 class="mb-2">Katun combat</h3>
+            <p class="lead mb-0">Rp. 150.000</p>
+>>>>>>> e6412627359c38efda1c779f78f3f5fdae8ba386
           </div>
         </div>
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-            <div class="features-icons-icon d-flex">
+            <!-- <div class="features-icons-icon d-flex">
               <i class="icon-check m-auto text-primary"></i>
-            </div>
-            <figure class="figure">
-            <div class="figure-img">
-              <img src="<?= base_url();?>assets/img/model/2.png" class="figure-img img-fluid" width="150">
-              <a href="" class="d-flex justify-content-center">
-                <img src="img/detail.png" class="align-self-center">
-              </a>
-            </div>
-            <figcaption class="figure-caption text-center">
-              <h5>Baju Teu Keren</h5>
-              <p>IDR 10.000</p>
-            </figcaption>
-          </figure>
+            </div> -->
+            <img class="mb-2" src="<?= base_url();?>assets/img/celana1.jpg" alt="">
+            <h3 class="mb-2">Katun combat</h3>
+            <p class="lead mb-0">Rp. 150.000</p>
+>>>>>>> e6412627359c38efda1c779f78f3f5fdae8ba386
           </div>
         </div>
       </div>

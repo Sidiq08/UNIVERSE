@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Halaman Home</title>
+	<title>Universe</title>
 	<style>
 		.badge{
 			margin-left : 3px;
+		}
+
+		.body {
+			color: #212529;
 		}
 	</style>
 	<link rel="stylesheet" href="<?= base_url();?>assets/css/bootstrap.css">
 	<link rel="stylesheet" href="<?= base_url();?>assets/css/style.css">
 	<link href="<?= base_url(); ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="<?= base_url();?>assets/css/spectre.min.css">
+	<link rel="stylesheet" href="<?= base_url();?>assets/css/spectre.min.css">
     <link rel="stylesheet" href="<?= base_url();?>assets/css/spectre-icons.min.css">
-    <link rel="stylesheet" href="<?= base_url();?>assets/css/spectre-exp.min.css"> -->
-    <!-- <link rel="stylesheet" href="<?= base_url();?>assets/css/docs.min.css"> -->
+    <link rel="stylesheet" href="<?= base_url();?>assets/css/spectre-exp.min.css">
+    <link rel="stylesheet" href="<?= base_url();?>assets/css/docs.min.css">
 	
 </head>
 <body>
@@ -143,7 +147,7 @@
 	<!-- <a class="navbar-brand">Navbar</a> -->
 
 
-	<header class="navbar navbar-dark bg-dark">
+	<!-- <header class="navbar navbar-dark bg-dark">
 		<section class="navbar-section">
 			<a href="#" class="btn btn-link">Docs</a>
 			<a href="#" class="btn btn-link">Examples</a>
@@ -170,6 +174,54 @@
   <li class="nav-item">
     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
   </li>
-</ul>
+</ul> -->
 
+<!-- <div class="container">
+	<header class="blog-header py-3">
+		<div class="row flex-nowrap justify-content-between align-items-center">
+			<div class="col-4 pt-1">
+					<a href="#" class="text-muted">Subscribe</a>
+				</div>
+				<div class="col-4 text-center">
+					<a href="#" class="blog-header-logo text-dark">Universe</a>
+				</div>
+				<div class="col-4-d-flex justify-content-end align-items-center">
+					<a href="#" class="text-muted" aria-label="Search">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24" focusable="false">
+							<title>Search</title>
+							<circle cx="10.5" cy="10.5" r="7.5"></circle>
+							<path d="M21 211-5.2-5.2"></path>
+						</svg>
+						<a href="#" class="btn btn-sm btn-outline-secondary">Sign Up</a>
+					</a>
+				</div>
+		</div>
+	</header>
+</div> -->
+
+<!-- <div class="container"> -->
+	<header class="navbar">
+		<section class="navbar-section">
+			<img class="mr-3" src="<?= base_url();?>assets/img/logofix.png" width="100" alt="">
+			<a href="#" class="btn btn-link mr-2">New Arrival</a>
+			<a href="#" class="btn btn-link mr-2">Man</a>
+			<a href="#" class="btn btn-link mr-2">Woman</a>
+		</section>
+		<section class="navbar-center">
+			<form class="form-inline">
+				<input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+				<a href="#" class="btn btn-sm btn-outline-secondary">Search</a>
+			</form>
+		</section>
+		<section class="navbar-section">
+			<div class="col-4-d-flex justify-content-end align-items-center mr-2">
+				<a href="#" class="text-muted" aria-label="Search">
+					<a href="<?= base_url();?>Auth" class="">Masuk / Daftar</a>
+				</a>
+			</div>
+			<a href="<?= base_url();?>Cart"><img class="" src="<?= base_url();?>assets/img/keranjang.png" width="25" alt=""></a>
+			
+		</section>
+	</header>
+<!-- </div> -->
 
