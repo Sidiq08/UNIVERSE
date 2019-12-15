@@ -1,16 +1,17 @@
-<div class="bg-light py-3 my-3">
+<div class="bg-dark y-3 my-3">
       <div class="container">
         <div class="row">
           <div class="col-md-12 mb-0"><a href="<?= base_url();?>/Home" class="text-success">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Cart</strong></div>
         </div>
       </div>
     </div>
+</div> 
 
-    <div class="site-section">
-      <div class="container">
-        <div class="row mb-5">
-          <form class="col-md-12" method="post">
-            <div class="site-blocks-table">
+<div class="container">
+  <div class="row justify-content-between">
+    <div class="col-lg-6">
+      <h4 class="mb-4">Your Items</h4>
+       <div class="site-blocks-table">
               <table class="table table-bordered">
                 <thead>
                   <tr class="text-center text-bold">
@@ -28,11 +29,11 @@
                       <img src="<?= base_url();?>assets/img/celana1.jpg" alt="Image" class="img-fluid">
                     </td>
                     <td class="product-name">
-                      <h2 class="h5 text-black">Celana Kurang Keceeeh</h2>
+                      Celana Kurang keceh
                     </td>
                     <td>$49.00</td>
                     <td>
-                      <div class="input-group mb-3" style="max-width: 120px;">
+                      <div class="input-group mb-3" style="max-width: 155px;">
                         <div class="input-group-prepend">
                           <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
                         </div>
@@ -44,7 +45,7 @@
 
                     </td>
                     <td>$49.00</td>
-                    <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
+                    <td><a href="#" class="btn btn-primary height-auto btn-sm ml-3">X</a></td>
                   </tr>
 
                   <tr>
@@ -68,13 +69,223 @@
 
                     </td>
                     <td>$49.00</td>
-                    <td><a href="#" class="btn btn-primary height-auto btn-sm">X</a></td>
+                    <td><a href="#" class="btn btn-primary height-auto btn-sm ml-3">X</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> 
+    </div>
+  
+    <div class="col-lg-5"> 
+    <h4 class="mb-3" style="">Your Address</h4>
+    <form>
+  <div class="form-group">
+    <label for="address">Name</label>
+    <input type="text" class="form-control" id="address" placeholder="Alamat lengkap">
+  </div>
+  <div class="form-group">
+    <label for="address2">Address</label>
+    <input type="text" class="form-control" id="address2" placeholder="Alamat tambahan">
+  </div>
+  <div class="form-group">
+    <label for="city">City</label>
+    <select class="custom-select">
+      <option selected>Select City</option>
+     
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="country">Country</label>
+    <select class="custom-select">
+      <option selected>Select Country</option>
+      
+    </select>
+  </div>
+</form>
+  </div>
+
+  <div class="row mb-2"></div>
+  <div class="col-lg-5">
+          <div class="card rounded-0 checkout-detail">
+            <div class="card-body">
+              <h5 class="card-title">Subs Total</h5>
+              <div class="row mb-3">
+                <div class="col">
+                  <h6 class="m-0">Celana kurang keceeh</h6>
+                  <small style="color: #B7B7B7;">1 Items</small>
+                </div>
+                <div class="col d-flex justify-content-end">
+                  <h6 class="m-0 align-self-center text-success">$49</h6>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col">
+                  <h6 class="m-0">Celana Keceeeh</h6>
+                  <small style="color: #B7B7B7;">1 Items</small>
+                </div>
+                <div class="col d-flex justify-content-end">
+                  <h6 class="m-0 align-self-center text-success">$49</h6>
+                </div>
+              </div>
+
+              <hr>
+
+              <div class="row mb-3">
+                <div class="col">
+                  <h6 class="m-0">Courier</h6>
+                  <small style="color: #B7B7B7;">JNT Express</small>
+                </div>
+                <div class="col d-flex justify-content-end">
+                  <h6 class="m-0 align-self-center text-success">$10</h6>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col">
+                  <h6 class="m-0">Tax</h6>
+                  <small style="color: #B7B7B7;">Country 20%</small>
+                </div>
+                <div class="col d-flex justify-content-end">
+                  <h6 class="m-0 align-self-center text-success">$20</h6>
+                </div>
+              </div>
+
+              <!-- <div class="row mb-3">
+                <div class="col">
+                  <h6 class="m-0">Eid Promo</h6>
+                  <small style="color: #B7B7B7;">10% OFF</small>
+                </div>
+                <div class="col d-flex justify-content-end">
+                  <h6 class="m-0 align-self-center text-danger">-IDR 50.000.000</h6>
+                </div>
+              </div> -->
+
+              <div class="row mb-3">
+                <div class="col">
+                  <h6 class="m-0">Total</h6>
+                </div>
+                <div class="col d-flex justify-content-end">
+                  <h6 class="m-0 align-self-center text-primary">$128</h6>
+                </div>
+              </div>
+
+            </div>
+          </div>
+  <!-- ss -->
+
+  
+  
+
+   <!-- <div class="site-section">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-6">
+            <div class="site-blocks-table">
+              <table class="table table-bordered">
+                <thead>
+                  <tr class="text-center text-bold">
+                    <th class="product-thumbnail">Image</th>
+                    <th class="product-name">Product</th>
+                    <th class="product-price">Price</th>
+                    <th class="product-quantity">Quantity</th>
+                    <th class="product-total">Total</th>
+                    <th class="product-remove">Remove</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="product-thumbnail">
+                      <img src="<?= base_url();?>assets/img/celana1.jpg" alt="Image" class="img-fluid">
+                    </td>
+                    <td class="product-name">
+                      Celana Kurang keceh
+                    </td>
+                    <td>$49.00</td>
+                    <td>
+                      <div class="input-group mb-3" style="max-width: 155px;">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+                        </div>
+                        <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td>$49.00</td>
+                    <td><a href="#" class="btn btn-primary height-auto btn-sm ml-3">X</a></td>
+                  </tr>
+
+                  <tr>
+                    <td class="product-thumbnail">
+                      <img src="<?= base_url();?>assets/img/celana1.jpg" alt="Image" class="img-fluid">
+                    </td>
+                    <td class="product-name">
+                      <h2 class="h5 text-black">Celana Keceeeh</h2>
+                    </td>
+                    <td>$49.00</td>
+                    <td>
+                      <div class="input-group mb-3" style="max-width: 120px;">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+                        </div>
+                        <input type="text" class="form-control text-center" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+                        </div>
+                      </div>
+
+                    </td>
+                    <td>$49.00</td>
+                    <td><a href="#" class="btn btn-primary height-auto btn-sm ml-3">X</a></td>
                   </tr>
                 </tbody>
               </table>
             </div>
-          </form>
+          </div>
+          <div class="col-5">
+          <h4 class="mb-3" style="">Your Address</h4>
+
+<form>
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input type="text" class="form-control" id="address" placeholder="Alamat lengkap">
+  </div>
+  <div class="form-group">
+    <label for="address2">Address II</label>
+    <input type="text" class="form-control" id="address2" placeholder="Alamat tambahan">
+  </div>
+  <div class="form-group">
+    <label for="city">City</label>
+    <select class="custom-select">
+      <option selected>Select City</option>
+      <option value="1">Bandung</option>
+      <option value="2">Jakarta</option>
+      <option value="3">Surabaya</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="country">Country</label>
+    <select class="custom-select">
+      <option selected>Select Country</option>
+      <option value="1">Indonesia</option>
+      <option value="2">Malaysia</option>
+      <option value="3">Singapore</option>
+    </select>
+  </div>
+</form>
+</div>
         </div>
+        </div>
+
+        <div class="row">
+        <div class="col-5">
+          dwojao
+        </div>
+        </div>
+
+        
 
         <div class="row">
           <div class="col-md-6">
@@ -99,7 +310,7 @@
               </div>
             </div>
           </div> -->
-          <div class="col-md-6 pl-5">
+          <!-- <div class="col-md-6 pl-5">
             <div class="row justify-content-end">
               <div class="col-md-7">
                 <div class="row">
@@ -134,4 +345,4 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
