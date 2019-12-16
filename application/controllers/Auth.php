@@ -14,7 +14,7 @@ class Auth extends CI_Controller{
         $this->form_validation->set_rules('password','Password', 'trim|required');
 
         if ($this->form_validation->run() == false) {
-            $data['title'] = 'WPU Login Page';
+            $data['title'] = 'Universe Login Admin';
             $this->load->view('template/auth_header', $data);
             $this->load->view('auth/login');
             $this->load->view('template/auth_footer');
@@ -24,7 +24,7 @@ class Auth extends CI_Controller{
 
     }
 
-    private function _login(){
+        private function _login(){
         $email = $this->input->post('email');
         $password = $this->input->post('password');
 
@@ -35,14 +35,10 @@ class Auth extends CI_Controller{
                 if (password_verify($password, $user['password'])) {
                     $data =[
                         'email' => $user['email'],
-                        'role_id' => $user['role_id']
+                        'password' => $user['password']
                     ];
                     $this->session->set_userdata($data);
-                    if ($user['role_id'] == 1) {
-                        redirect('admin');
-                    }else{
-                        redirect('user');
-                    }
+                   redirect('admin');
                 }else{
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong Password!</div>');
                 redirect('auth');
@@ -57,7 +53,8 @@ class Auth extends CI_Controller{
         }
     }
 
-    public function registration(){
+
+    public function reg(){
 
         $this->form_validation->set_rules('name', 'Name', 'required|trim');
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', [
@@ -72,9 +69,9 @@ class Auth extends CI_Controller{
         $this->form_validation->set_rules('password2' , 'Password2' , 'required|trim|matches[password]');
 
         if ($this->form_validation->run() == false) {
-            $data['title'] = 'WPU User Registration';
+            $data['title'] = 'Universe Admin Registration';
             $this->load->view('template/auth_header', $data);
-            $this->load->view('auth/registration');
+            $this->load->view('auth/reg');
             $this->load->view('template/auth_footer');
         }else{
             $data = [
@@ -82,7 +79,6 @@ class Auth extends CI_Controller{
                 'email' => htmlspecialchars($this->input->post('email',true)),
                 'image' => 'default.png',
                 'password'=>password_hash(htmlspecialchars($this->input->post('password')),PASSWORD_DEFAULT),
-                'role_id' => 2,
                 'is_active' => 1,
                 'date_created'=>time(),
             ];
