@@ -1,4 +1,8 @@
+</div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
 
+ 
       <!-- Control Sidebar -->
       <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -41,9 +45,11 @@
 <script src="<?= base_url();?>assets/dist/js/pages/dashboard2.js"></script>
 
 <!-- SweetAlert2 -->
-<script src="../../plugins/sweetalert2/sweetalert2.min.js"></script>
+<script src="<?= base_url();?>assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+<!-- <script src="<?= base_url();?>assets/js/myscript.js"></script> -->
+<!-- <script src="<?= base_url();?>assets/js/script.js"></script> -->
 <!-- Toastr -->
-<script src="../../plugins/toastr/toastr.min.js"></script>
+<script src="<?= base_url();?>assets/plugins/toastr/toastr.min.js"></script>
 
 
 <script type="text/javascript">
