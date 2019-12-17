@@ -34,8 +34,8 @@ class Kategori extends CI_Controller{
         $data['kategori'] = $this->kategori->getKategori($config['per_page'], $data['start'], $data['keyword']);
         $data['jeniskelamin'] = $this->db->get('jeniskelamin')->num_rows();
         $data['jeniskelamin'] = $this->kategori->getAllJenisKelamin();
-        $data['jeniskelamin'] = $this->kategori->countJenisLaki2();
-        $data['jeniskelamin'] = $this->kategori->countJenisPerempuan();
+        $data['jeniskelaminL'] = $this->kategori->countJenisLaki2();
+        $data['jeniskelaminP'] = $this->kategori->countJenisPerempuan();
         // $data['kategori'] = $this->kategori->getAllKategori();
         // $data['kategori'] = $this->kategori->getKategoriById($idKategoriBaju);
         

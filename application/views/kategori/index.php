@@ -1,16 +1,23 @@
 <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash');?>"></div>
   <div class="row">
-    <?php foreach ($jeniskelamin as $j):?>
     <div class="col-md-3 col-sm-6 col-12">
             <div class="info-box bg-info">
-              <span class="info-box-icon"><i class="fas <?= $j['kelas'];?>"></i></span>
+              <span class="info-box-icon"><i class="fas fa-mars"></i></span>
               <div class="info-box-content">
-                <span class="info-box-text"><?= $j['jenisKelamin'];?></span>
-                <span class="info-box-number"><?= $j['jenisKelamin'];?></span>
+                <span class="info-box-text">Laki - Laki</span>
+                <span class="info-box-number"><?=$jeniskelaminL?></span>
               </div> <!-- /.info-box-content -->
             </div> <!-- /.info-box -->
           </div> <!-- /.info-col -->
-          <?php endforeach;?>
+          <div class="col-md-3 col-sm-6 col-12">
+            <div class="info-box bg-danger">
+              <span class="info-box-icon"><i class="fas fa-venus"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Perempuan</span>
+                <span class="info-box-number"><?=$jeniskelaminP?></span>
+              </div> <!-- /.info-box-content -->
+            </div> <!-- /.info-box -->
+          </div> <!-- /.info-col -->
          </div>
 <div class="row">
   <div class="col-12">
@@ -47,8 +54,8 @@
                               <label for="idJenisKelamin">Jenis Kelamin</label>
                               <select class="form-control custom-select" id="idJenisKelamin" name="idJenisKelamin" value="<?= set_value('idJenisKelamin');?>">
                                 <option selected disabled>Select one</option>
-                                <option value="1">Pria</option>
-                                <option value="2">Wanita</option>
+                                <option value="1">Laki - Laki</option>
+                                <option value="2">Perempuan</option>
                               </select>
                               <small class="form-text text-danger">
                                   <?= form_error('idJenisKelamin');?>

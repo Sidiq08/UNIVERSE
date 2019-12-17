@@ -35,11 +35,11 @@ class Kategori_model extends CI_Model{
     }
     public function countJenisLaki2(){
         $query = "SELECT `kategori`.* FROM `kategori` WHERE `idJenisKelamin` = 1";
-        return $this->db->query($query)->result_array();
+        return $this->db->query($query)->num_rows();
     }
     public function countJenisPerempuan(){
         $query = "SELECT `kategori`.* FROM `kategori` WHERE `idJenisKelamin` = 2";
-        return $this->db->query($query)->result_array();
+        return $this->db->query($query)->num_rows();
     }
 
     public function tambahDataKategori(){
