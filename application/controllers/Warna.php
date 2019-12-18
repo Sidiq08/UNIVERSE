@@ -1,17 +1,17 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Kategori extends CI_Controller{
+class Warna extends CI_Controller{
     
     public function __construct(){
         parent::__construct();
-        $this->load->model('Kategori_model');
+        $this->load->model('Warna_model');
         $this->load->library('form_validation');
     }
     
     public function index(){
-        $data['judul'] = 'List of Kategori';
-        $this->load->model('Kategori_model', 'kategori');
+        $data['judul'] = 'List of warna';
+        $this->load->model('Warna_model', 'warna');
         
         $this->load->library('pagination');
         
@@ -22,8 +22,8 @@ class Kategori extends CI_Controller{
             $data['keyword'] = $this->session->userdata('keyword');
         }
         
-        $this->db->like('kategoriBaju', $data['keyword']);
-        $this->db->from('kategori');
+        $this->db->like('warnaBaju', $data['keyword']);
+        $this->db->from('warna');
         $config['total_rows'] = $this->db->count_all_results();
         $data['total_rows'] = $config['total_rows'];
         $config['per_page'] = 8;
@@ -31,28 +31,24 @@ class Kategori extends CI_Controller{
         $this->pagination->initialize($config);
         
         $data['start'] = $this->uri->segment(3);
-        $data['kategori'] = $this->kategori->getKategori($config['per_page'], $data['start'], $data['keyword']);
-        $data['jeniskelamin'] = $this->db->get('jeniskelamin')->num_rows();
-        $data['jeniskelamin'] = $this->kategori->getAllJenisKelamin();
-        $data['jeniskelaminL'] = $this->kategori->countJenisLaki2();
-        $data['jeniskelaminP'] = $this->kategori->countJenisPerempuan();
-        // $data['kategori'] = $this->kategori->getAllKategori();
-        // $data['kategori'] = $this->kategori->getKategoriById($idKategoriBaju);
+        $data['warna'] = $this->warna->getwarna($config['per_page'], $data['start'], $data['keyword']);
+        // $data['warna'] = $this->warna->getAllwarna();
+        // $data['warna'] = $this->warna->getwarnaById($idwarnaBaju);
         
         // Tambah Data
-        $this->form_validation->set_rules('idJenisKelamin', 'IdJenisKelamin' , 'required');
-        $this->form_validation->set_rules('kategoriBaju', 'KategoriBaju' , 'required');
+        $this->form_validation->set_rules('idWarnaBaju', 'idWarnaBaju' , 'required');
+        $this->form_validation->set_rules('warnaBaju', 'warnaBaju' , 'required');
         
                 if ($this->form_validation->run() == FALSE) {
                     $this->load->view('template/header_admin' );
                     $this->load->view('template/sidebar_admin' );
-                    $this->load->view('kategori/index', $data);
+                    $this->load->view('warna/index', $data);
                     $this->load->view('template/footer_admin' );
                 }else{
-                    $this->Kategori_model->tambahDataKategori();
-                    // $this->Kategori_model->ubahDataKategori();
+                    $this->warna_model->tambahDataWarna();
+                    // $this->warna_model->ubahDatawarna();
                     $this->session->set_flashdata('flash', 'Ditambahkan Diubah');
-                    redirect('kategori');
+                    redirect('warna');
                 }
         // akhir tambah
     }
@@ -64,29 +60,29 @@ class Kategori extends CI_Controller{
                 redirect('auth');
     }
 
-    public function hapus($idKategoriBaju){
-        $this->Kategori_model->hapusDataKategori($idKategoriBaju);
+    public function hapus($idWarnaBaju){
+        $this->warna_model->hapusDataWarna($idWarnaBaju);
         $this->session->set_flashdata('flash', 'Dihapus');
-        redirect('kategori');
+        redirect('warna');
     }
 
-    public function ubah($idKategoriBaju){
-        $data['judul'] = 'Form Ubah Data kategori';
-        $data['kategori'] = $this->Kategori_model->getkategoriById($idKategoriBaju);
+    public function ubah($idWarnaBaju){
+        $data['judul'] = 'Form Ubah Data warna';
+        $data['warna'] = $this->warna_model->getWarnaById($idWarnaBaju);
        
 
-        $this->form_validation->set_rules('idJenisKelamin', 'IdJenisKelamin' , 'required');
-        $this->form_validation->set_rules('kategoriBaju', 'KategoriBaju' , 'required');
+        $this->form_validation->set_rules('idWarnaBaju', 'idWarnaBaju' , 'required');
+        $this->form_validation->set_rules('warnaBaju', 'warnaBaju' , 'required');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('template/header_admin' );
             $this->load->view('template/sidebar_admin' );
-            $this->load->view('kategori/ubah', $data);
+            $this->load->view('warna/ubah', $data);
             $this->load->view('template/footer_admin' );
         }else{
-            $this->Kategori_model->ubahDataKategori();
+            $this->warna_model->ubahDataWarna();
             $this->session->set_flashdata('flash', 'Diubah');
-            redirect('kategori');
+            redirect('warna');
         }
     }
 }

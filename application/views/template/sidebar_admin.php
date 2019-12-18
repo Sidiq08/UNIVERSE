@@ -26,8 +26,17 @@
                <li class="nav-item">
             <a href="<?= base_url();?>kategori" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
+              <ion-icon name="color-palette"></ion-icon>
               <p>
                 Kategori
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?= base_url();?>warna" class="nav-link">
+              <i class="nav-icon fas fa-palette"></i>
+              <p>
+                Warna Baju
               </p>
             </a>
           </li>
