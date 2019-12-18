@@ -11,6 +11,7 @@
 			color: #212529;
 		}
 	</style>
+	<link href="<?= base_url();?>assets/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="<?= base_url();?>assets/css/bootstrap.css">
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/sb-admin-2.min.css">
 	<link rel="stylesheet" href="<?= base_url();?>assets/css/spectre.min.css">
