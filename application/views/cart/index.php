@@ -13,7 +13,7 @@
           <h4 class="mb-4">Your Items</h4>
           <div class="row mb-4">
           <div class="col-2 text-right">
-              <button type="button" class="btn btn-sm btn-danger" style="color: white;"><i class="fas fa-times"></i></button>
+              <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-times"></i></button>
             </div>
             <div class="col-2">
               <img src="<?= base_url();?>assets/img/celana1.jpg" class ="img-fluid">
@@ -23,18 +23,16 @@
               
             </div>
             <div class="col-3">
-              <button type="button" class="btn btn-sm" style="background-color: #EAEAEF; color: white;"><i
-                  class="fas fa-minus-circle"></i></button>
+              <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-minus"></i></button>
               <span class="mx-2">20</span>
-              <button type="button" class="btn btn-sm btn-success" style="background-color: #EAEAEF color: white;"><i
-                  class="fas fa-plus-circle"></i></button>
+              <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-plus"></i></button>
             </div>
             <div class="col-2">
               <h5>$40</h5>
             </div>
 
             <div class="col-2 text-right">
-              <button type="button" class="btn btn-sm btn-danger" style="color: white;"><i class="fas fa-times"></i></button>
+              <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-times"></i></button>
             </div>
             <div class="col-2">
               <img src="<?= base_url();?>assets/img/celana1.jpg" class ="img-fluid">
@@ -44,18 +42,16 @@
               
             </div>
             <div class="col-3">
-              <button type="button" class="btn btn-sm" style="background-color: #EAEAEF; color: white;"><i
-                  class="fas fa-minus-circle"></i></button>
+            <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-minus"></i></button>
               <span class="mx-2">20</span>
-              <button type="button" class="btn btn-sm btn-success" style="background-color: #EAEAEF color: white;"><i
-                  class="fas fa-plus-circle"></i></button>
+              <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-plus"></i></button>
             </div>
             <div class="col-2">
               <h5>$40</h5>
             </div>
 
             <div class="col-2 text-right">
-              <button type="button" class="btn btn-sm btn-danger" style="color: white;"><i class="fas fa-times"></i></button>
+              <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-times"></i></button>
             </div>
             <div class="col-2">
               <img src="<?= base_url();?>assets/img/celana1.jpg" class ="img-fluid">
@@ -65,11 +61,9 @@
               
             </div>
             <div class="col-3">
-              <button type="button" class="btn btn-sm" style="background-color: #EAEAEF; color: white;"><i
-                  class="fas fa-minus-circle"></i></button>
+            <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-minus"></i></button>
               <span class="mx-2">20</span>
-              <button type="button" class="btn btn-sm btn-success" style="background-color: #EAEAEF color: white;"><i
-                  class="fas fa-plus-circle"></i></button>
+              <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-plus"></i></button>
             </div>
             <div class="col-2">
               <h5>$40</h5>
