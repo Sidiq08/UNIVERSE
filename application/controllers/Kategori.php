@@ -46,7 +46,6 @@ class Kategori extends CI_Controller{
                     $this->load->view('template/footer_admin' );
                 }else{
                     $this->Kategori_model->tambahDataKategori();
-                    // $this->Kategori_model->ubahDataKategori();
                     $this->session->set_flashdata('flash', 'Ditambahkan Diubah');
                     redirect('kategori');
                 }
@@ -80,9 +79,9 @@ class Kategori extends CI_Controller{
             $this->load->view('template/footer_admin' );
         }else{
             $aa = $this->Kategori_model->ubahDataKategori();
-            var_dump("return con + ".$aa);
+            // var_dump("return con + ".$aa);
             $this->session->set_flashdata('flash', 'Diubah');
-            // redirect('kategori');
+            redirect('kategori');
         }
 
 }

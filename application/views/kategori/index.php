@@ -62,8 +62,8 @@
                     <td><?= $k['kategoriBaju']; ?></td>
                     <td>
                       <a href="<?= base_url(); ?>kategori/ubah/<?= $k['idKategoriBaju']; ?>" class="btn btn-sm btn-flat btn-info">Ubah Data</a>
-                      <!-- <a href="<?= base_url(); ?>kategori/ubah/<?= $k['idKategoriBaju']; ?>" class="btn btn-sm btn-flat btn-success" data-toggle="modal" data-target="#modal-default">edit</a> -->
-                      <!-- <button type="button" class="btn btn-flat btn-primary btn-edit" id="<?= $k['idKategoriBaju']; ?>" data-toggle="modal" data-target="#modal-default">Edit Data</button> -->
+                      <!-- <a href="<?= base_url(); ?>kategori/ubah/<//?= $k['idKategoriBaju']; ?>" class="btn btn-sm btn-flat btn-success" data-toggle="modal" data-target="#modal-default">edit</a> -->
+                      <!-- <button type="button" class="btn btn-flat btn-primary btn-edit" id="<//?= $k['idKategoriBaju']; ?>" data-toggle="modal" data-target="#modal-default">Edit Data</button> -->
                       <a href="<?= base_url(); ?>kategori/hapus/<?= $k['idKategoriBaju']; ?>" class="btn btn-sm btn-flat btn-danger">Hapus Data</a>
                     </td>
                   </tr>

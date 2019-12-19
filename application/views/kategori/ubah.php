@@ -7,9 +7,9 @@
     </div>
     
         <div class="card-body">                
-        <form method="post" action="<?= base_url();?>kategori/ubah">
+        <form method="post" action="">
             
-                <input type="hidden" name="idKategoriBaju" class="idKategoriBaju" value="">
+                <input type="hidden" value="<?= $kategori['idKategoriBaju'] ?>" name="idKategoriBaju" class="idKategoriBaju" value="">
                 <div class="form-group">
                 <div class="form-group">
                   <label for="idJenisKelamin">Jenis Kelamin</label>
