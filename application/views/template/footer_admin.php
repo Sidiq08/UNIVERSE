@@ -21,7 +21,7 @@
 
 <!-- REQUIRED SCRIPTS -->
 <!-- jQuery -->
-<script src="<?= base_url();?>assets/plugins/jquery/jquery.min.js"></script>
+
 <!-- Bootstrap -->
 <script src="<?= base_url();?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- overlayScrollbars -->
@@ -50,6 +50,10 @@
 <!-- <script src="<?= base_url();?>assets/js/script.js"></script> -->
 <!-- Toastr -->
 <script src="<?= base_url();?>assets/plugins/toastr/toastr.min.js"></script>
+
+<!-- DataTables -->
+<script src="<?= base_url();?>assets/plugins/datatables/jquery.dataTables.js"></script>
+<script src="<?= base_url();?>assets/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
 
 
 <script type="text/javascript">

@@ -24,7 +24,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                <li class="nav-item">
-            <a href="<?= base_url();?>kategori" class="nav-link">
+            <a href="<?= site_url();?>kategori" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <ion-icon name="color-palette"></ion-icon>
               <p>

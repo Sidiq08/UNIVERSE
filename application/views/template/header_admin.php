@@ -7,6 +7,8 @@
 
   <title>Universe Admin | Dashboard</title>
 
+<!-- DataTables -->
+<link rel="stylesheet" href="<?= base_url();?>assets/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="<?= base_url();?>assets/plugins/fontawesome-free/css/all.min.css">
   <!-- overlayScrollbars -->
@@ -15,6 +17,7 @@
   <link rel="stylesheet" href="<?= base_url();?>assets/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <script src="<?= base_url();?>assets/plugins/jquery/jquery.min.js"></script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">

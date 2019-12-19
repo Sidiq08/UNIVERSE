@@ -2,7 +2,7 @@
 
 class Kategori_model extends CI_Model{
     
-    public function getAllkategori(){
+    public function getAllKategori(){
         $this->db->select('*');
         $this->db->from('kategori a'); 
         $this->db->join('jeniskelamin b', 'b.idJenisKelamin=a.idJenisKelamin', 'left');       
@@ -17,13 +17,13 @@ class Kategori_model extends CI_Model{
         }
     }
 
-    public function getKategori($limit, $start, $keyword = null){
-        if ($keyword) {
-            $this->db->like('kategoriBaju',$keyword);
-        }
-        $query = "SELECT `kategori`.*, `jeniskelamin`.* FROM `kategori` JOIN `jeniskelamin` ON `kategori`.`idJenisKelamin`=`jeniskelamin`.`idJenisKelamin`";
-        return $this->db->query($query)->result_array();
-    }
+    // public function getKategori($limit, $start, $keyword = null){
+    //     // if ($keyword) {
+    //     //     $this->db->like('kategoriBaju',$keyword);
+    //     // }
+    //     $query = "SELECT `kategori`.*, `jeniskelamin`.* FROM `kategori` JOIN `jeniskelamin` ON `kategori`.`idJenisKelamin`=`jeniskelamin`.`idJenisKelamin`";
+    //     return $this->db->query($query)->result_array();
+    // }
 
 
     public function getAllJenisKelamin(){
@@ -49,6 +49,17 @@ class Kategori_model extends CI_Model{
         ];
         $this->db->insert('kategori',$data);
     }
+    
+    public function ubahDataKategori(){
+        $data= [
+            'idJenisKelamin' => $this->input->post('idJenisKelamin',true),
+            'kategoriBaju' => $this->input->post('kategoriBaju',true)
+        ];
+
+        $this->db->where('idKategoriBaju', $this->input->post('idKategoriBaju'));
+        $qq = $this->db->update('kategori',$data);
+        var_dump("return model  =" . $qq);
+    }
 
     public function hapusDataKategori($idKategoriBaju){
         $this->db->delete('kategori', ['idKategoriBaju' => $idKategoriBaju]);
@@ -58,15 +69,6 @@ class Kategori_model extends CI_Model{
         return $this->db->get_where('kategori', ['idKategoriBaju' => $idKategoriBaju ])->row_array();
     }
 
-    public function ubahDataKategori(){
-        $data= [
-            'idJenisKelamin' => $this->input->post('idJenisKelamin',true),
-            'kategoriBaju' => $this->input->post('kategoriBaju',true)
-        ];
-
-        $this->db->where('idKategoriBaju', $this->input->post('idKategoriBaju'));
-        $this->db->update('kategori',$data);
-    }
 
     // public function cariDataKategori(){
     //     $keyword = $this->input->post('keyword',true);
