@@ -83,52 +83,28 @@
 
   <!-- Icons Grid -->
 
+  <!-- Halaman Utama -->
 
-    <!-- <div class="container bg-light"> -->
-      <section class="features-icons bg-light text-center">        
-        <div class="col text-center pb-4 mt-4">
-          <h2 class="libre-baskerville-italic text-brown">
-            <span class="py-4 pl-4 pr-4 pl-md-0 pr-md-5 home-underline">Artikel Terlaris</span>
-          </h2>
-        <div class="row mt-5">
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <!-- <div class="features-icons-icon d-flex">
-              <i class="icon-screen-desktop m-auto text-primary"></i>
+  <div class="contanier-fluid">
+    <div class="row text-center m-4">
+      <?php  foreach ($produk as $prd) : ?>
 
-            </div> -->
-            <img class="mb-2" src="<?= base_url();?>assets/img/celana1.jpg" alt="">
-            <h3 class="mb-2">Katun combat</h3>
-            <p class="lead mb-0">Rp. 150.000</p>
->>>>>>> e6412627359c38efda1c779f78f3f5fdae8ba386
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <!-- <div class="features-icons-icon d-flex">
-              <i class="icon-layers m-auto text-primary"></i>
-            </div> -->
-            <img class="mb-2" src="<?= base_url();?>assets/img/celana1.jpg" alt="">
-            <h3 class="mb-2">Katun combat</h3>
-            <p class="lead mb-0">Rp. 150.000</p>
->>>>>>> e6412627359c38efda1c779f78f3f5fdae8ba386
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-            <!-- <div class="features-icons-icon d-flex">
-              <i class="icon-check m-auto text-primary"></i>
-            </div> -->
-            <img class="mb-2" src="<?= base_url();?>assets/img/celana1.jpg" alt="">
-            <h3 class="mb-2">Katun combat</h3>
-            <p class="lead mb-0">Rp. 150.000</p>
->>>>>>> e6412627359c38efda1c779f78f3f5fdae8ba386
-          </div>
+      <div class="card ml-4" style="width: 18rem;">
+      <img class="img-thumbnail img-fluid" src="<?php echo base_url().'/assets/img/model/'. $prd->gambar_baju ?>" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title"><?php echo $prd->nama_baju ?></h5>
+        <small><?php echo $prd->deskripsi_baju ?></small><br>
+        <span class="badge badge-success mb-2">Rp. <?php echo $prd->harga_baju ?></span><br>
+        <?php echo anchor('Home/tambah_ke_keranjang/'. $prd->id_baju, '<div class="btn btn-sm btn-primary">Tambah ke keranjang</div>') ?>
+        <a href="#" class="btn btn-sm btn-success">Detail Barang</a>
         </div>
       </div>
-    </div>
-  </section>
 
+      
+    <?php endforeach; ?>
+    </div>
+  </div>
+   
   <!-- Image Showcases -->
   <section class="showcase">
     <div class="container-fluid p-0">

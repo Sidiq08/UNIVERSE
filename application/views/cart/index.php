@@ -12,63 +12,42 @@
         <div class="col-7">
           <h4 class="mb-4">Your Items</h4>
           <div class="row mb-4">
+            <?php 
+            
+            foreach($this->cart->contents() as $items ) :
+            ?>
+
+<?php echo form_hidden($items['rowid']); ?>
           <div class="col-2 text-right">
               <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-times"></i></button>
             </div>
             <div class="col-2">
-              <img src="<?= base_url();?>assets/img/celana1.jpg" class ="img-fluid">
+               
+
+            
+            <?php foreach ($this->cart->product_options($items['rowid']) as $option_name  => $option_value): ?>
+              <img src="assets/img/model/<?= $option_value?>" class ="img-fluid">
+              <p><?= $option_value ; ?>aa</p>
+                    
+
+            <?php endforeach; ?>
+            
+
+              <img src="assets/img/model/<?= $items['id']?>" class ="img-fluid">
             </div>
             <div class="col-3">
-              <p>Celana Catton</p>
+              <p><?= $items['name']?></p>
               
             </div>
             <div class="col-3">
               <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-minus"></i></button>
-              <span class="mx-2">20</span>
+              <span class="mx-2"><?php echo $items['qty'] ?></span>
               <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-plus"></i></button>
             </div>
             <div class="col-2">
-              <h5>$40</h5>
+              <small>Rp. <?php echo $items['price'] ?></small>
             </div>
-
-            <div class="col-2 text-right">
-              <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="col-2">
-              <img src="<?= base_url();?>assets/img/celana1.jpg" class ="img-fluid">
-            </div>
-            <div class="col-3">
-              <p>Celana Catton</p>
-              
-            </div>
-            <div class="col-3">
-            <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-minus"></i></button>
-              <span class="mx-2">20</span>
-              <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-plus"></i></button>
-            </div>
-            <div class="col-2">
-              <h5>$40</h5>
-            </div>
-
-            <div class="col-2 text-right">
-              <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="col-2">
-              <img src="<?= base_url();?>assets/img/celana1.jpg" class ="img-fluid">
-            </div>
-            <div class="col-3">
-              <p>Celana Catton</p>
-              
-            </div>
-            <div class="col-3">
-            <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-minus"></i></button>
-              <span class="mx-2">20</span>
-              <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-plus"></i></button>
-            </div>
-            <div class="col-2">
-              <h5>$40</h5>
-            </div>
-
+            <?php endforeach; ?>
             
             </div>
             
