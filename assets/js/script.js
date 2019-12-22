@@ -45,7 +45,7 @@
 
     		Swal.fire({
     			title: 'Apakah anda yakin?',
-    			text: "data mahasiswa akan dihapus!",
+    			text: "Items akan dihapus!",
     			type: 'warning',
     			showCancelButton: true,
     			confirmButtonColor: '#3085d6',

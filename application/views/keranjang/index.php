@@ -8,51 +8,78 @@
 </div> 
 
 <div class="container">
-<div class="row justify-content-between" style="margin-bottom: 100px;">
-        <div class="col-7">
-          <h4 class="mb-4">Your Items</h4>
-          <div class="row mb-4">
-            <?php 
-            
-            foreach($this->cart->contents() as $items ) :
-            ?>
+  <div class="row justify-content-between" style="margin-bottom: 100px;">
+    <div class="col-12">
+     <h2>Daftar Belanja</h2>
+        <form action="<?php echo base_url()?>keranjang/ubah_cart" method="post" name="frmShopping" id="frmShopping" class="form-horizontal" enctype="multipart/form-data">
+<?php
+	if ($cart = $this->cart->contents())
+		{
+ ?>
 
-<?php echo form_hidden($items['rowid']); ?>
-          <div class="col-2 text-right">
-              <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="col-2">
-               
+<table class="table">
+  <tr id= "main_heading">
+    <td width="2%">No</td>
+    <td width="10%">Gambar</td>
+    <td width="33%">Item</td>
+    <td width="17%">Harga</td>
+    <td width="10%">Qty</td>
+    <td width="20%">Jumlah</td>
+    <td width="8%">Hapus</td>
+  </tr>
+<?php
+// Create form and send all values in "shopping/update_cart" function.
+    $grand_total = 0;
+    $i = 1;
 
-            
-            <?php foreach ($this->cart->product_options($items['rowid']) as $option_name  => $option_value): ?>
-              <img src="assets/img/model/<?= $option_value?>" class ="img-fluid">
-              <p><?= $option_value ; ?>aa</p>
-                    
+foreach ($cart as $item):
+    $grand_total = $grand_total + $item['subtotal'];
+?>
+    <input type="hidden" name="cart[<?php echo $item['id'];?>][id]" value="<?php echo $item['id'];?>" />
+    <input type="hidden" name="cart[<?php echo $item['id'];?>][rowid]" value="<?php echo $item['rowid'];?>" />
+    <input type="hidden" name="cart[<?php echo $item['id'];?>][name]" value="<?php echo $item['name'];?>" />
+    <input type="hidden" name="cart[<?php echo $item['id'];?>][price]" value="<?php echo $item['price'];?>" />
+    <input type="hidden" name="cart[<?php echo $item['id'];?>][gambar]" value="<?php echo $item['gambar'];?>" />
+    <input type="hidden" name="cart[<?php echo $item['id'];?>][qty]" value="<?php echo $item['qty'];?>" />
+    <tr>
+      <td><?php echo $i++; ?></td>
+      <td><img class="img-responsive" src="<?= $item['gambar']; ?>"/></td>
+      <td><?php echo $item['name']; ?></td>
+      <td><?php echo number_format($item['price'], 0,",","."); ?></td>
+      <td><input type="text" class="form-control input-sm" name="cart[<?php echo $item['id'];?>][qty]" value="<?php echo $item['qty'];?>" /></td>
+      <td><?php echo number_format($item['subtotal'], 0,",",".") ?></td>
+      <td><a href="<?php echo base_url()?>keranjang/hapus/<?php echo $item['rowid'];?>" class="btn btn-sm btn-danger tombol-hapus"><i class="fas fa-minus-circle"></i></a></td>
+<?php endforeach; ?>
+    </tr>
+    <tr>
+      <td colspan="3"><b>Order Total: Rp <?php echo number_format($grand_total, 0,",","."); ?></b></td>
+      <td colspan="4" align="right">
+      <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#myModal">
+      Hapus semua keranjang
+      </button>
+      <button class='btn btn-sm btn-success'  type="submit">Update Cart</button>
+      <a href="<?php echo base_url()?>shopping/check_out"  class ='btn btn-sm btn-primary'>Check Out</a>
+    </tr>
 
-            <?php endforeach; ?>
-            
+</table>
+<?php
+		}
+	else
+		{
+			echo "<h3>Keranjang Belanja masih kosong</h3>";	
+		}	
+?>
+</form>
 
-              <img src="assets/img/model/<?= $items['id']?>" class ="img-fluid">
-            </div>
-            <div class="col-3">
-              <p><?= $items['name']?></p>
-              
-            </div>
-            <div class="col-3">
-              <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-minus"></i></button>
-              <span class="mx-2"><?php echo $items['qty'] ?></span>
-              <button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-plus"></i></button>
-            </div>
-            <div class="col-2">
-              <small>Rp. <?php echo $items['price'] ?></small>
-            </div>
-            <?php endforeach; ?>
+
             
             </div>
             
           </div>
-  
+  <!-- Modal Hapus Semua Keranjang -->
+
+ 
+  <!--End Modal-->
 
   <!-- <div class="row mb-2"></div> -->
   <div class="col-lg-5">
@@ -168,7 +195,7 @@
 </div>
 </div>
 
-  
+
   
   <!-- ss -->
 
@@ -345,3 +372,26 @@
         </div>
       </div>
     </div> -->
+    <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModalTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

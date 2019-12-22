@@ -222,7 +222,7 @@
 				</a>
 			</div>
 			<!-- <a href="<?= base_url();?>Cart"><img class="" src="<?= base_url();?>assets/img/keranjang.png" width="25" alt=""></a> -->
-			<a href="<?= base_url();?>Cart" class="nav-link"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang = $this->cart->total_items();
+			<a href="<?= base_url();?>Keranjang" class="nav-link"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang = $this->cart->total_items();
 			echo anchor('Home/detail_keranjang',$keranjang)?></span>)</a>
 			
 		</section>

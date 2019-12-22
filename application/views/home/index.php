@@ -28,59 +28,6 @@
 </div>
 </div>
 
-
-
-<!-- <div class="row pt-4 pb-2 py-md-5 px-md-5 mx-md-5 mt-3" id="home-products">
-  <div class="col text-center pb-4">
-    <h2 class="libre-baskerville-italic text-brown">
-      <span class="py-4 pl-4 pr-4 pl-md-0 pr-md-5 home-underline">Artikel Terlaris</span>
-    </h2>
-
-    <div class="col-lg-4">
-      <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-          <div class="features-icons-icon d-flex">
-            <i class="icon-layers m-auto text-primary"></i>
-          </div>
-          <img class="mb-2" src="<?= base_url();?>assets/img/celana1.jpg" alt="">
-          <h3 class="mb-2">Katun combat</h3>
-          <p class="lead mb-0">Rp. 150.000</p>
-        </div>
-      </div>
-    <div class="col-lg-4">
-      <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-          <div class="features-icons-icon d-flex">
-            <i class="icon-layers m-auto text-primary"></i>
-          </div>
-          <img class="mb-2" src="<?= base_url();?>assets/img/celana1.jpg" alt="">
-          <h3 class="mb-2">Katun combat</h3>
-          <p class="lead mb-0">Rp. 150.000</p>
-        </div>
-      </div>
-    </div> -->
-
-<!-- <div class="row product-menu mx-1 mx-md-5">
-      <div class="col-4 col-md text-center p-0">
-        <a href="" class="btn btn-link link-grey">
-          <h1 class="h3 product-menu-text">Celana</h1>
-        </a>
-      </div>
-    </div>
-    <div class="row product-menu mx-1 mx-md-5">
-      <div class="col-4 col-md text-center p-0">
-        <a href="" class="btn btn-link link-grey">
-          <h1 class="h3 product-menu-text">Baju</h1>
-        </a>
-      </div>
-    </div>
-    <div class="row product-menu mx-1 mx-md-5">
-      <div class="col-4 col-md text-center p-0">
-        <a href="" class="btn btn-link link-grey">
-          <h1 class="h3 product-menu-text">Kacamata</h1>
-        </a>
-      </div>
-    </div> -->
-
-
   <!-- Icons Grid -->
 
   <!-- Halaman Utama -->
@@ -88,18 +35,30 @@
   <div class="contanier-fluid">
     <div class="row text-center m-4">
       <?php  foreach ($produk as $prd) : ?>
-
-      <div class="card ml-4" style="width: 18rem;">
-      <img class="img-thumbnail img-fluid" src="<?php echo base_url().'/assets/img/model/'. $prd->gambar_baju ?>" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title"><?php echo $prd->nama_baju ?></h5>
-        <small><?php echo $prd->deskripsi_baju ?></small><br>
-        <span class="badge badge-success mb-2">Rp. <?php echo $prd->harga_baju ?></span><br>
-        <?php echo anchor('Home/tambah_ke_keranjang/'. $prd->id_baju, '<div class="btn btn-sm btn-primary">Tambah ke keranjang</div>') ?>
-        <a href="#" class="btn btn-sm btn-success">Detail Barang</a>
-        </div>
-      </div>
-
+        <div class="col-lg-4 col-md-6 mb-4">
+              <div class="kotak">
+              <form method="post" action="<?php echo base_url();?>keranjang/tambah_ke_keranjang" method="post" accept-charset="utf-8">
+                <a href="#"><img class="img-thumbnail img" src="<?php echo base_url() . 'assets/img/model/'.$prd['gambar_baju']; ?>"/></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#"><?php echo $prd['nama_baju'];?></a>
+                  </h4>
+                  <h5>Rp. <?php echo number_format($prd['harga_baju'],0,",",".");?></h5>
+                  <p class="card-text"><?php echo $prd['deskripsi_baju'];?></p>
+                </div>
+                <div class="card-footer">
+                  <a href="<?php echo base_url();?>home/detail_produk/<?php echo $prd['id_baju'];?>" class="btn btn-sm btn-default"><i class="fas fa-shopping-search"></i> Detail</a> 
+                  
+                  <input type="hidden" name="id" value="<?php echo $prd['id_baju']; ?>" />
+                  <input type="hidden" name="nama" value="<?php echo $prd['nama_baju']; ?>" />
+                  <input type="hidden" name="harga" value="<?php echo $prd['harga_baju']; ?>" />
+                  <input type="hidden" name="gambar" value="<?php echo base_url().'/assets/img/model/'.  $prd['gambar_baju']; ?>" />
+                  <input type="hidden" name="qty" value="1" />
+                  <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Beli</button>
+                </div>
+                </form>
+              </div>
+            </div>
       
     <?php endforeach; ?>
     </div>
