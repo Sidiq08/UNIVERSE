@@ -1,77 +1,39 @@
 <?php
+class Warna_model extends CI_Model
+{
 
-class Warna_model extends CI_Model{
-    
-    public function getAllWarna(){
-        $this->db->select('*');
-        $this->db->from('warna');   
-        $query = $this->db->get(); 
-        if($query->num_rows() != 0)
-        {
-            return $query->result_array();
-        }
-        else
-        {
-            return false;
-        }
+    function warna_list()
+    {
+        $hasil = $this->db->get('warna_baju_produk');
+        return $hasil->result();
     }
 
-    public function getwarna($limit, $start, $keyword = null){
-        if ($keyword) {
-            $this->db->like('warnaBaju',$keyword);
-        }
-        $query = "SELECT `warna`.* FROM `warna`";
-        return $this->db->query($query)->result_array();
+    function save_warna()
+    {
+        $data = array(
+            'id_warna_baju' => $this->input->post('id_warna_baju'),
+            'warna_baju'     => $this->input->post('warna_baju'),
+        );
+        $result = $this->db->insert('warna_baju_produk', $data);
+        return $result;
     }
 
+    function update_warna()
+    {
+        $id_warna_baju = $this->input->post('id_warna_baju');
+        $warna_baju = $this->input->post('warna_baju');
 
-    public function getAllJenisKelamin(){
-        return $this->db->get('jeniskelamin')->result_array();
+        $this->db->set('warna_baju', $warna_baju);
+        $this->db->where('id_warna_baju', $id_warna_baju);
+        $result = $this->db->update('warna_baju_produk');
+        return $result;
     }
 
-    public function countAllwarna(){
-        return $this->db->get('warna')->num_rows();
+    function delete_warna()
+    {
+        $id_warna_baju = $this->input->post('id_warna_baju');
+        $this->db->where('id_warna_baju', $id_warna_baju);
+        $result = $this->db->delete('warna_baju_produk');
+        return $result;
     }
-    public function countJenisLaki2(){
-        $query = "SELECT `warna`.* FROM `warna` WHERE `idJenisKelamin` = 1";
-        return $this->db->query($query)->num_rows();
-    }
-    public function countJenisPerempuan(){
-        $query = "SELECT `warna`.* FROM `warna` WHERE `idJenisKelamin` = 2";
-        return $this->db->query($query)->num_rows();
-    }
-
-    public function tambahDatawarna(){
-        $data= [
-            'idJenisKelamin' => $this->input->post('idJenisKelamin',true),
-            'warnaBaju' => $this->input->post('warnaBaju',true)
-        ];
-        $this->db->insert('warna',$data);
-    }
-
-    public function hapusDatawarna($idwarnaBaju){
-        $this->db->delete('warna', ['idwarnaBaju' => $idwarnaBaju]);
-    }
-
-    public function getwarnaById($idwarnaBaju){
-        return $this->db->get_where('warna', ['idwarnaBaju' => $idwarnaBaju ])->row_array();
-    }
-
-    public function ubahDatawarna(){
-        $data= [
-            'idJenisKelamin' => $this->input->post('idJenisKelamin',true),
-            'warnaBaju' => $this->input->post('warnaBaju',true)
-        ];
-
-        $this->db->where('idwarnaBaju', $this->input->post('idwarnaBaju'));
-        $this->db->update('warna',$data);
-    }
-
-    // public function cariDatawarna(){
-    //     $keyword = $this->input->post('keyword',true);
-    //     $this->db->like('name', $keyword);
-    //     $this->db->or_like('address', $keyword);
-    //     $this->db->or_like('email', $keyword);
-    //     return $this->db->get('warna')->result_array();
-    // }
 }
