@@ -21,7 +21,7 @@ class Keranjang extends CI_Controller{
         redirect('home');
 }
 
-      function ubah_cart()
+      public function ubah_cart()
       {
               $cart_info = $_POST['cart'] ;
               foreach( $cart_info as $id => $cart)
@@ -41,19 +41,34 @@ class Keranjang extends CI_Controller{
               redirect('keranjang');
       }
 
-      function hapus($rowid) 
+      public function hapus($rowid) 
 	{
-		if ($rowid=="all")
-			{
-				$this->cart->destroy();
-			}
-		else
-			{
+		// if ($rowid =="all")
+		// 	{
+		// 		$this->cart->destroy();
+		// 	}
+		// else
+			
 				$data = array('rowid' => $rowid,
 			  				  'qty' =>0);
 				$this->cart->update($data);
-			}
+			
 		redirect('keranjang');
+        }
+
+        public function hapus_all()
+        {
+                $this->cart->destroy();
+                redirect('keranjang');
+        }
+        
+        
+        public function check_out()
+	{
+	        $data['title'] = 'Check Out Universe';
+              $this->load->view('template/header', $data);
+              $this->load->view('keranjang/check_out', $data);
+              $this->load->view('template/footer');
 	}
       
      

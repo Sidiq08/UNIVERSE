@@ -52,9 +52,9 @@
                   <input type="hidden" name="id" value="<?php echo $prd['id_baju']; ?>" />
                   <input type="hidden" name="nama" value="<?php echo $prd['nama_baju']; ?>" />
                   <input type="hidden" name="harga" value="<?php echo $prd['harga_baju']; ?>" />
-                  <input type="hidden" name="gambar" value="<?php echo base_url().'/assets/img/model/'.  $prd['gambar_baju']; ?>" />
+                  <input type="hidden" name="gambar" value="<?php echo $prd['gambar_baju']; ?>" />
                   <input type="hidden" name="qty" value="1" />
-                  <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Beli</button>
+                  <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i>Beli Produk ini</button>
                 </div>
                 </form>
               </div>
