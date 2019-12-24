@@ -1,33 +1,28 @@
-
-<div id="carouselExampleIndicators" class="carousel slide carousel-awal" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
-  <div class="container mt-5">
   <div class="carousel-inner">
     <div class="carousel-item active">
-    <div class="container">
-      <img class="" src="<?= base_url();?>assets/img/img2.jpg" alt="">
-    </div>
+      <img src="<?= base_url();?>assets/img/foto1.jpg" class="" alt="...">
     </div>
     <div class="carousel-item">
-    <img class="" src="<?= base_url();?>assets/img/aril2.jpg" alt="">
+	<img src="<?= base_url();?>assets/img/foto2.jpg" class="d-block w-60 h-60" alt="...">
     </div>
     <div class="carousel-item">
-    <img class="" src="<?= base_url();?>assets/img/aril3.jpg" alt="">
+	<img src="<?= base_url();?>assets/img/foto3.jpg" class="d-block w-60 h-60" alt="...">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="carousel-control-prev-icon-dark" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
   <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div>
 </div>
 
 

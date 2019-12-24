@@ -23,85 +23,71 @@
 	
 </head>
 <body>
-		<!-- </div>
-</div>
-</div> -->
 
-<!-- nav nav -->
-<div class="container">
-<header class="navbar">
-	<section class="navbar-section">
-			<!-- <form class="form-inline">
-				<input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-				<a href="#" class="btn btn-sm btn-outline-secondary">Search</a>
-			</form> -->
-	</section>
-	<section class="navbar-center">
-			<a href="#" class="logo"><img class=" mr-2" src="<?= base_url();?>assets/img/logofix.png" width="100" alt=""></a>
-	</section>
-	<section class="navbar-section">
-		
-		<a href="<?= base_url();?>Cart" class="nav-link"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang = $this->cart->total_items();
-		echo anchor('Home/detail_keranjang',$keranjang)?></span>)</a>
-	</section>
-</header>
-</div>
-
-<!-- navbar baru -->
-<header role="banner">
-		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-			<div class="container">
-				<a href="" class="navbar-brand"><img class=" mr-2" src="<?= base_url();?>assets/img/logofix.png" width="100" alt=""></a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarExample05">
-					<ul class="navbar-nav ml-auto pl-lg-5 pl-0">
-						<li class="nav-item">
-							<a href="" class="nav-link">Sale</a>
-						</li>
-						<li class="nav-item">
-							<a href="" class="nav-link">New Arrival</a>
-						</li>
-						<li class="nav-item">
-							<a href="" class="nav-link">Man</a>
-						</li>
-						<li class="nav-item">
-							<a href="" class="nav-link">Woman</a>
-						</li>
-					</ul>
-					<ul class="navbar-nav ml-auto pl-lg-5 pl-0">
-						<li class="nav-item">
-						<button type="button" class="btn btn-primary">Masuk / Daftar</button>
-						<!-- <a href="" class="nav-link">Masuk / Daftar </a> -->
-						</li>
-					</ul>
+<!-- nav terbaru -->
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-light ftco-navbar-dark" id="ftco-navbar">
+		<div class="container">
+			<div class="row m-auto">
+				<div class="col-12 w-100 text-center">
+					<a href=""><img class=" mr-2" src="<?= base_url();?>assets/img/logofix.png" width="100" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="oi oi-menu">
+							::before
+						</span>
+						" Menu
+						"
+					</button>
 					
 				</div>
+				<div class="col-12 w-100 text-center">
+					<div class="collapse navbar-collapse" id="ftco-nav">
+						<ul class="navbar-nav m-auto">
+							<li class="nav-item active">
+								<a href="" class="nav-link text-dark">Sale</a>
+							</li>
+							<li class="nav-item active">
+								<a href="" class="nav-link text-dark">New Arrival</a>
+							</li>
+							<li class="nav-item active">
+								<a href="" class="nav-link text-dark">Man</a>
+							</li>
+							<li class="nav-item active">
+								<a href="" class="nav-link text-dark">Woman</a>
+							</li>
+							<li class="nav-item active">
+							<a href="<?= base_url();?>Cart" class="nav-link text-dark"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang = $this->cart->total_items();
+		echo anchor('Home/detail_keranjang',$keranjang)?></span>)</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-		</nav>
-</header>
-
-<!-- awal -->
-	<!-- <header class="navbar">
-		<section class="navbar-section">
-			<img class=" mr-2" src="<?= base_url();?>assets/img/logofix.png" width="100" alt="">
-			<a href="#" class="nav-item nav-link">New Arrival</a>
-			<a href="#" class="nav-item nav-link">Man</a>
-			<a href="#" class="nav-item nav-link">Woman</a>
-		</section>
-		<section class="navbar-center">
-			<form class="form-inline">
-				<input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-				<a href="#" class="btn btn-sm btn-outline-secondary">Search</a>
-			</form>
-		</section>
-		<section class="navbar-section">
-			<div class="col-4-d-flex justify-content-end align-items-center mr-2">
-					<a href="<?= base_url();?>Auth" class="">Masuk / Daftar</a>
-			</div>
-			<a href="<?= base_url();?>Cart" class="nav-link"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang = $this->cart->total_items();
-			echo anchor('Home/detail_keranjang',$keranjang)?></span>)</a>
-		</section>
-	</header> -->
+		</div>
+</nav>
+<!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="<?= base_url();?>assets/img/foto1.jpg" class="" alt="...">
+    </div>
+    <div class="carousel-item">
+	<img src="<?= base_url();?>assets/img/foto2.jpg" class="d-block w-60 h-60" alt="...">
+    </div>
+    <div class="carousel-item">
+	<img src="<?= base_url();?>assets/img/foto3.jpg" class="d-block w-60 h-60" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon-dark" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> -->
 
