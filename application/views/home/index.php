@@ -8,7 +8,9 @@
   <div class="container mt-5">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="" src="<?= base_url();?>assets/img/aril1.jpg" alt="">
+    <div class="container">
+      <img class="" src="<?= base_url();?>assets/img/img2.jpg" alt="">
+    </div>
     </div>
     <div class="carousel-item">
     <img class="" src="<?= base_url();?>assets/img/aril2.jpg" alt="">
