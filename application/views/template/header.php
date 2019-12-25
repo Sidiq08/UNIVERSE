@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Universe</title>
 	<style>
-		.badge{
-			margin-left : 3px;
+		.badge {
+			margin-left: 3px;
 		}
 
 		.body {
 			color: #212529;
 		}
 	</style>
-	<link href="<?= base_url();?>assets/css/all.css" rel="stylesheet">
-	<link rel="stylesheet" href="<?= base_url();?>assets/css/bootstrap.css">
+	<link href="<?= base_url(); ?>assets/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.css">
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/sb-admin-2.min.css">
-	<link rel="stylesheet" href="<?= base_url();?>assets/css/spectre.min.css">
-    	<link rel="stylesheet" href="<?= base_url();?>assets/css/spectre-icons.min.css">
-    	<link rel="stylesheet" href="<?= base_url();?>assets/css/spectre-exp.min.css">
-    	<link rel="stylesheet" href="<?= base_url();?>assets/css/docs.min.css">
-	    <link rel="stylesheet" href="<?= base_url();?>assets/css/style.css">
-	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/spectre.min.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/spectre-icons.min.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/spectre-exp.min.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/docs.min.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 </head>
+
 <body>
 
-<!-- nav terbaru -->
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-light ftco-navbar-dark" id="ftco-navbar">
+	<!-- nav terbaru -->
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-light ftco-navbar-dark" id="ftco-navbar">
 		<div class="container">
 			<div class="row m-auto">
 				<div class="col-12 w-100 text-center">
-					<a href=""><img class=" mr-2" src="<?= base_url();?>assets/img/logofix.png" width="100" alt=""></a>
+					<a href=""><img class=" mr-2" src="<?= base_url(); ?>assets/img/logofix.png" width="100" alt=""></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="oi oi-menu">
 							::before
@@ -37,7 +39,7 @@
 						" Menu
 						"
 					</button>
-					
+
 				</div>
 				<div class="col-12 w-100 text-center">
 					<div class="collapse navbar-collapse" id="ftco-nav">
@@ -55,16 +57,16 @@
 								<a href="" class="nav-link text-dark">Woman</a>
 							</li>
 							<li class="nav-item active">
-							<a href="<?= base_url();?>Cart" class="nav-link text-dark"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang = $this->cart->total_items();
-		echo anchor('Home/detail_keranjang',$keranjang)?></span>)</a>
+								<a href="<?= base_url(); ?>Cart" class="nav-link text-dark"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang = $this->cart->total_items();
+																																		echo anchor('Home/detail_keranjang', $keranjang) ?></span>)</a>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
-</nav>
-<!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+	</nav>
+	<!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -72,13 +74,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="<?= base_url();?>assets/img/foto1.jpg" class="" alt="...">
+      <img src="<?= base_url(); ?>assets/img/foto1.jpg" class="" alt="...">
     </div>
     <div class="carousel-item">
-	<img src="<?= base_url();?>assets/img/foto2.jpg" class="d-block w-60 h-60" alt="...">
+	<img src="<?= base_url(); ?>assets/img/foto2.jpg" class="d-block w-60 h-60" alt="...">
     </div>
     <div class="carousel-item">
-	<img src="<?= base_url();?>assets/img/foto3.jpg" class="d-block w-60 h-60" alt="...">
+	<img src="<?= base_url(); ?>assets/img/foto3.jpg" class="d-block w-60 h-60" alt="...">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -91,11 +93,10 @@
   </a>
 </div> -->
 
-<<<<<<< HEAD
-<!-- <div class="container"> -->
+	<!-- <div class="container"> -->
 	<header class="navbar">
 		<section class="navbar-section">
-			<img class="mr-3" src="<?= base_url();?>assets/img/logofix.png" width="100" alt="">
+			<img class="mr-3" src="<?= base_url(); ?>assets/img/logofix.png" width="100" alt="">
 			<a href="#" class="btn btn-link mr-2">New Arrival</a>
 			<a href="#" class="btn btn-link mr-2">Man</a>
 			<a href="#" class="btn btn-link mr-2">Woman</a>
@@ -109,16 +110,13 @@
 		<section class="navbar-section">
 			<div class="col-4-d-flex justify-content-end align-items-center mr-2">
 				<a href="#" class="text-muted" aria-label="Search">
-					<a href="<?= base_url();?>Auth" class="">Masuk / Daftar</a>
+					<a href="<?= base_url(); ?>Auth" class="">Masuk / Daftar</a>
 				</a>
 			</div>
-			<!-- <a href="<?= base_url();?>Cart"><img class="" src="<?= base_url();?>assets/img/keranjang.png" width="25" alt=""></a> -->
-			<a href="<?= base_url();?>Home/detail_keranjang" class="nav-link"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang = $this->cart->total_items();
-			echo $keranjang ?></span>)</a>
-			
+			<!-- <a href="<?= base_url(); ?>Cart"><img class="" src="<?= base_url(); ?>assets/img/keranjang.png" width="25" alt=""></a> -->
+			<a href="<?= base_url(); ?>Home/detail_keranjang" class="nav-link"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang = $this->cart->total_items();
+																															echo $keranjang ?></span>)</a>
+
 		</section>
 	</header>
-<!-- </div> -->
-
-=======
->>>>>>> c586ee2df38007a00801d616d28fa62a658305e8
+	<!-- </div> -->
