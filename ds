@@ -1,0 +1,322 @@
+[33mcommit 406d53e00ce44bf5fa1c5bf0d467f498b1d2fd63[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Merge: 45a9789 c586ee2
+Author: ari <radenariffudin@mail.unpas.ac.id>
+Date:   Wed Dec 25 10:42:26 2019 +0700
+
+    ridlwan
+
+[33mcommit c586ee2df38007a00801d616d28fa62a658305e8[m
+Author: Ari <radenariffudin@mail.unpas.ac.id>
+Date:   Wed Dec 25 04:25:34 2019 +0700
+
+    mengubah halaman home terbaru
+
+[33mcommit 6218a8da8aebf69a5d021666147ca9d30f2e90e9[m
+Author: Ari <radenariffudin@mail.unpas.ac.id>
+Date:   Wed Dec 25 02:45:36 2019 +0700
+
+    merubah tampilan navbar
+
+[33mcommit 45a9789b2750899310bfb8900f411d084f1ca360[m[33m ([m[1;31mRidlwan/master[m[33m)[m
+Author: ridlw13 <ridlwanbaks@mail.unpas.ac.id>
+Date:   Sun Dec 22 21:48:12 2019 +0700
+
+    Membuat fitur hapus semua produk di keranjang, dan membuat halaman checkout untuk user
+
+[33mcommit 398876de1769f66c749cb01df0a19eef99bf8929[m
+Author: ridlw13 <ridlwanbaks@mail.unpas.ac.id>
+Date:   Sun Dec 22 16:26:57 2019 +0700
+
+    Membuat fitur tambah keranjang, hapus item di keranjang, update keranjang (modal belum beres)
+
+[33mcommit b32f64858a3fa15278ce0862d6ded11a604ded79[m
+Author: ari <radenariffudin@mail.unpas.ac.id>
+Date:   Sun Dec 22 13:27:55 2019 +0700
+
+    crud warna
+
+[33mcommit d86959a5ca81817eee0c4a4653405ec1ae48778c[m
+Merge: ed24826 811b95f
+Author: ari <radenariffudin@mail.unpas.ac.id>
+Date:   Sun Dec 22 13:27:22 2019 +0700
+
+    Merge branch 'master' of https://github.com/ridlw13/UNIVERSE
+
+[33mcommit 811b95f7f54b24520decc579e4eb3d9b58b5c2ee[m
+Author: ridlw13 <ridlwanbaks@mail.unpas.ac.id>
+Date:   Fri Dec 20 22:58:45 2019 +0700
+
+    Mengubah tampilan halaman home dan menambah fitur tambah ke keranjang
+
+[33mcommit ed24826141e49eaefd2529d94f6c17f9d6f3b2d3[m
+Author: Muhammad Aulia Asshiddiqie <m.aulia08@mail.unpas.ac.id>
+Date:   Fri Dec 20 06:41:34 2019 +0700
+
+    clear CRUD tinggal alert
+
+[33mcommit 3373bdde6911c4b214b4151b6daefaa0b8cb02aa[m
+Author: Muhammad Aulia Asshiddiqie <m.aulia08@mail.unpas.ac.id>
+Date:   Fri Dec 20 05:52:36 2019 +0700
+
+    ubah cek
+
+[33mcommit 99c6671a56071c13aa3033b04fd65621541b8d70[m
+Author: ridlw13 <ridlwanbaks@mail.unpas.ac.id>
+Date:   Thu Dec 19 18:07:08 2019 +0700
+
+    Mengubah tampilan cart
+
+[33mcommit fb3aa28f4c2526a916c6cc1e8a3e31519efbe187[m
+Merge: 54b478d b1cb906
+Author: Muhammad Aulia Asshiddiqie <m.aulia08@mail.unpas.ac.id>
+Date:   Thu Dec 19 17:04:18 2019 +0700
+
+    Merge branch 'master' of https://github.com/adamPermadi/UNIVERSE
+
+[33mcommit b1cb906e376a570606cbee81a115919ce582bfce[m[33m ([m[1;31mAdamP/master[m[33m)[m
+Author: adamPermadi <adampermadi24@gmail.com>
+Date:   Thu Dec 19 13:34:23 2019 +0700
+
+    Menambahkan fitur edit profile
+
+[33mcommit 54b478d3edbb040e834ce68f25a5365e3d66d859[m
+Author: ridlw13 <ridlwanbaks@mail.unpas.ac.id>
+Date:   Wed Dec 18 20:49:27 2019 +0700
+
+    Tampilan cart final
+
+[33mcommit f5c7b68cd4bfcaaf78a286d71e6c51157bc0fa0b[m
+Merge: 24dadf4 c89db33
+Author: ridlw13 <ridlwanbaks@mail.unpas.ac.id>
+Date:   Wed Dec 18 19:19:09 2019 +0700
+
+    Merge branch 'master' of https://github.com/Sidiq08/UNIVERSE
+
+[33mcommit c89db3381e05b926881d4614e882b45a0c56c58c[m
+Author: Muhammad Aulia Asshiddiqie <m.aulia08@mail.unpas.ac.id>
+Date:   Wed Dec 18 06:24:58 2019 +0700
+
+     add Warna
+
+[33mcommit 711c1474d542abe3866eeb8675995fdd02fd2866[m
+Author: Muhammad Aulia Asshiddiqie <m.aulia08@mail.unpas.ac.id>
+Date:   Tue Dec 17 22:44:18 2019 +0700
+
+    kategori clear
+
+[33mcommit 24dadf4b92eb542ef95a6085fe5803b3af7d7015[m
+Merge: 1963b1f 632f15b
+Author: ridlw13 <ridlwanbaks@mail.unpas.ac.id>
+Date:   Mon Dec 16 11:45:28 2019 +0700
+
+    Mengubah tampilan halaman cart
+
+[33mcommit 632f15be71ea41b78f977d524f32d02c78163d6e[m
+Author: Muhammad Aulia Asshiddiqie <m.aulia08@mail.unpas.ac.id>
+Date:   Mon Dec 16 09:56:37 2019 +0700
+
+    CRUD kategori sidiq1
+
+[33mcommit 1963b1fe8423570e7cc8cb03a78531a99f97699f[m
+Author: ridlw13 <ridlwanbaks@mail.unpas.ac.id>
+Date:   Sun Dec 15 22:01:37 2019 +0700
+
+    Mengubah tampilan halaman cart
+
+[33mcommit 5da1b4356db1439e3135e4d21a03591575d7b760[m
+Author: adamPermadi <adampermadi24@gmail.com>
+Date:   Sun Dec 15 20:11:50 2019 +0700
+
+    edit index admin eped
+
+[33mcommit 900557f300c75590c44b560969afda211367e937[m
+Author: adam <adamalfal8@mail.unpas.ac.id>
+Date:   Sun Dec 15 02:23:55 2019 +0700
+
+    login + database table user clear
+
+[33mcommit 7c4e8e7766b9ff53419a7ea1b4877b1604858994[m
+Author: Muhammad Aulia Asshiddiqie <m.aulia08@mail.unpas.ac.id>
+Date:   Sun Dec 15 00:55:09 2019 +0700
+
+    add template admin
+
+[33mcommit ea1eba373e091cbd7524014c098cec9837026205[m
+Author: adam <adamalfal8@mail.unpas.ac.id>
+Date:   Sun Dec 15 00:52:42 2019 +0700
+
+    edit login
+
+[33mcommit 5c4325dfe5e555440b27db1cec5df2119606f88d[m
+Author: ridlw13 <ridlwanbaks@mail.unpas.ac.id>
+Date:   Sat Dec 14 00:57:00 2019 +0700
+
+    Edit halaman cart
+
+[33mcommit 2d01af2df56ba1ae3ae22bdd6c4156883d24fdc4[m
+Author: adamPermadi <adampermadi24@gmail.com>
+Date:   Fri Dec 13 23:48:59 2019 +0700
+
+    eped nyoba
+
+[33mcommit 9d758d209e152cc60ae2eadae9adecb92d57bd33[m
+Author: ridlw13 <ridlwanbaks@mail.unpas.ac.id>
+Date:   Fri Dec 13 20:54:41 2019 +0700
+
+    Mengubah tampilan halaman cart
+
+[33mcommit a9be2b422d2c8224d7cf430df1dccd87015d520f[m
+Merge: d665b29 e641262
+Author: ridlw13 <ridlwanbaks@mail.unpas.ac.id>
+Date:   Fri Dec 13 20:53:53 2019 +0700
+
+    Membuat halaman cart
+
+[33mcommit d665b29c463d330feb5f289950fdb2a793c9b813[m
+Author: ridlw13 <ridlwanbaks@mail.unpas.ac.id>
+Date:   Fri Dec 13 19:26:13 2019 +0700
+
+    Mengubah tampilan home
+
+[33mcommit e6412627359c38efda1c779f78f3f5fdae8ba386[m
+Merge: 4a42d4e eaa3c3c
+Author: Raden Ariffudin Rachman <radenariffudin@mail.unpas.ac.id>
+Date:   Wed Dec 11 18:45:31 2019 +0700
+
+    Merge branch 'master' of https://github.com/Sidiq08/UNIVERSE
+
+[33mcommit 4a42d4e314f705b1403d73f38a1258cceabd137e[m
+Author: Raden Ariffudin Rachman <radenariffudin@mail.unpas.ac.id>
+Date:   Wed Dec 11 18:44:03 2019 +0700
+
+    menambahkan header, mengedit file index
+
+[33mcommit eaa3c3c7bb6c15e70d8db37cdf41c5fca76e72dc[m
+Merge: f8991a0 e996208
+Author: ridlw13 <ridlwanbaks@mail.unpas.ac.id>
+Date:   Wed Dec 11 13:48:10 2019 +0700
+
+    Merge branch 'master' of https://github.com/Sidiq08/UNIVERSE
+
+[33mcommit f8991a07c63ab08bab5bad37e2a0d0d5d7e3eab4[m
+Author: ridlw13 <ridlwanbaks@mail.unpas.ac.id>
+Date:   Wed Dec 11 13:41:39 2019 +0700
+
+    Coba deui ul
+
+[33mcommit e996208138ae66b32ced421a7f77a17243dc3c2c[m
+Author: Muhammad Aulia Asshiddiqie <m.aulia08@mail.unpas.ac.id>
+Date:   Wed Dec 11 13:38:38 2019 +0700
+
+    update sidiq Admin
+
+[33mcommit 63690c5a821f7f0c97e641dc431dd076be8f7c4e[m
+Author: ridlw13 <ridlwanbaks@mail.unpas.ac.id>
+Date:   Wed Dec 11 13:25:25 2019 +0700
+
+    Test hela
+
+[33mcommit be82febbb9c83a06bc6296fce0f6c507b5b8904b[m
+Author: Raden Ariffudin Rachman <radenariffudin@mail.unpas.ac.id>
+Date:   Sun Dec 8 23:31:13 2019 +0700
+
+    edit navbar
+
+[33mcommit 56a2573b1f87811d1a3a52494018f9295ea777cb[m
+Author: Muhammad Aulia Asshiddiqie <m.aulia08@mail.unpas.ac.id>
+Date:   Sun Dec 8 22:09:28 2019 +0700
+
+    tambah img
+
+[33mcommit 5beb40ac77460dc45c4ed432ef622b802c25809f[m
+Author: adam <adamalfal8@mail.unpas.ac.id>
+Date:   Sat Dec 7 22:30:57 2019 +0700
+
+    menambahkan tombol kembali di login
+
+[33mcommit 3ce155c54f042bf7e14f21fa080edd1ce14ca78d[m
+Author: Muhammad Aulia Asshiddiqie <m.aulia08@mail.unpas.ac.id>
+Date:   Sat Dec 7 22:13:42 2019 +0700
+
+    rubah config folder
+
+[33mcommit 30d49d0197b23680d64bdf28247f570ab9b95d84[m
+Merge: c91ec52 10c2623
+Author: Muhammad Aulia Asshiddiqie <m.aulia08@mail.unpas.ac.id>
+Date:   Sat Dec 7 21:56:08 2019 +0700
+
+    Merge branch 'master' of https://github.com/Sidiq08/UNIVERSE
+
+[33mcommit c91ec526be1f63629eec4fb99f0aa8744c892298[m
+Author: Muhammad Aulia Asshiddiqie <m.aulia08@mail.unpas.ac.id>
+Date:   Sat Dec 7 21:54:58 2019 +0700
+
+    add db sidiq
+
+[33mcommit 10c2623f82d7b448be2282cfd5702aaf68380d3e[m
+Author: Raden Ariffudin Rachman <radenariffudin@mail.unpas.ac.id>
+Date:   Sat Dec 7 21:17:15 2019 +0700
+
+    txt ari
+
+[33mcommit 199a35242819f55bbf47d5c44fe783efa488599b[m
+Merge: 9d2a8be c7fbde4
+Author: Muhammad Aulia Asshiddiqie <m.aulia08@mail.unpas.ac.id>
+Date:   Sat Dec 7 18:36:02 2019 +0700
+
+    Merge branch 'master' of https://github.com/Sidiq08/UNIVERSE
+
+[33mcommit 9d2a8bebfdf9c805101909a23f86683e6c364d46[m
+Author: Muhammad Aulia Asshiddiqie <m.aulia08@mail.unpas.ac.id>
+Date:   Sat Dec 7 18:34:19 2019 +0700
+
+    ngaco
+
+[33mcommit c7fbde4af9d5ae8f66a28fdf5f35863b1655503b[m[33m ([m[1;31mAri/master[m[33m)[m
+Author: adam <adamalfal8@mail.unpas.ac.id>
+Date:   Fri Dec 6 08:33:03 2019 +0700
+
+    tamabh
+
+[33mcommit 3194ec6f3fa7e36c8c5fffc12fd1c11eab4f1e67[m
+Author: adam <adamalfal8@mail.unpas.ac.id>
+Date:   Fri Dec 6 08:07:14 2019 +0700
+
+    coba
+
+[33mcommit 24fd4beab7b99a65b74100d6d4dc2cb69c40d4ee[m[33m ([m[1;31mAdamA/master[m[33m)[m
+Author: Muhammad Aulia Asshiddiqie <m.aulia08@mail.unpas.ac.id>
+Date:   Thu Nov 28 06:10:59 2019 +0700
+
+    edit index.php(sidiq)
+
+[33mcommit 8c5358264bdd2aae2b77c2573258dbf06e115cff[m
+Merge: 64a8f48 9686e30
+Author: ridlw13 <ridlwanbaks@mail.unpas.ac.id>
+Date:   Wed Nov 27 16:04:08 2019 +0700
+
+    Merge remote-tracking branch 'Sidiq/master'
+
+[33mcommit 9686e3010aefa4955b704964bf9525213dfed1f2[m
+Author: Muhammad Aulia Asshiddiqie <m.aulia08@mail.unpas.ac.id>
+Date:   Wed Nov 27 15:57:03 2019 +0700
+
+    mengganti navbar jadi Orang
+
+[33mcommit 64a8f4856924f0e828dd16577ff8283e5938290b[m
+Author: ridlw13 <ridlwanbaks@mail.unpas.ac.id>
+Date:   Wed Nov 27 15:45:18 2019 +0700
+
+    Mengganti nama user
+
+[33mcommit 36a33063e78cbb7b997a1f09303f65ba00f5c6ff[m
+Author: Muhammad Aulia Asshiddiqie <m.aulia08@mail.unpas.ac.id>
+Date:   Wed Nov 27 15:36:08 2019 +0700
+
+    tambah framework bulma dan edit navbar sidiq
+
+[33mcommit b93596a3152ed8246aeff5be8c79039f5ab5bff7[m
+Author: Muhammad Aulia Asshiddiqie <m.aulia08@mail.unpas.ac.id>
+Date:   Wed Nov 27 14:37:15 2019 +0700
+
+    new

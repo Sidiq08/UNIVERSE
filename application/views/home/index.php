@@ -1,24 +1,23 @@
-
-<div id="carouselExampleIndicators" class="carousel slide carousel-awal" data-ride="carousel">
+<!-- slide bergerak -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
-  <div class="container mt-5">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="" src="<?= base_url();?>assets/img/aril1.jpg" alt="">
+      <img src="<?= base_url();?>assets/img/foto1.jpg" class="" alt="...">
     </div>
     <div class="carousel-item">
-    <img class="" src="<?= base_url();?>assets/img/aril2.jpg" alt="">
+	<img src="<?= base_url();?>assets/img/foto2.jpg" class="d-block w-60 h-60" alt="...">
     </div>
     <div class="carousel-item">
-    <img class="" src="<?= base_url();?>assets/img/aril3.jpg" alt="">
+	<img src="<?= base_url();?>assets/img/foto3.jpg" class="d-block w-60 h-60" alt="...">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="carousel-control-prev-icon-dark" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
   <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
@@ -26,6 +25,82 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
+<!-- belanja di universe baru -->
+<!-- <section class="site-section border-bottom" id="unggulan">
+  <div class="container">
+    <div class="row mb-5 justify-content-center">
+      <div class="col-md-8 text-center">
+        <h2 class="section-title mb-3 aos-init aos-animate" data-aos="fade-up" data-aos-delay>Mengapa belanja di Universe</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay>
+        <div class="team-member">
+          <figure>
+            <img src="<?= base_url();?>assets/img/foto2.jpg" alt="Image" class="img-fluid">
+          </figure>
+          <div class="p-3">
+            <h3>asdfghjkl</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+  <!-- mengapa belanja di universe -->
+  <section class="belanjadiuniverse" id="belanjadiuniverse">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-sm-12">
+            <h4 class="text-center">Menggapa belanja di Universe</h4>
+            <hr>
+          </div>
+      <div class="card-deck mt-4">
+        <div class="card" style="width: 50rem; heigth: 100rem;">
+          <img src="<?= base_url();?>assets/img/baju1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text-center">Personalisasi produk yang sesuai gaya kamu</p>
+            </div>
+        </div>
+        <div class="card">
+          <img src="<?= base_url();?>assets/img/baju2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text text-center">Garansi produk original dan berkualitas</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="<?= base_url();?>assets/img/mobil.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text text-center">Free Delivery* dan garansi 14 hari penukaran</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- latest produk -->
+<div class="container">
+  <div class="row mb-5 justify-content-center">
+    <div class="col-md-8 text-center mt-5">
+      <h4 class="section-title mb-3 aos-init aos-animate" data-aos="fade-up" data-aos-delay>Latests Product</h4>
+      <p class="lead aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">"Dengan menggunakan bahan terbaik Universe mengeluarkan product terbaru yang akan membuat gaya anda semakin masa kini"</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 mb-5 aos-init aos-animate" data-aos="fade-up" data-aos-delay>
+      <figure class="circle-bg">
+        <img src="<?= base_url();?>assets/img/baju4.jpg" alt="Free Website Template By Universe.com" class="img-fluid">
+      </figure>
+    </div>
+    <div class="col-lg-5 ml-auto aos-init aos-animate mt-5" data-aos="fade-up" data-aos-delay="100">
+      <h3 class="text-black mb-4">Pungky Piss</h3>
+      <p>Bahan : cotton combat</p>
+      <p>Ukuran : S, M, L, XL, XXL, XXXL</p>
+      <h4>Rp. 175.000</h4>
+    </div>
+  </div>
 </div>
 
   <!-- Icons Grid -->
@@ -34,7 +109,7 @@
 
   <div class="contanier-fluid">
     <div class="row text-center m-4">
-      <?php  foreach ($produk as $prd) : ?>
+    <?php  foreach ($produk as $prd) : ?>
         <div class="col-lg-4 col-md-6 mb-4">
               <div class="kotak">
               <form method="post" action="<?php echo base_url();?>keranjang/tambah_ke_keranjang" method="post" accept-charset="utf-8">
@@ -63,7 +138,12 @@
     <?php endforeach; ?>
     </div>
   </div>
-   
+
+
+
+  <!-- jumbotronn -->
+
+
   <!-- Image Showcases -->
   <section class="showcase">
     <div class="container-fluid p-0">

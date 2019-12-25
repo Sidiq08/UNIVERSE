@@ -1,7 +1,7 @@
 <div class="bg-light y-3 my-3">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 mb-0"><a href="<?= base_url();?>/Home" class="text-success">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Cart</strong></div>
+          <div class="col-md-12 mb-0"><hr><hr><hr><hr><a href="<?= base_url();?>/Home" class="text-success">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Cart</strong></div>
         </div>
       </div>
     </div>
@@ -61,10 +61,11 @@ foreach ($cart as $item):
       <td colspan="3"><b>Order Total: Rp <?php echo number_format($grand_total, 0,",","."); ?></b></td>
       <td colspan="4" align="right">
       <form method="post" action="<?php echo base_url()?>keranjang/hapus/all">
-      <!-- <a data-toggle="modal" data-target="#staticBackdrop"  class ='btn btn-sm btn-danger'>Kosongkan Cart</a> -->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+      <!-- <a data-toggle="modal" data-target="#myModal"  class ='btn btn-sm btn-danger'>Kosongkan Cart</a> -->
+      <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#myModal">Kosongkan Cart</button>
+      <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
   Launch static backdrop modal
-</button>
+</button> -->
       <!-- <button type="post" class="btn btn-sm btn-danger" action="<?php echo base_url()?>keranjang/hapus_all">Kosongkan Cart</button> -->
       <!-- <a href="<?php echo base_url()?>keranjang/hapus_all"  class ='btn btn-sm btn-danger'>Kosongkan Keranjang</a> -->
     </form>
@@ -87,23 +88,29 @@ foreach ($cart as $item):
   
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+      <div class="modal-content">
+      	<form method="post" action="<?php echo base_url()?>keranjang/hapus_all">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Kosongkan Keranjang</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        ...
+        <div class="modal-body">
+			Apakah anda yakin akan mengosongkan keranjang anda ?
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+        <button type="button" class="btn btn-primary">Ya</button>
+          
+        </div>
+        
+        </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div>
+      
     </div>
   </div>
-</div>
+  <!--End Modal-->

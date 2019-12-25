@@ -1,6 +1,14 @@
 <?php 
 
 class Keranjang extends CI_Controller{
+
+        public function __construct()
+	{	
+		parent::__construct();
+		
+		$this->load->model('produk_model');
+        }
+        
       public function index(){
               $data['title'] = 'Cart Universe';
               $this->load->view('template/header', $data);
@@ -69,6 +77,38 @@ class Keranjang extends CI_Controller{
               $this->load->view('template/header', $data);
               $this->load->view('keranjang/check_out', $data);
               $this->load->view('template/footer');
+        }
+        
+        public function proses_order()
+	{
+		//-------------------------Input data pelanggan--------------------------
+		$data_pembeli = array('nama' => $this->input->post('nama'),
+							'email' => $this->input->post('email'),
+							'alamat' => $this->input->post('alamat'),
+							'telpon' => $this->input->post('telpon'));
+		$id_pembeli = $this->produk_model->tambah_pembeli($data_pembeli);
+		//-------------------------Input data order------------------------------
+		$data_order = array('tanggal_transaksi' => date('Y-m-d'),
+					   		'pembeli' => $id_pembeli);
+		$id_order = $this->produk_model->tambah_order($data_order);
+		//-------------------------Input data detail order-----------------------		
+		if ($cart = $this->cart->contents())
+			{
+				foreach ($cart as $item)
+					{
+						$data_detail = array('id' =>$id_order,
+										'id_produk' => $item['id'],
+										'qty' => $item['qty'],
+										'harga' => $item['price']);			
+						$proses = $this->produk_model->tambah_detail_order($data_detail);
+					}
+			}
+		//-------------------------Hapus shopping cart--------------------------		
+		$this->cart->destroy();
+		$data['produk'] = $this->produk_model->get_produk_all();
+		$this->load->view('template/header', $data);
+                $this->load->view('home/index', $data);
+                $this->load->view('template/footer');
 	}
       
      

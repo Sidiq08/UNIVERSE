@@ -2,7 +2,7 @@
 <div class="bg-light y-3 my-3">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 mb-0"><a href="<?= base_url();?>/Home" class="text-success">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Check-Out</strong></div>
+          <div class="col-md-12 mb-0"><hr><hr><hr><hr><a href="<?= base_url();?>/Home" class="text-success">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Check-Out</strong></div>
         </div>
       </div>
     </div>
@@ -42,9 +42,8 @@ if ($cart = $this->cart->contents())
         </div>
         <div class="form-group  has-success has-feedback">
             <label class="control-label" for="phoneNumber">Telp :</label>
-                <input type="tel" class="form-control" name="telp" id="telp" placeholder="No Telp">
+                <input type="tel" class="form-control" name="telpon" id="telpon" placeholder="No Telp">
         </div>
-        
         <div class="form-group  has-success has-feedback">
               
             <div class="col mt-3">
