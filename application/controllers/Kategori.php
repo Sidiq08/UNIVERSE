@@ -73,9 +73,13 @@ class Kategori extends CI_Controller
         return true;
     }
 
-    public function ubah($idKategoriBaju)
+    public function ubah()
     {
-        $data['kategori'] = $this->Kategori_model->getkategoriById($idKategoriBaju);
+        // $data['kategori'] = $this->Kategori_model->getkategoriById();
+
+        $id = $this->input->post('idKategoriBaju');
+        $jenisKelamin = $this->input->post('idJenisKelamin');
+        $kategoriBaju = $this->input->post('kategoriBaju');
 
         $this->form_validation->set_rules('idJenisKelamin', 'IdJenisKelamin', 'required');
         $this->form_validation->set_rules('kategoriBaju', 'KategoriBaju', 'required');
@@ -83,11 +87,10 @@ class Kategori extends CI_Controller
         if ($this->form_validation->run() == false) {
             $this->load->view('template/header_admin');
             $this->load->view('template/sidebar_admin');
-            $this->load->view('kategori/ubah', $data);
+            $this->load->view('kategori/index', $data);
             $this->load->view('template/footer_admin');
         } else {
-            $aa = $this->Kategori_model->ubahDataKategori();
-            // var_dump("return con + ".$aa);
+            $this->Kategori_model->ubahDataKategori();
             $this->session->set_flashdata('flash', 'Diubah');
             redirect('kategori');
         }

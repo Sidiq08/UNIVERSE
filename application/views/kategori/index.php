@@ -61,9 +61,9 @@
               <td><?= $k['jenisKelamin']; ?></td>
               <td><?= $k['kategoriBaju']; ?></td>
               <td>
-                <a href="<?= base_url(); ?>kategori/ubah/<?= $k['idKategoriBaju']; ?>" class="btn btn-sm btn-flat btn-info">Ubah Data</a>
-                <!-- <a href="<?= base_url(); ?>kategori/ubah/<//?= $k['idKategoriBaju']; ?>" class="btn btn-sm btn-flat btn-success" data-toggle="modal" data-target="#modal-default">edit</a> -->
-                <!-- <button type="button" class="btn btn-flat btn-primary btn-edit" id="<//?= $k['idKategoriBaju']; ?>" data-toggle="modal" data-target="#modal-default">Edit Data</button> -->
+                <!-- <a href="<//?= base_url(); ?>kategori/ubah/<//?= $k['idKategoriBaju']; ?>" class="btn btn-sm btn-flat btn-info">Ubah Data</a> -->
+                <!-- <a href="<//?= base_url(); ?>kategori/ubah/<//?= $k['idKategoriBaju']; ?>" class="btn btn-sm btn-flat btn-success" data-toggle="modal" data-target="#modal-default">edit</a> -->
+                <button type="button" class="btn btn-flat btn-primary btn-edit" id="<?= $k['idKategoriBaju']; ?>" data-toggle="modal" data-target="#modal-default">Edit Data</button>
                 <a href="<?= base_url(); ?>kategori/hapus/<?= $k['idKategoriBaju']; ?>" class="btn btn-sm btn-flat btn-danger tombol-hapus">Hapus Data</a>
               </td>
             </tr>
@@ -79,8 +79,9 @@
 </div>
 </div>
 <!-- /.row -->
+
 <!-- Ubah Data -->
-<!-- <div class="modal fade" id="modal-default">
+<div class="modal fade" id="modal-default">
   <div class="modal-dialog">
     <div class="modal-content bg-default">
       <div class="modal-header">
@@ -99,10 +100,10 @@
 
             <div class="card-body">
               <form method="post" action="">
-                <input type="hidden" name="idKategoriBaju" class="idKategoriBaju" value="">
+                <input type="hidden" id="idKategoriBaju" name="idKategoriBaju" class="idKategoriBaju">
                 <div class="form-group">
                   <label for="idJenisKelamin">Jenis Kelamin</label>
-                  <select class="form-control custom-select idJenisKelamin" name="idJenisKelamin">
+                  <select class="form-control custom-select idJenisKelamin" id="idJenisKelamin" name="idJenisKelamin">
                     <option selected disabled>Select one</option>
                     <option value="1">Laki- Laki</option>
                     <option value="2">Perempuan</option>
@@ -113,69 +114,77 @@
                 </div>
                 <div class="form-group">
                   <label for="kategoriBaju">Kategori Pakaian</label>
-                  <input type="text" name="kategoriBaju" class="form-control kategoriBaju">
+                  <input type="text" id="kategoriBaju" name="kategoriBaju" class="form-control kategoriBaju">
                   <small class="form-text text-danger">
                     <?= form_error('kategoriBaju'); ?>
                   </small>
                 </div>
-              </div>
             </div>
           </div>
         </div>
-        <div class="modal-footer justify-content-between">
-          <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Keluar</button>
-          <button name="ubah" id="btn_update" class="btn btn-outline-dark">Ya, Saya Yakin.</button>
-        </div>
       </div>
+      <div class="modal-footer justify-content-between">
+        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Keluar</button>
+        <button name="ubah" id="btn_update" class="btn btn-outline-dark">Ya, Saya Yakin.</button>
+      </div>
+    </div>
     </form> -->
-<!-- /.modal-content -->
-<!-- </div>/.modal-dialog -->
-<!-- </div>/.modal -->
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog --> -->
+</div>
+<!-- /.modal -->
 <!-- Akhir Ubah -->
 
 <script>
   $(function() {
-    // $(".btn-edit").click(function(e){   
-    //   e.preventDefault();
-    //   var id = $(this).attr('id');
-    //   $.ajax({
-    //     type: "GET",
-    //     url: "<//?= site_url('Kategori/getData') ?>",
-    //     data: "id="+id,
-    //     dataType:'JSON',
-    //     success:function(data){
-    //       if (data.status == 202) {
-    //         $('.idJenisKelamin > option').each(function (i,v){
-    //           if (data.list.idJenisKelamin == v.value) {
-    //             $(this).attr('selected',true)
-    //           }else {
-    //             $(this).attr('selected',false)
-    //           }
-    //         })
+    $(".btn-edit").click(function(e) {
+      e.preventDefault();
+      var id = $(this).attr('id');
+      $.ajax({
+        type: "GET",
+        url: "<?= site_url('Kategori/getData') ?>",
+        data: "id=" + id,
+        dataType: 'JSON',
+        success: function(data) {
+          $('.idKategoriBaju').val(data.list.idKategoriBaju);
+          if (data.status == 202) {
+            $('.idJenisKelamin > option').each(function(i, v) {
+              if (data.list.idJenisKelamin == v.value) {
+                $(this).attr('selected', true)
+              } else {
+                $(this).attr('selected', false)
+              }
+            })
 
-    //         $('.kategoriBaju').val(data.list.kategoriBaju);  
-    //       }
-    //     }
-    //   })
-    // })
+            $('.kategoriBaju').val(data.list.kategoriBaju);
+          }
+        }
+      })
+    })
 
     // //Update Barang
-    // $('#btn_update').on('click',function(){
-    //         var idJenisKelamin=$('#idJenisKelamin').val();
-    //         var kategoriBaju=$('#kategoriBaju').val();
-    //         $.ajax({
-    //             type : "POST",
-    //             url  : "<//?php echo site_url('kategori/ubahDataKategori')?>",
-    //             dataType : "JSON",
-    //             data : {idJenisKelamin:idJenisKelamin , kategoriBaju:kategoriBaju},
-    //             success: function(data){
-    //                 $('[name="idJenisKelamin"]').val(data.idJenisKelamin);
-    //                 $('[name="kategoriBaju"]').val(data.kategoriBaju);
-    //                 $('#modal-default').modal('hide');
-    //             }
-    //         });
-    //         return false;
-    //     });
+    $('#btn_update').on('click', function() {
+      var idKategoriBaju = $('#idKategoriBaju').val();
+      var idJenisKelamin = $('#idJenisKelamin').val();
+      var kategoriBaju = $('#kategoriBaju').val();
+      $.ajax({
+        type: "POST",
+        url: "<?php echo site_url('kategori/ubah') ?>",
+        dataType: "JSON",
+        data: {
+          idKategoriBaju: idKategoriBaju,
+          idJenisKelamin: idJenisKelamin,
+          kategoriBaju: kategoriBaju
+        },
+        success: function(data) {
+          $('[name="idKategoriBaju"]').val(data.idKategoriBaju);
+          $('[name="idJenisKelamin"]').val(data.idJenisKelamin);
+          $('[name="kategoriBaju"]').val(data.kategoriBaju);
+        }
+      });
+      return false;
+    });
     $("#tabelkategori").DataTable();
     // $('#modal-default').on('show.bs.modal', function(event) {
 
