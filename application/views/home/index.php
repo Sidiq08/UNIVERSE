@@ -81,7 +81,27 @@
 </section>
 
 <!-- latest produk -->
-
+<div class="container">
+  <div class="row mb-5 justify-content-center">
+    <div class="col-md-8 text-center mt-5">
+      <h4 class="section-title mb-3 aos-init aos-animate" data-aos="fade-up" data-aos-delay>Latests Product</h4>
+      <p class="lead aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">"Dengan menggunakan bahan terbaik Universe mengeluarkan product terbaru yang akan membuat gaya anda semakin masa kini"</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 mb-5 aos-init aos-animate" data-aos="fade-up" data-aos-delay>
+      <figure class="circle-bg">
+        <img src="<?= base_url();?>assets/img/baju4.jpg" alt="Free Website Template By Universe.com" class="img-fluid">
+      </figure>
+    </div>
+    <div class="col-lg-5 ml-auto aos-init aos-animate mt-5" data-aos="fade-up" data-aos-delay="100">
+      <h3 class="text-black mb-4">Pungky Piss</h3>
+      <p>Bahan : cotton combat</p>
+      <p>Ukuran : S, M, L, XL, XXL, XXXL</p>
+      <h4>Rp. 175.000</h4>
+    </div>
+  </div>
+</div>
 
   <!-- Icons Grid -->
 

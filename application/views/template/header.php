@@ -25,7 +25,7 @@
 <body>
 
 <!-- nav terbaru -->
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-light ftco-navbar-dark" id="ftco-navbar">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark ftco_navbar bg-light ftco-navbar-dark" id="ftco-navbar">
 		<div class="container">
 			<div class="row m-auto">
 				<div class="col-12 w-100 text-center">
@@ -39,7 +39,7 @@
 					</button>
 					
 				</div>
-				<div class="col-12 w-100 text-center">
+				<div class="col w-120 text-center">
 					<div class="collapse navbar-collapse" id="ftco-nav">
 						<ul class="navbar-nav m-auto">
 							<li class="nav-item active">
@@ -58,7 +58,8 @@
 								<a href="" class="nav-link text-primary">Masuk / Daftar</a>
 							</li>
 							<li class="nav-item active">
-							<a href="<?= base_url();?>Keranjang" class="nav-link text-secondary"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang=$this->cart->total_items();echo anchor('Home/detail_keranjang',$keranjang)?></span>)</a>
+							<a href="<?= base_url();?>Keranjang" class="nav-link text-secondary"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang=$this->cart->total_items();
+							echo ($keranjang)?></span>)</a>
 							</li>
 						</ul>
 					</div>
