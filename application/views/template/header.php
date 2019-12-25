@@ -27,7 +27,7 @@
 <body>
 
 	<!-- nav terbaru -->
-	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-light ftco-navbar-dark" id="ftco-navbar">
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark ftco_navbar bg-light ftco-navbar-dark" id="ftco-navbar">
 		<div class="container">
 			<div class="row m-auto">
 				<div class="col-12 w-100 text-center">
@@ -41,7 +41,7 @@
 					</button>
 
 				</div>
-				<div class="col-12 w-100 text-center">
+				<div class="col w-120 text-center">
 					<div class="collapse navbar-collapse" id="ftco-nav">
 						<ul class="navbar-nav m-auto">
 							<li class="nav-item active">
@@ -57,8 +57,11 @@
 								<a href="" class="nav-link text-dark">Woman</a>
 							</li>
 							<li class="nav-item active">
-								<a href="<?= base_url(); ?>Cart" class="nav-link text-dark"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang = $this->cart->total_items();
-																																		echo anchor('Home/detail_keranjang', $keranjang) ?></span>)</a>
+								<a href="" class="nav-link text-primary">Masuk / Daftar</a>
+							</li>
+							<li class="nav-item active">
+								<a href="<?= base_url(); ?>Keranjang" class="nav-link text-secondary"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang = $this->cart->total_items();
+																																					echo ($keranjang) ?></span>)</a>
 							</li>
 						</ul>
 					</div>
@@ -66,57 +69,3 @@
 			</div>
 		</div>
 	</nav>
-	<!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="<?= base_url(); ?>assets/img/foto1.jpg" class="" alt="...">
-    </div>
-    <div class="carousel-item">
-	<img src="<?= base_url(); ?>assets/img/foto2.jpg" class="d-block w-60 h-60" alt="...">
-    </div>
-    <div class="carousel-item">
-	<img src="<?= base_url(); ?>assets/img/foto3.jpg" class="d-block w-60 h-60" alt="...">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon-dark" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div> -->
-
-	<!-- <div class="container"> -->
-	<header class="navbar">
-		<section class="navbar-section">
-			<img class="mr-3" src="<?= base_url(); ?>assets/img/logofix.png" width="100" alt="">
-			<a href="#" class="btn btn-link mr-2">New Arrival</a>
-			<a href="#" class="btn btn-link mr-2">Man</a>
-			<a href="#" class="btn btn-link mr-2">Woman</a>
-		</section>
-		<section class="navbar-center">
-			<form class="form-inline">
-				<input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-				<a href="#" class="btn btn-sm btn-outline-secondary">Search</a>
-			</form>
-		</section>
-		<section class="navbar-section">
-			<div class="col-4-d-flex justify-content-end align-items-center mr-2">
-				<a href="#" class="text-muted" aria-label="Search">
-					<a href="<?= base_url(); ?>Auth" class="">Masuk / Daftar</a>
-				</a>
-			</div>
-			<!-- <a href="<?= base_url(); ?>Cart"><img class="" src="<?= base_url(); ?>assets/img/keranjang.png" width="25" alt=""></a> -->
-			<a href="<?= base_url(); ?>Home/detail_keranjang" class="nav-link"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang = $this->cart->total_items();
-																															echo $keranjang ?></span>)</a>
-
-		</section>
-	</header>
-	<!-- </div> -->
