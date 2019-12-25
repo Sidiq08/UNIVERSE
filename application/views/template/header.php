@@ -55,8 +55,10 @@
 								<a href="" class="nav-link text-dark">Woman</a>
 							</li>
 							<li class="nav-item active">
-							<a href="<?= base_url();?>Cart" class="nav-link text-dark"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang = $this->cart->total_items();
-		echo anchor('Home/detail_keranjang',$keranjang)?></span>)</a>
+								<a href="" class="nav-link text-primary">Masuk / Daftar</a>
+							</li>
+							<li class="nav-item active">
+							<a href="<?= base_url();?>Cart" class="nav-link text-secondary"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang=$this->cart->total_items();echo anchor('Home/detail_keranjang',$keranjang)?></span>)</a>
 							</li>
 						</ul>
 					</div>
@@ -64,30 +66,4 @@
 			</div>
 		</div>
 </nav>
-<!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="<?= base_url();?>assets/img/foto1.jpg" class="" alt="...">
-    </div>
-    <div class="carousel-item">
-	<img src="<?= base_url();?>assets/img/foto2.jpg" class="d-block w-60 h-60" alt="...">
-    </div>
-    <div class="carousel-item">
-	<img src="<?= base_url();?>assets/img/foto3.jpg" class="d-block w-60 h-60" alt="...">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon-dark" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div> -->
 

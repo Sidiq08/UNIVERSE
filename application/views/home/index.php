@@ -1,3 +1,4 @@
+<!-- slide bergerak -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -24,58 +25,6 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
-
-
-<!-- <div class="row pt-4 pb-2 py-md-5 px-md-5 mx-md-5 mt-3" id="home-products">
-  <div class="col text-center pb-4">
-    <h2 class="libre-baskerville-italic text-brown">
-      <span class="py-4 pl-4 pr-4 pl-md-0 pr-md-5 home-underline">Artikel Terlaris</span>
-    </h2>
-
-    <div class="col-lg-4">
-      <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-          <div class="features-icons-icon d-flex">
-            <i class="icon-layers m-auto text-primary"></i>
-          </div>
-          <img class="mb-2" src="<?= base_url();?>assets/img/celana1.jpg" alt="">
-          <h3 class="mb-2">Katun combat</h3>
-          <p class="lead mb-0">Rp. 150.000</p>
-        </div>
-      </div>
-    <div class="col-lg-4">
-      <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-          <div class="features-icons-icon d-flex">
-            <i class="icon-layers m-auto text-primary"></i>
-          </div>
-          <img class="mb-2" src="<?= base_url();?>assets/img/celana1.jpg" alt="">
-          <h3 class="mb-2">Katun combat</h3>
-          <p class="lead mb-0">Rp. 150.000</p>
-        </div>
-      </div>
-    </div> -->
-
-<!-- <div class="row product-menu mx-1 mx-md-5">
-      <div class="col-4 col-md text-center p-0">
-        <a href="" class="btn btn-link link-grey">
-          <h1 class="h3 product-menu-text">Celana</h1>
-        </a>
-      </div>
-    </div>
-    <div class="row product-menu mx-1 mx-md-5">
-      <div class="col-4 col-md text-center p-0">
-        <a href="" class="btn btn-link link-grey">
-          <h1 class="h3 product-menu-text">Baju</h1>
-        </a>
-      </div>
-    </div>
-    <div class="row product-menu mx-1 mx-md-5">
-      <div class="col-4 col-md text-center p-0">
-        <a href="" class="btn btn-link link-grey">
-          <h1 class="h3 product-menu-text">Kacamata</h1>
-        </a>
-      </div>
-    </div> -->
 
 
   <!-- Icons Grid -->
