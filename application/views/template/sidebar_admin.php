@@ -14,10 +14,10 @@
           <img src="#" class="img-circle elevation-2" alt="..."><!-- Ambil dari Login -->
         </div>
         <div class="info">
-          <a href="#" class="d-block">Muhammad Sidiq</a><!-- Ambil dari Login -->
+          <a href="#" class="d-block"></a><!-- Ambil dari Login -->
+
         </div>
       </div>
-
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">

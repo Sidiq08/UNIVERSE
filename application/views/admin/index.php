@@ -1,3 +1,30 @@
+
+
+    <div class="row">
+        <div class="col-lg-8">
+            <?= $this->session->flashdata('message'); ?>
+        </div>
+    </div>
+
+    <div class="card mb-3 col-lg-8">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="<?= base_url('assets/img/') . $user['image']; ?>" class="card-img">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $user['name']; ?></h5>
+                    <p class="card-text"><?= $user['email']; ?></p>
+                    <p class="card-text"><small class="text-muted">Member since <?= date('d F Y', $user['date_created']); ?></small></p>
+                    <a href="<?= base_url()?>admin/ubah">
+                    <button type="button" class="btn btn-secondary" >Edit Profil</button>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
         <div class="row">
           <!-- Earnings (Monthly) Card Example -->
           <div class="col-xl-3 col-md-6 mb-4">
@@ -171,3 +198,20 @@
             </div>
           </div>
         </div>
+          <!-- Bootstrap core JavaScript-->
+          <script src="<?= base_url(); ?>/assets/vendor/jquery/jquery.min.js"></script>
+          <script src="<?= base_url(); ?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+          <!-- Core plugin JavaScript-->
+          <script src="<?= base_url(); ?>/assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+          <!-- Custom scripts for all pages-->
+          <script src="<?= base_url(); ?>/assets/js/sb-admin-2.min.js"></script>
+
+          <!-- Page level plugins -->
+          <script src="<?= base_url(); ?>/assets/vendor/chart.js/Chart.min.js"></script>
+
+          <!-- Page level custom scripts -->
+          <script src="<?= base_url(); ?>/assets/js/demo/chart-area-demo.js"></script>
+          <script src="<?= base_url(); ?>/assets/js/demo/chart-pie-demo.js"></script>
+
