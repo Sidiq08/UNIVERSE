@@ -22,7 +22,7 @@ $('.tombol-hapus').on('click', function(e){
 
     Swal.fire({
         title: 'Apakah anda yakin?',
-        text: "data mahasiswa akan dihapus!",
+        text: "items",
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',

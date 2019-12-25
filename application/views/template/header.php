@@ -58,7 +58,7 @@
 								<a href="" class="nav-link text-primary">Masuk / Daftar</a>
 							</li>
 							<li class="nav-item active">
-							<a href="<?= base_url();?>Cart" class="nav-link text-secondary"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang=$this->cart->total_items();echo anchor('Home/detail_keranjang',$keranjang)?></span>)</a>
+							<a href="<?= base_url();?>Keranjang" class="nav-link text-secondary"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang=$this->cart->total_items();echo anchor('Home/detail_keranjang',$keranjang)?></span>)</a>
 							</li>
 						</ul>
 					</div>

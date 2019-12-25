@@ -10,35 +10,35 @@ class Home extends CI_Controller{
 
 
         public function index(){
+                $this->load->model('Produk_model');
                 $data['judul'] = 'Halaman Home';
-                $data['produk'] = $this->Produk_model->get_produk_all()->result();
+                $data['produk'] = $this->Produk_model->get_produk_all();
                 $this->load->view('template/header', $data);
                 $this->load->view('home/index', $data);
                 $this->load->view('template/footer');
             
     }
 
-        public function tambah_ke_keranjang($id){
-        $produk = $this->Produk_model->find($id);
-
-        $data = array(
-            'id'      => $produk->id_baju,
-            'qty'     => 1,
-            'price'   => $produk->harga_baju,
-            'name'    => $produk->nama_baju
-        //     'options' => array('image' => $produk->nama_baju)
-            
-            
-    );
-    
-    $this->cart->insert($data);
-    redirect('home');
-    }
+        
 
     public function detail_keranjang(){
-       
-            $this->load->view('template/header');
-            $this->load->view('cart/index');
+        $data['produk'] = $this->Produk_model->get_produk_all();
+            $this->load->view('template/header', $data);
+            $this->load->view('keranjang/index', $data);
             $this->load->view('template/footer');
     }
+
+    public function detail_produk()
+	{
+		$id=($this->uri->segment(3));
+		$data['produk'] = $this->Produk_model->get_produk_all();
+		$data['detail'] = $this->Produk_model->get_produk_id($id)->row_array();
+		$this->load->view('template/header', $data);
+                $this->load->view('home/detail', $data);
+                $this->load->view('template/footer');
+        }
+        
+       
+        
+        
 }

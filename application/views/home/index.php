@@ -26,6 +26,62 @@
   </a>
 </div>
 
+<!-- belanja di universe baru -->
+<!-- <section class="site-section border-bottom" id="unggulan">
+  <div class="container">
+    <div class="row mb-5 justify-content-center">
+      <div class="col-md-8 text-center">
+        <h2 class="section-title mb-3 aos-init aos-animate" data-aos="fade-up" data-aos-delay>Mengapa belanja di Universe</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay>
+        <div class="team-member">
+          <figure>
+            <img src="<?= base_url();?>assets/img/foto2.jpg" alt="Image" class="img-fluid">
+          </figure>
+          <div class="p-3">
+            <h3>asdfghjkl</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+  <!-- mengapa belanja di universe -->
+  <section class="belanjadiuniverse" id="belanjadiuniverse">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-sm-12">
+            <h4 class="text-center">Menggapa belanja di Universe</h4>
+            <hr>
+          </div>
+      <div class="card-deck mt-4">
+        <div class="card" style="width: 50rem; heigth: 100rem;">
+          <img src="<?= base_url();?>assets/img/baju1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text text-center">Personalisasi produk yang sesuai gaya kamu</p>
+            </div>
+        </div>
+        <div class="card">
+          <img src="<?= base_url();?>assets/img/baju2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text text-center">Garansi produk original dan berkualitas</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="<?= base_url();?>assets/img/mobil.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text text-center">Free Delivery* dan garansi 14 hari penukaran</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- latest produk -->
+
 
   <!-- Icons Grid -->
 
@@ -33,24 +89,41 @@
 
   <div class="contanier-fluid">
     <div class="row text-center m-4">
-      <?php  foreach ($produk as $prd) : ?>
-
-      <div class="card ml-4" style="width: 18rem;">
-      <img class="img-thumbnail img-fluid" src="<?php echo base_url().'/assets/img/model/'. $prd->gambar_baju ?>" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title"><?php echo $prd->nama_baju ?></h5>
-        <small><?php echo $prd->deskripsi_baju ?></small><br>
-        <span class="badge badge-success mb-2">Rp. <?php echo $prd->harga_baju ?></span><br>
-        <?php echo anchor('Home/tambah_ke_keranjang/'. $prd->id_baju, '<div class="btn btn-sm btn-primary">Tambah ke keranjang</div>') ?>
-        <a href="#" class="btn btn-sm btn-success">Detail Barang</a>
-        </div>
-      </div>
-
+    <?php  foreach ($produk as $prd) : ?>
+        <div class="col-lg-4 col-md-6 mb-4">
+              <div class="kotak">
+              <form method="post" action="<?php echo base_url();?>keranjang/tambah_ke_keranjang" method="post" accept-charset="utf-8">
+                <a href="#"><img class="img-thumbnail img" src="<?php echo base_url() . 'assets/img/model/'.$prd['gambar_baju']; ?>"/></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#"><?php echo $prd['nama_baju'];?></a>
+                  </h4>
+                  <h5>Rp. <?php echo number_format($prd['harga_baju'],0,",",".");?></h5>
+                  <p class="card-text"><?php echo $prd['deskripsi_baju'];?></p>
+                </div>
+                <div class="card-footer">
+                  <a href="<?php echo base_url();?>home/detail_produk/<?php echo $prd['id_baju'];?>" class="btn btn-sm btn-default"><i class="fas fa-shopping-search"></i> Detail</a> 
+                  
+                  <input type="hidden" name="id" value="<?php echo $prd['id_baju']; ?>" />
+                  <input type="hidden" name="nama" value="<?php echo $prd['nama_baju']; ?>" />
+                  <input type="hidden" name="harga" value="<?php echo $prd['harga_baju']; ?>" />
+                  <input type="hidden" name="gambar" value="<?php echo $prd['gambar_baju']; ?>" />
+                  <input type="hidden" name="qty" value="1" />
+                  <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i>Beli Produk ini</button>
+                </div>
+                </form>
+              </div>
+            </div>
       
     <?php endforeach; ?>
     </div>
   </div>
-   
+
+
+
+  <!-- jumbotronn -->
+
+
   <!-- Image Showcases -->
   <section class="showcase">
     <div class="container-fluid p-0">
