@@ -69,7 +69,6 @@ class Keranjang extends CI_Controller{
         public function check_out()
 	{
                 $data['title'] = 'Check Out Universe';
-        
                 $this->load->view('template/header', $data);
                 $this->load->view('keranjang/check_out', $data);
                 $this->load->view('template/footer');

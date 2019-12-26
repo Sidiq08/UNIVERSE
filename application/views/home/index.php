@@ -91,18 +91,17 @@
     <?php foreach ($produk as $prd) : ?>
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="kotak">
-          <form method="post" action="<?php echo base_url(); ?>keranjang/tambah_ke_keranjang" method="post" accept-charset="utf-8">
-            <a href="#"><img class="img-thumbnail img" src="<?php echo base_url() . 'assets/img/model/' . $prd['gambarBaju']; ?>" /></a>
+          <form method="post" action="<?php echo base_url(); ?>keranjang/tambah_ke_keranjang">
+            <img class="img-thumbnail img" src="<?php echo base_url() . 'assets/img/model/' . $prd['gambarBaju']; ?>" />
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#"><?php echo $prd['namaBaju']; ?></a>
+                <?php echo $prd['namaBaju']; ?>
               </h4>
               <h5>Rp. <?php echo number_format($prd['hargaBaju'], 0, ",", "."); ?></h5>
               <p class="card-text"><?php echo $prd['deskripsiBaju']; ?></p>
             </div>
             <div class="card-footer">
               <a href="<?php echo base_url(); ?>home/detail_produk/<?php echo $prd['idBaju']; ?>" class="btn btn-sm btn-default"><i class="fas fa-shopping-search"></i> Detail</a>
-
               <input type="hidden" name="id" value="<?php echo $prd['idBaju']; ?>" />
               <input type="hidden" name="nama" value="<?php echo $prd['namaBaju']; ?>" />
               <input type="hidden" name="harga" value="<?php echo $prd['hargaBaju']; ?>" />
