@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $config['base_url'] = 'http://localhost/coba-ci/peoples/index';
 $config['num_links'] = 5;

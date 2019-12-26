@@ -1,14 +1,17 @@
 <?php
 
-class Peoples extends CI_Controller{
+class Peoples extends CI_Controller
+{
 
-    public function __construct(){
+    public function __construct()
+    {
         parent::__construct();
         $this->load->model('Peoples_model');
         $this->load->library('form_validation');
     }
 
-    public function index(){
+    public function index()
+    {
         $data['judul'] = 'List of Peoples';
         $this->load->model('Peoples_model', 'peoples');
 
@@ -17,7 +20,7 @@ class Peoples extends CI_Controller{
         if ($this->input->post('submit')) {
             $data['keyword'] = $this->input->post('keyword');
             $this->session->set_userdata('keyword', $data['keyword']);
-        }else{
+        } else {
             $data['keyword'] = $this->session->userdata('keyword');
         }
 
@@ -38,52 +41,56 @@ class Peoples extends CI_Controller{
         $this->load->view('template/footer');
     }
 
-    public function tambah(){
-        
+    public function tambah()
+    {
+
         $data['judul'] = 'Form Tambah Data People';
-        $this->form_validation->set_rules('name', 'Name' , 'required');
-        $this->form_validation->set_rules('address', 'Address' , 'required');
-        $this->form_validation->set_rules('email', 'Email' , 'required|valid_email');
-        
+        $this->form_validation->set_rules('name', 'Name', 'required');
+        $this->form_validation->set_rules('address', 'Address', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('template/header', $data);
             $this->load->view('peoples/tambah');
             $this->load->view('template/footer');
-        }else{
+        } else {
             $this->Peoples_model->tambahDatapeoples();
             $this->session->set_flashdata('flash', 'Ditambahkan');
             redirect('peoples');
         }
     }
-    
-    public function hapus($id){
+
+    public function hapus($id)
+    {
         $this->Peoples_model->hapusDatapeoples($id);
         $this->session->set_flashdata('flash', 'Dihapus');
         redirect('peoples');
     }
-    
-    public function detail($id){
+
+    public function detail($id)
+    {
         $data['judul'] = 'Detail Data peoples';
         $data['peoples'] = $this->Peoples_model->getPeoplesById($id);
         $this->load->view('template/header', $data);
         $this->load->view('peoples/detail');
         $this->load->view('template/footer');
     }
-    
-    public function ubah($id){
+
+    public function ubah($id)
+    {
         $data['judul'] = 'Form Ubah Data peoples';
         $data['peoples'] = $this->Peoples_model->getPeoplesById($id);
-       
 
-        $this->form_validation->set_rules('name', 'Name' , 'required');
-        $this->form_validation->set_rules('address', 'Address' , 'required');
-        $this->form_validation->set_rules('email', 'Email' , 'required|valid_email');
+
+        $this->form_validation->set_rules('name', 'Name', 'required');
+        $this->form_validation->set_rules('address', 'Address', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('template/header', $data);
-            $this->load->view('peoples/ubah' , $data);
+            $this->load->view('peoples/ubah', $data);
             $this->load->view('template/footer');
-        }else{
+        } else {
             $this->Peoples_model->ubahDataPeoples();
             $this->session->set_flashdata('flash', 'Diubah');
             redirect('peoples');

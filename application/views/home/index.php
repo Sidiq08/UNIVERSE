@@ -35,7 +35,7 @@
         <hr>
       </div>
       <div class="card-deck mt-4">
-        <div class="card" style="width: 50rem; heigth: 100rem;">
+        <div class="card" style="width: 50rem; height: 100rem;">
           <img src="<?= base_url(); ?>assets/img/baju1.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text text-center">Personalisasi produk yang sesuai gaya kamu</p>
