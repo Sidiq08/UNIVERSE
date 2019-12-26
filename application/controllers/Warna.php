@@ -7,37 +7,32 @@ class Warna extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('warna_model');
+        $this->load->model('Warna_model');
         $this->load->library('form_validation');
     }
 
     public function index()
     {
         $data['judul'] = 'List of warna';
-        $this->load->model('warna_model', 'warna');
+        $this->load->model('Warna_model', 'warna');
 
         $data['warna'] = $this->warna->getAllWarna();
+        $data['JumlahWarna'] = $this->warna->countAllWarna();
         // $data['kategori'] = $this->kategori->getAllKategori();
         // $data['kategori'] = $this->kategori->getKategoriById($idKategoriBaju);
         // Tambah Data
-        $data['judul'] = 'Tambah of warna';
-        $this->form_validation->set_rules('WarnaBaju', 'WarnaBaju', 'required');
+        $this->form_validation->set_rules('warnaBaju', 'WarnaBaju', 'required');
 
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('template/header_admin');
             $this->load->view('template/sidebar_admin');
-            $this->load->view('admin/index_warna', $data);
+            $this->load->view('warna/index_warna', $data);
             $this->load->view('template/footer_admin');
         } else {
-            $this->warna_model->tambahDataWarna();
+            $this->warna->tambahDataWarna();
             $this->session->set_flashdata('flash', 'Ditambahkan Diubah');
             redirect('warna');
         }
-        // akhir tambah
-        // $this->load->view('template/header_admin');
-        // $this->load->view('template/sidebar_admin');
-        // $this->load->view('kategori/index', $data);
-        // $this->load->view('template/footer_admin');
     }
 
     public function logout()
@@ -48,9 +43,9 @@ class Warna extends CI_Controller
         redirect('auth');
     }
 
-    public function hapus($idKategoriwarna)
+    public function hapus($idWarnaBaju)
     {
-        $this->warna_model->hapusDatawarna($idwarnaBaju);
+        $this->Warna_model->hapusDataWarna($idWarnaBaju);
         $this->session->set_flashdata('flash', 'Dihapus');
         redirect('warna');
     }
@@ -64,26 +59,27 @@ class Warna extends CI_Controller
         return true;
     }
 
-    public function ubah()
+    public function ubah($idWarnaBaju)
     {
-        // $data['kategori'] = $this->Kategori_model->getkategoriById();
+        $data['warna'] = $this->Warna_model->getWarnaById($idWarnaBaju);
 
-        $id = $this->input->post('idWarnaBaju');
-        $jenisKelamin = $this->input->post('idJenisKelamin');
-        $warnaBaju = $this->input->post('warnaBaju');
+        // $idWarnaBaju = $this->input->post('idWarnaBaju');
+        // $warnaBaju = $this->input->post('warnaBaju');
+        // $data['JumlahWarna'] = $this->warna_model->countAllWarna();
+        // $data['warna'] = $this->warna_model->getAllWarna();
 
-        $this->form_validation->set_rules('idJenisKelamin', 'IdJenisKelamin', 'required');
-        $this->form_validation->set_rules('warnaBaju', 'warnaBaju', 'required');
+        $this->form_validation->set_rules('warnaBaju', 'WarnaBaju', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('template/header_admin');
             $this->load->view('template/sidebar_admin');
-            $this->load->view('admin/index_warna');
+            $this->load->view('warna/ubah_warna', $data);
             $this->load->view('template/footer_admin');
         } else {
-            $data = $this->warna_model->ubahDataWarna();
+            $data = $this->Warna_model->ubahDataWarna();
+            var_dump($data);
             $this->session->set_flashdata('flash', 'Diubah');
-            redirect('admin/index_warna');
+            // redirect('warna');
             // echo json_encode($data);
         }
     }

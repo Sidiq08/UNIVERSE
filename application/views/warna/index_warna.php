@@ -2,19 +2,10 @@
 <div class="row">
   <div class="col-md-3 col-sm-6 col-12">
     <div class="info-box bg-info">
-      <span class="info-box-icon"><i class="fas fa-mars"></i></span>
+      <span class="info-box-icon"><i class="fas fa-palette"></i></span>
       <div class="info-box-content">
-        <!-- <span class="info-box-text">Laki - Laki</span> -->
-        <!-- <span class="info-box-number"><?= $jeniskelaminL ?></span> -->
-      </div> <!-- /.info-box-content -->
-    </div> <!-- /.info-box -->
-  </div> <!-- /.info-col -->
-  <div class="col-md-3 col-sm-6 col-12">
-    <div class="info-box bg-danger">
-      <span class="info-box-icon"><i class="fas fa-venus"></i></span>
-      <div class="info-box-content">
-        <!-- <span class="info-box-text">Perempuan</span> -->
-        <!-- <span class="info-box-number"><?= $jeniskelaminP ?></span> -->
+        <span class="info-box-text">Total Warna</span>
+        <span class="info-box-number"><?= $JumlahWarna ?></span>
       </div> <!-- /.info-box-content -->
     </div> <!-- /.info-box -->
   </div> <!-- /.info-col -->
@@ -61,8 +52,9 @@
               <td>
                 <!-- <a href="<//?= base_url(); ?>kategori/ubah/<//?= $k['idKategoriBaju']; ?>" class="btn btn-sm btn-flat btn-info">Ubah Data</a> -->
                 <!-- <a href="<//?= base_url(); ?>kategori/ubah/<//?= $k['idKategoriBaju']; ?>" class="btn btn-sm btn-flat btn-success" data-toggle="modal" data-target="#modal-default">edit</a> -->
-                <button type="button" class="btn btn-sm btn-flat btn-primary btn-edit" id="<?= $k['idWarnaBaju']; ?>" data-toggle="modal" data-target="#modal-default">Edit Data</button>
-                <a href="<?= base_url(); ?>Warna/hapus/<?= $k['idWarnaBaju']; ?>" class="btn btn-sm btn-flat btn-danger hapus-warna">Hapus Data</a>
+                <!-- <button type="button" class="btn btn-sm btn-flat btn-primary btn-edit" id="<?= $k['idWarnaBaju']; ?>" data-toggle="modal" data-target="#modal-default">Edit Data</button> -->
+                <a href="<?= base_url(); ?>Warna/ubah/<?= $k['idWarnaBaju']; ?>" class="btn btn-sm btn-flat btn-info">Ubah Data</a>
+                <a href="<?= base_url(); ?>Warna/hapus/<?= $k['idWarnaBaju']; ?>" class="btn btn-sm btn-flat btn-danger hapus-Warna">Hapus Data</a>
               </td>
             </tr>
           <?php endforeach; ?>
@@ -100,12 +92,10 @@
               <form method="post" action="">
                 <input type="hidden" name="idWarnaBaju" class="idWarnaBaju">
                 <div class="form-group">
-                  <!-- <label for="idJenisKelamin">Jenis Kelamin</label> -->
-                <div class="form-group">
-                  <label for="WarnaBaju">Warna Pakaian</label>
-                  <input type="text" name="WarnaBaju" class="form-control WarnaBaju">
+                  <label for="warnaBaju">Kategori Pakaian</label>
+                  <input type="text" name="warnaBaju" class="form-control warnaBaju">
                   <small class="form-text text-danger">
-                    <?= form_error('WarnaBaju'); ?>
+                    <?= form_error('warnaBaju'); ?>
                   </small>
                 </div>
                 <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Keluar</button>
@@ -125,110 +115,54 @@
 <!-- /.modal -->
 <!-- Akhir Tambah -->
 
-<!-- Ubah Data -->
-<div class="modal fade" id="modal-default">
-  <div class="modal-dialog">
-    <div class="modal-content bg-default">
-      <div class="modal-header">
-        <h4 class="modal-title">
-
-          Form Ubah Data</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span></button>
-      </div>
-      <div class="modal-body">
-        <div class="container">
-          <div class="card">
-            <div class="card-header">
-              <h3>Form Ubah Data Kategori <span class="idWarna"></span></h3>
-            </div>
-
-            <div class="card-body">
-              <form method="post" action="">
-                <input type="hidden" id="idWarnaBaju" name="idWarnaBaju" class="idWarnaBaju">
-                <div class="form-group">
-                  <label for="WarnaBaju">Warna Pakaian</label>
-                  <input type="text" id="WarnaBaju" name="WarnaBaju" class="form-control WarnaBaju">
-                  <small class="form-text text-danger">
-                    <?= form_error('WarnaBaju'); ?>
-                  </small>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer justify-content-between">
-        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Keluar</button>
-        <button name="ubah" type="submit" id="btn_update" class="btn btn-outline-dark">Ya, Saya Yakin.</button>
-      </div>
-    </div>
-    </form> -->
-    <!-- /.modal-content -->
-  </div>
-  <!-- /.modal-dialog --> -->
-</div>
-<!-- /.modal -->
-<!-- Akhir Ubah -->
-
 <script>
   $(function() {
 
     //Get Data Update
-    $(".btn-edit").click(function(e) {
-      e.preventDefault();
-      var id = $(this).attr('id');
-      $.ajax({
-        type: "GET",
-        url: "<?= site_url('Warna/getData') ?>",
-        data: "id=" + id,
-        dataType: 'JSON',
-        success: function(data) {
-          $('.idWarnaBaju').val(data.list.idWarnaBaju);
-          if (data.status == 202) {
-            $('.idJenisKelamin > option').each(function(i, v) {
-              if (data.list.idJenisKelamin == v.value) {
-                $(this).attr('selected', true)
-              } else {
-                $(this).attr('selected', false)
-              }
-            })
+    // $(".btn-edit").click(function(e) {
+    //   e.preventDefault();
+    //   var id = $(this).attr('id');
+    //   $.ajax({
+    //     type: "GET",
+    //     url: "<?= site_url('Warna/getData') ?>",
+    //     data: "id=" + id,
+    //     dataType: 'JSON',
+    //     success: function(data) {
+    //       $('.idWarnaBaju').val(data.list.idWarnaBaju);
 
-            $('.WarnaBaju').val(data.list.WarnaBaju);
-          }
-        }
-      })
-    })
+    //       $('.warnaBaju').val(data.list.warnaBaju);
+
+    //     }
+    //   })
+    // })
 
     // //Update Barang
-    $('#btn_update').on('click', function() {
-      var idWarnaBaju = $('#idWarnaBaju').val();
-      var idJenisKelamin = $('#idJenisKelamin').val();
-      var WarnaBaju = $('#WarnaBaju').val();
-      $.ajax({
-        type: "POST",
-        url: "<?php echo site_url('Warna/ubah') ?>",
-        dataType: "JSON",
-        data: {
-          idWarnaBaju: idWarnaBaju,
-          idJenisKelamin: idJenisKelamin,
-          WarnaBaju: WarnaBaju
-        },
-        success: function(data) {
-          $('[name="idWarnaBaju"]').val(data.idWarnaBaju);
-          $('[name="idJenisKelamin"]').val(data.idJenisKelamin);
-          $('[name="WarnaBaju"]').val(data.WarnaBaju);
-          // $('#modal-default').modal('hide'); //belum jalan
-          // show_kategori(); //gajalan
-          // if (data.success == true) { // if true (1)
-          //   setTimeout(function() { // wait for 5 secs(2)
-          //     location.reload(); // then reload the page.(3)
-          //   }, 2000);
-          // }
-          // location.reload();
-        }
-      });
-      return false;
-    });
+    // $('#btn_update').on('click', function() {
+    //   var idWarnaBaju = $('#idWarnaBaju').val();
+    //   var WarnaBaju = $('#WarnaBaju').val();
+    //   $.ajax({
+    //     type: "POST",
+    //     url: "<?php echo site_url('Warna/ubah') ?>",
+    //     dataType: "JSON",
+    //     data: {
+    //       idWarnaBaju: idWarnaBaju,
+    //       WarnaBaju: WarnaBaju
+    //     },
+    //     success: function(data) {
+    //       $('[name="idWarnaBaju"]').val(data.idWarnaBaju);
+    //       $('[name="WarnaBaju"]').val(data.WarnaBaju);
+    // $('#modal-default').modal('hide'); //belum jalan
+    // show_kategori(); //gajalan
+    // if (data.success == true) { // if true (1)
+    //   setTimeout(function() { // wait for 5 secs(2)
+    //     location.reload(); // then reload the page.(3)
+    //   }, 2000);
+    // }
+    // location.reload();
+    // }
+    // });
+    // return false;
+    // });
 
     $("#tabelkategori").dataTable();
 

@@ -1,18 +1,17 @@
 <?php
 
-class Warna_model extends CI_Model{
-    
-    public function getAllWarna(){
+class Warna_model extends CI_Model
+{
+
+    public function getAllWarna()
+    {
         $this->db->select('*');
-        $this->db->from('warna'); 
-               
-        $query = $this->db->get(); 
-        if($query->num_rows() != 0)
-        {
+        $this->db->from('warna');
+
+        $query = $this->db->get();
+        if ($query->num_rows() != 0) {
             return $query->result_array();
-        }
-        else
-        {
+        } else {
             return false;
         }
     }
@@ -26,33 +25,48 @@ class Warna_model extends CI_Model{
     // }
 
 
-    public function countAllWarna(){
+    public function countAllWarna()
+    {
         return $this->db->get('warna')->num_rows();
     }
-   
-    public function tambahDataWarna(){
-        $data= [
-            'WarnaBaju' => $this->input->post('WarnaBaju',true)
+
+    public function tambahDataWarna()
+    {
+        $data = [
+            'warnaBaju' => $this->input->post('warnaBaju', true)
         ];
-        $this->db->insert('warna',$data);
+        $this->db->insert('warna', $data);
     }
-    
-    public function ubahDataWarna(){
-        $data= [
-            'warnaBaju' => $this->input->post('warnaBaju',true)
+
+    public function ubahDataWarna()
+    {
+        $data = [
+            'warnaBaju' => $this->input->post('warnaBaju', true)
+        ];
+        $this->db->where('idWarnaBaju', $this->input->post('idWarnaBaju'));
+        $this->db->update('warna', $data);
+    }
+
+    public function ubahDataKategori()
+    {
+        $data = [
+            'idJenisKelamin' => $this->input->post('idJenisKelamin', true),
+            'kategoriBaju' => $this->input->post('kategoriBaju', true)
         ];
 
-        $this->db->where('idWarnaBaju', $this->input->post('idWarnaBaju'));
-        $qq = $this->db->update('warna',$data);
+        $this->db->where('idKategoriBaju', $this->input->post('idKategoriBaju'));
+        $qq = $this->db->update('kategori', $data);
         var_dump("return model  =" . $qq);
     }
 
-    public function hapusDataWarna($idWarnaBaju){
+    public function hapusDataWarna($idWarnaBaju)
+    {
         $this->db->delete('warna', ['idWarnaBaju' => $idWarnaBaju]);
     }
 
-    public function getWarnaById($idWarnaBaju){
-        return $this->db->get_where('warna', ['idWarnaBaju' => $idWarnaBaju ])->row_array();
+    public function getWarnaById($idWarnaBaju)
+    {
+        return $this->db->get_where('warna', ['idWarnaBaju' => $idWarnaBaju])->row_array();
     }
 
 
