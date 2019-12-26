@@ -1,12 +1,12 @@
 <?php
 
-class Warna_model extends CI_Model
+class Ukuran_model extends CI_Model
 {
 
-    public function getAllWarna()
+    public function getAllUkuran()
     {
         $this->db->select('*');
-        $this->db->from('warna');
+        $this->db->from('ukuran');
 
         $query = $this->db->get();
         if ($query->num_rows() != 0) {
@@ -25,26 +25,26 @@ class Warna_model extends CI_Model
     // }
 
 
-    public function countAllWarna()
+    public function countAllUkuran()
     {
         return $this->db->get('warna')->num_rows();
     }
 
-    public function tambahDataWarna()
+    public function tambahDataUkuran()
     {
         $data = [
-            'warnaBaju' => $this->input->post('warnaBaju', true)
+            'ukuranBaju' => $this->input->post('ukuranBaju', true)
         ];
-        $this->db->insert('warna', $data);
+        $this->db->insert('ukuran', $data);
     }
 
     public function ubahDataWarna()
     {
         $data = [
-            'warnaBaju' => $this->input->post('warnaBaju', true)
+            'ukuranBaju' => $this->input->post('ukuranBaju', true)
         ];
-        $this->db->where('idWarnaBaju', $this->input->post('idWarnaBaju'));
-        $this->db->update('warna', $data);
+        $this->db->where('idUkuran', $this->input->post('idUkuran'));
+        $this->db->update('ukuran', $data);
     }
 
     public function ubahDataKategori()
@@ -59,14 +59,14 @@ class Warna_model extends CI_Model
         var_dump("return model  =" . $qq);
     }
 
-    public function hapusDataWarna($idWarnaBaju)
+    public function hapusDataUkuran($idUkuran)
     {
         $this->db->delete('warna', ['idWarnaBaju' => $idWarnaBaju]);
     }
 
-    public function getWarnaById($idWarnaBaju)
+    public function getUkuranById($idUkuran)
     {
-        return $this->db->get_where('warna', ['idWarnaBaju' => $idWarnaBaju])->row_array();
+        return $this->db->get_where('ukuran', ['idUkuran' => $idUkuran])->row_array();
     }
 
 
