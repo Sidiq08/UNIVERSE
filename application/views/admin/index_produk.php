@@ -1,25 +1,31 @@
 <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
-<div class="row">
+<!-- <div class="row">
     <div class="col-md-3 col-sm-6 col-12">
         <div class="info-box bg-info">
             <span class="info-box-icon"><i class="fas fa-mars"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">Laki - Laki</span>
                 <span class="info-box-number"><?= $jeniskelaminL ?></span>
-            </div> <!-- /.info-box-content -->
-        </div> <!-- /.info-box -->
-    </div> <!-- /.info-col -->
-    <div class="col-md-3 col-sm-6 col-12">
+            </div>  -->
+<!-- /.info-box-content -->
+<!-- </div> -->
+<!-- /.info-box -->
+<!-- </div> -->
+<!-- /.info-col -->
+<!-- <div class="col-md-3 col-sm-6 col-12">
         <div class="info-box bg-danger">
             <span class="info-box-icon"><i class="fas fa-venus"></i></span>
             <div class="info-box-content">
                 <span class="info-box-text">Perempuan</span>
                 <span class="info-box-number"><?= $jeniskelaminP ?></span>
-            </div> <!-- /.info-box-content -->
-        </div> <!-- /.info-box -->
-    </div> <!-- /.info-col -->
-</div>
-<hr>
+            </div> -->
+<!-- /.info-box-content -->
+<!-- </div> -->
+<!-- /.info-box -->
+<!-- </div> -->
+<!-- /.info-col -->
+<!-- </div> -->
+<!-- <hr> -->
 <div class="row">
     <div class="col-12">
         <h1 class="card-title">Kelola Kategori</h1>
@@ -28,7 +34,7 @@
 <hr>
 <div class="row mt-6 m-2">
     <div class="col-md-12">
-        <a href="<?= base_url(); ?>kategori/tambah" class="btn btn-lg btn-success btn-flat" data-toggle="modal" data-target="#modal-add">Tambah Data Kategori</a>
+        <a href="<?= base_url(); ?>produk/tambah" class="btn btn-lg btn-success btn-flat" data-toggle="modal" data-target="#modal-add">Tambah Data Kategori</a>
     </div>
 </div>
 
@@ -36,17 +42,20 @@
 <div class="row">
     <div class="col-10">
         <div class="card-body table-responsive p-0">
-            <table class="table table-hover" id='tabelkategori'>
+            <table class="table table-hover" id='tabelproduk'>
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Jenis Kelamin</th>
-                        <th>Kategori</th>
+                        <th>idBaju</th>
+                        <th>namaBaju</th>
+                        <th>idUkuran</th>
+                        <th>idWarna</th>
+                        <th>idKategori</th>
+                        <th>hargaBaju</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php if (empty($kategori)) : ?>
+                    <?php if (empty($produk)) : ?>
                         <tr>
                             <td colspan="4">
                                 <div class="alert alert-danger" role="alert">
@@ -55,16 +64,19 @@
                             </td>
                         </tr>
                     <?php endif; ?>
-                    <?php foreach ($kategori as $k) : ?>
+                    <?php foreach ($produk as $p) : ?>
                         <tr>
-                            <td><?= $k['idKategoriBaju']; ?></td>
-                            <td><?= $k['jenisKelamin']; ?></td>
-                            <td><?= $k['kategoriBaju']; ?></td>
+                            <td><?= $p['idBaju']; ?></td>
+                            <td><?= $p['namaBaju']; ?></td>
+                            <td><?= $p['idUkuran']; ?></td>
+                            <td><?= $p['idWarna']; ?></td>
+                            <td><?= $p['idKategori']; ?></td>
+                            <td><?= $p['hargaBaju']; ?></td>
                             <td>
                                 <!-- <a href="<//?= base_url(); ?>kategori/ubah/<//?= $k['idKategoriBaju']; ?>" class="btn btn-sm btn-flat btn-info">Ubah Data</a> -->
                                 <!-- <a href="<//?= base_url(); ?>kategori/ubah/<//?= $k['idKategoriBaju']; ?>" class="btn btn-sm btn-flat btn-success" data-toggle="modal" data-target="#modal-default">edit</a> -->
-                                <button type="button" class="btn btn-sm btn-flat btn-primary btn-edit" id="<?= $k['idKategoriBaju']; ?>" data-toggle="modal" data-target="#modal-default">Edit Data</button>
-                                <a href="<?= base_url(); ?>kategori/hapus/<?= $k['idKategoriBaju']; ?>" class="btn btn-sm btn-flat btn-danger hapus-kategori">Hapus Data</a>
+                                <button type="button" class="btn btn-sm btn-flat btn-primary btn-edit" id="<?= $p['idBaju']; ?>" data-toggle="modal" data-target="#modal-default">Edit Data</button>
+                                <a href="<?= base_url(); ?>produk/hapus/<?= $p['idBaju']; ?>" class="btn btn-sm btn-flat btn-danger hapus-kategori">Hapus Data</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

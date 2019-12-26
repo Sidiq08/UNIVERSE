@@ -25,7 +25,6 @@ class Produk extends CI_Controller
         // $data['warna'] = $this->db->get('warna')->num_rows();
         // $data['ukuran'] = $this->db->get('ukuran')->num_rows();
         // Tambah Data
-        $data['judul'] = 'Tambah of Produk';
         $this->form_validation->set_rules('namaBaju', 'NamaBaju', 'required');
         $this->form_validation->set_rules('idUkuran', 'Id-ukuran', 'required');
         $this->form_validation->set_rules('idWarna', 'IdWarna', 'required');
