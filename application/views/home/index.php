@@ -81,65 +81,32 @@
   </div>
 </div>
 
-<<<<<<< HEAD
 <!-- Icons Grid -->
 
 <!-- Halaman Utama -->
 
 <div class="contanier-fluid">
+  <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
   <div class="row text-center m-4">
     <?php foreach ($produk as $prd) : ?>
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="kotak">
           <form method="post" action="<?php echo base_url(); ?>keranjang/tambah_ke_keranjang" method="post" accept-charset="utf-8">
-            <a href="#"><img class="img-thumbnail img" src="<?php echo base_url() . 'assets/img/model/' . $prd['gambar_baju']; ?>" /></a>
+            <a href="#"><img class="img-thumbnail img" src="<?php echo base_url() . 'assets/img/model/' . $prd['gambarBaju']; ?>" /></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#"><?php echo $prd['nama_baju']; ?></a>
+                <a href="#"><?php echo $prd['namaBaju']; ?></a>
               </h4>
-              <h5>Rp. <?php echo number_format($prd['harga_baju'], 0, ",", "."); ?></h5>
-              <p class="card-text"><?php echo $prd['deskripsi_baju']; ?></p>
-=======
-  <!-- Icons Grid -->
-
-  <!-- Halaman Utama -->
-
-  <div class="contanier-fluid">
-  <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
-    <div class="row text-center m-4">
-    <?php  foreach ($produk as $prd) : ?>
-        <div class="col-lg-4 col-md-6 mb-4">
-              <div class="kotak">
-              <form method="post" action="<?php echo base_url();?>keranjang/tambah_ke_keranjang" method="post" accept-charset="utf-8">
-                <a href="#"><img class="img-thumbnail img" src="<?php echo base_url() . 'assets/img/model/'.$prd['gambarBaju']; ?>"/></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#"><?php echo $prd['namaBaju'];?></a>
-                  </h4>
-                  <h5>Rp. <?php echo number_format($prd['hargaBaju'],0,",",".");?></h5>
-                  <p class="card-text"><?php echo $prd['deskripsiBaju'];?></p>
-                </div>
-                <div class="card-footer">
-                  <a href="<?php echo base_url();?>home/detail_produk/<?php echo $prd['idBaju'];?>" class="btn btn-sm btn-default"><i class="fas fa-shopping-search"></i> Detail</a> 
-                  
-                  <input type="hidden" name="id" value="<?php echo $prd['idBaju']; ?>" />
-                  <input type="hidden" name="nama" value="<?php echo $prd['namaBaju']; ?>" />
-                  <input type="hidden" name="harga" value="<?php echo $prd['hargaBaju']; ?>" />
-                  <input type="hidden" name="gambar" value="<?php echo $prd['gambarBaju']; ?>" />
-                  <input type="hidden" name="qty" value="1" />
-                  <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i>Beli Produk ini</button>
-                </div>
-                </form>
-              </div>
->>>>>>> 48a535ff8f7f6a276c46202701a0a83c53f41023
+              <h5>Rp. <?php echo number_format($prd['hargaBaju'], 0, ",", "."); ?></h5>
+              <p class="card-text"><?php echo $prd['deskripsiBaju']; ?></p>
             </div>
             <div class="card-footer">
-              <a href="<?php echo base_url(); ?>home/detail_produk/<?php echo $prd['id_baju']; ?>" class="btn btn-sm btn-default"><i class="fas fa-shopping-search"></i> Detail</a>
+              <a href="<?php echo base_url(); ?>home/detail_produk/<?php echo $prd['idBaju']; ?>" class="btn btn-sm btn-default"><i class="fas fa-shopping-search"></i> Detail</a>
 
-              <input type="hidden" name="id" value="<?php echo $prd['id_baju']; ?>" />
-              <input type="hidden" name="nama" value="<?php echo $prd['nama_baju']; ?>" />
-              <input type="hidden" name="harga" value="<?php echo $prd['harga_baju']; ?>" />
-              <input type="hidden" name="gambar" value="<?php echo $prd['gambar_baju']; ?>" />
+              <input type="hidden" name="id" value="<?php echo $prd['idBaju']; ?>" />
+              <input type="hidden" name="nama" value="<?php echo $prd['namaBaju']; ?>" />
+              <input type="hidden" name="harga" value="<?php echo $prd['hargaBaju']; ?>" />
+              <input type="hidden" name="gambar" value="<?php echo $prd['gambarBaju']; ?>" />
               <input type="hidden" name="qty" value="1" />
               <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i>Beli Produk ini</button>
             </div>
@@ -282,10 +249,4 @@
         </ul>
       </div>
     </div>
-<<<<<<< HEAD
-  </div>
 </footer>
-=======
-  </footer>
-  
->>>>>>> 48a535ff8f7f6a276c46202701a0a83c53f41023
