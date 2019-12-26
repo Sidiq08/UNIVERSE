@@ -40,7 +40,6 @@
         <thead>
           <tr>
             <th>ID</th>
-            <th>Jenis Kelamin</th>
             <th>warna</th>
             <th>Aksi</th>
           </tr>
@@ -58,7 +57,7 @@
           <?php foreach ($warna as $k) : ?>
             <tr>
               <td><?= $k['idWarnaBaju']; ?></td>
-              <td><?= $k['WarnaBaju']; ?></td>
+              <td><?= $k['warnaBaju']; ?></td>
               <td>
                 <!-- <a href="<//?= base_url(); ?>kategori/ubah/<//?= $k['idKategoriBaju']; ?>" class="btn btn-sm btn-flat btn-info">Ubah Data</a> -->
                 <!-- <a href="<//?= base_url(); ?>kategori/ubah/<//?= $k['idKategoriBaju']; ?>" class="btn btn-sm btn-flat btn-success" data-toggle="modal" data-target="#modal-default">edit</a> -->
@@ -101,16 +100,7 @@
               <form method="post" action="">
                 <input type="hidden" name="idWarnaBaju" class="idWarnaBaju">
                 <div class="form-group">
-                  <label for="idJenisKelamin">Jenis Kelamin</label>
-                  <select class="form-control custom-select idJenisKelamin" name="idJenisKelamin">
-                    <option selected>Select one</option>
-                    <option value="1">Laki- Laki</option>
-                    <option value="2">Perempuan</option>
-                  </select>
-                  <small class="form-text text-danger">
-                    <?= form_error('idJenisKelamin'); ?>
-                  </small>
-                </div>
+                  <!-- <label for="idJenisKelamin">Jenis Kelamin</label> -->
                 <div class="form-group">
                   <label for="WarnaBaju">Warna Pakaian</label>
                   <input type="text" name="WarnaBaju" class="form-control WarnaBaju">
@@ -156,17 +146,6 @@
             <div class="card-body">
               <form method="post" action="">
                 <input type="hidden" id="idWarnaBaju" name="idWarnaBaju" class="idWarnaBaju">
-                <div class="form-group">
-                  <label for="idJenisKelamin">Jenis Kelamin</label>
-                  <select class="form-control custom-select idJenisKelamin" id="idJenisKelamin" name="idJenisKelamin">
-                    <option selected disabled>Select one</option>
-                    <option value="1">Laki- Laki</option>
-                    <option value="2">Perempuan</option>
-                  </select>
-                  <small class="form-text text-danger">
-                    <?= form_error('idJenisKelamin'); ?>
-                  </small>
-                </div>
                 <div class="form-group">
                   <label for="WarnaBaju">Warna Pakaian</label>
                   <input type="text" id="WarnaBaju" name="WarnaBaju" class="form-control WarnaBaju">
