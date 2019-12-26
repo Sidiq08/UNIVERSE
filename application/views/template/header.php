@@ -26,8 +26,9 @@
 
 <body>
 
+		<!-- ftco_navbar ftco-navbar-dark -->
 	<!-- nav terbaru -->
-	<nav class="navbar fixed-top navbar-expand-lg navbar-dark ftco_navbar bg-light ftco-navbar-dark" id="ftco-navbar">
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light " id="ftco-navbar">
 		<div class="container">
 			<div class="row m-auto">
 				<div class="col-12 w-100 text-center">
@@ -54,7 +55,7 @@
 								<a href="<?= base_url(); ?>home/men" class="nav-link text-dark">Men</a>
 							</li>
 							<li class="nav-item active">
-								<a href="" class="nav-link text-dark">Woman</a>
+								<a href="<?= base_url(); ?>home/woman" class="nav-link text-dark">Woman</a>
 							</li>
 							<li class="nav-item active">
 								<a href="<?= base_url(); ?>auth/login" class="nav-link text-primary">Masuk / Daftar</a>
@@ -69,3 +70,6 @@
 			</div>
 		</div>
 	</nav>
+	<!-- <br>
+	<br>
+	<br> -->

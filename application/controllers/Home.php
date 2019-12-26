@@ -48,6 +48,14 @@ class Home extends CI_Controller
                 $this->load->view('template/footer');
         }
 
+        public function woman()
+        {
+                $data['judul'] = 'Halaman Men';
+                $this->load->view('template/header', $data);
+                $this->load->view('home/woman', $data);
+                $this->load->view('template/footer');
+        }
+
         public function login()
         {
                 $data['judul'] = 'Halaman Men';
