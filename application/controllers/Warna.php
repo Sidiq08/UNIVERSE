@@ -17,16 +17,11 @@ class Warna extends CI_Controller
         $this->load->model('warna_model', 'warna');
 
         $data['warna'] = $this->warna->getAllWarna();
-        $data['jeniskelamin'] = $this->db->get('jeniskelamin')->num_rows();
-        $data['jeniskelamin'] = $this->warna->getAllJenisKelamin();
-        $data['jeniskelaminL'] = $this->warna->countJenisLaki2();
-        $data['jeniskelaminP'] = $this->warna->countJenisPerempuan();
         // $data['kategori'] = $this->kategori->getAllKategori();
         // $data['kategori'] = $this->kategori->getKategoriById($idKategoriBaju);
         // Tambah Data
         $data['judul'] = 'Tambah of warna';
-        $this->form_validation->set_rules('idJenisKelamin', 'IdJenisKelamin', 'required');
-        $this->form_validation->set_rules('WarnaBaju', 'WarnBaju', 'required');
+        $this->form_validation->set_rules('WarnaBaju', 'WarnaBaju', 'required');
 
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('template/header_admin');
@@ -83,7 +78,7 @@ class Warna extends CI_Controller
         if ($this->form_validation->run() == false) {
             $this->load->view('template/header_admin');
             $this->load->view('template/sidebar_admin');
-            $this->load->view('admin/index_kategori');
+            $this->load->view('admin/index_warna');
             $this->load->view('template/footer_admin');
         } else {
             $data = $this->warna_model->ubahDataWarna();
