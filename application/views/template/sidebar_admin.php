@@ -47,6 +47,14 @@
               </p>
             </a>
           </li>
+           <li class="nav-item">
+            <a href="<?= site_url(); ?>ukuran" class="nav-link">
+              <i class="nav-icon fas fa-plus-circle"></i>
+              <p>
+                Ukuran Baju
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
