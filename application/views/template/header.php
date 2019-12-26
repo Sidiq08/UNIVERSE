@@ -68,13 +68,4 @@
 				</div>
 			</div>
 		</div>
-<<<<<<< HEAD
 	</nav>
-=======
-</nav>
-<br>
-<br>
-<br>
-<br>
-
->>>>>>> aa826e91f43045702c74ed3ee0bfc413ca1f5a8d
