@@ -26,35 +26,12 @@
   </a>
 </div>
 
-<!-- belanja di universe baru -->
-<!-- <section class="site-section border-bottom" id="unggulan">
-  <div class="container">
-    <div class="row mb-5 justify-content-center">
-      <div class="col-md-8 text-center">
-        <h2 class="section-title mb-3 aos-init aos-animate" data-aos="fade-up" data-aos-delay>Mengapa belanja di Universe</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-lg-4 mb-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay>
-        <div class="team-member">
-          <figure>
-            <img src="<?= base_url();?>assets/img/foto2.jpg" alt="Image" class="img-fluid">
-          </figure>
-          <div class="p-3">
-            <h3>asdfghjkl</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
   <!-- mengapa belanja di universe -->
   <section class="belanjadiuniverse" id="belanjadiuniverse">
       <div class="container">
         <div class="row mt-5">
           <div class="col-sm-12">
-            <h4 class="text-center">Menggapa belanja di Universe</h4>
+            <h4 class="text-center">Mengapa belanja di Universe</h4>
             <hr>
           </div>
       <div class="card-deck mt-4">
@@ -85,7 +62,7 @@
   <div class="row mb-5 justify-content-center">
     <div class="col-md-8 text-center mt-5">
       <h4 class="section-title mb-3 aos-init aos-animate" data-aos="fade-up" data-aos-delay>Latests Product</h4>
-      <p class="lead aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">"Dengan menggunakan bahan terbaik Universe mengeluarkan product terbaru yang akan membuat gaya anda semakin masa kini"</p>
+      <p class="lead aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">" Dengan menggunakan bahan terbaik Universe mengeluarkan product terbaru yang akan membuat gaya anda semakin masa kini "</p>
     </div>
   </div>
   <div class="row">
@@ -99,6 +76,7 @@
       <p>Bahan : cotton combat</p>
       <p>Ukuran : S, M, L, XL, XXL, XXXL</p>
       <h4>Rp. 175.000</h4>
+      <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Beli Produk ini</button>
     </div>
   </div>
 </div>

@@ -43,19 +43,19 @@
 					<div class="collapse navbar-collapse" id="ftco-nav">
 						<ul class="navbar-nav m-auto">
 							<li class="nav-item active">
-								<a href="" class="nav-link text-dark">Sale</a>
+								<a href="<?= base_url();?>home/index" class="nav-link text-dark">Home</a>
 							</li>
 							<li class="nav-item active">
 								<a href="" class="nav-link text-dark">New Arrival</a>
 							</li>
 							<li class="nav-item active">
-								<a href="" class="nav-link text-dark">Man</a>
+								<a href="<?= base_url();?>home/men" class="nav-link text-dark">Men</a>
 							</li>
 							<li class="nav-item active">
 								<a href="" class="nav-link text-dark">Woman</a>
 							</li>
 							<li class="nav-item active">
-								<a href="" class="nav-link text-primary">Masuk / Daftar</a>
+								<a href="<?= base_url();?>auth/login" class="nav-link text-primary">Masuk / Daftar</a>
 							</li>
 							<li class="nav-item active">
 							<a href="<?= base_url();?>Keranjang" class="nav-link text-secondary"><i class="fas fa-shopping-cart"></i> (<span><?php $keranjang=$this->cart->total_items();
@@ -67,4 +67,8 @@
 			</div>
 		</div>
 </nav>
+<br>
+<br>
+<br>
+<br>
 
