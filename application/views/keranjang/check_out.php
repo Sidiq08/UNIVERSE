@@ -1,4 +1,5 @@
 <div class="bg-light y-3 my-3">
+<<<<<<< HEAD
   <div class="container">
     <div class="row">
       <div class="col-md-12 mb-0">
@@ -9,6 +10,16 @@
         <a href="<?= base_url(); ?>/keranjang" class="text-success">Keranjang</a><span class="mx-2 mb-0">/</span>
         <strong class="text-black">Check-Out</strong>
 
+=======
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a href="<?= base_url();?>/Home" class="text-success">Home</a> <span class="mx-2 mb-0">/</span>
+          <a href="<?= base_url();?>/keranjang" class="text-success">Keranjang</a><span class="mx-2 mb-0">/</span>
+          <strong class="text-black">Check-Out</strong>
+          
+        </div>
+        </div>
+>>>>>>> 840bc560db42e5f702710d657a60fe2550ebbdba
       </div>
     </div>
   </div>
@@ -22,6 +33,7 @@
     </div>
   </div>
 
+<<<<<<< HEAD
   <?php
   $grand_total = 0;
   if ($cart = $this->cart->contents()) {
@@ -34,6 +46,22 @@
 
   ?>
     <div class="row justify-content-between">
+=======
+<?php
+$grand_total = 0;
+if ($cart = $this->cart->contents())
+	{
+		foreach ($cart as $item)
+			{
+        $grand_total = $grand_total + $item['subtotal'];
+        $baju = $item['name'];
+			}
+            echo "<h4><small>Total Belanja: Rp.".number_format($grand_total,0,",",".")."</small></h4>";
+            // echo "<h4><small>Total Belanja: Rp.".$baju."</small></h4>";
+            
+?>
+<div class="row justify-content-between">
+>>>>>>> 840bc560db42e5f702710d657a60fe2550ebbdba
       <div class="col-8 mb-3">
         <form class="form-horizontal" action="<?php echo base_url() ?>keranjang/proses_order" method="post" name="frmCO" id="frmCO">
           <div class="form-group  has-success has-feedback">
@@ -59,9 +87,17 @@
           <div class="form-group  has-success has-feedback">
 
             <div class="col mt-3">
+<<<<<<< HEAD
               <button type="submit" class="btn btn-primary">Proses Order</button>
               <a class="btn btn-sm btn-warning" href="<?php echo base_url() ?>keranjang/konfirmasi">Lanjutkan</a>
               <button type="button" class="btn btn-warning btn-block text-white" data-toggle="modal" data-target="#checkoutModal">Checkout</button>
+=======
+                <button type="submit" class="btn btn-primary" data-toggle="modal"
+                data-target="#checkoutModal">Proses Order</button>
+                <!-- <a class="btn btn-sm btn-warning" href="<?php echo base_url()?>keranjang/konfirmasi">Lanjutkan</a>
+                <button type="button" class="btn btn-warning btn-block text-white" data-toggle="modal"
+                data-target="#checkoutModal">Checkout</button> -->
+>>>>>>> 840bc560db42e5f702710d657a60fe2550ebbdba
             </div>
 
           </div>
@@ -77,6 +113,7 @@
 </div>
 
 <!-- Modal -->
+<<<<<<< HEAD
 <div class="modal fade checkout-modal-success" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -85,6 +122,18 @@
         <h3>Checkout Berhasil</h3>
         <p>Anda akan mendapatkan barang anda <br> dalam beberapa hari</p>
         <button type="button" class="btn mt-3" style="background-color: #EAEAEF; color: #ADADAD;" data-dismiss="modal">Home</button>
+=======
+<div class="modal fade checkout-modal-success" id="checkoutModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <img src="<?= base_url();?>assets/img/checkout.png" class="mb-3">
+          <h3>Checkout Berhasil</h3>
+          <p>Anda akan mendapatkan barang anda <br> dalam beberapa hari</p>
+          <button type="button" class="btn btn-sm">Home</button>
+        </div>
+>>>>>>> 840bc560db42e5f702710d657a60fe2550ebbdba
       </div>
     </div>
   </div>
