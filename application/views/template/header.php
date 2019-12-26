@@ -26,7 +26,7 @@
 
 <body>
 
-		<!-- ftco_navbar ftco-navbar-dark -->
+	<!-- ftco_navbar ftco-navbar-dark -->
 	<!-- nav terbaru -->
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light " id="ftco-navbar">
 		<div class="container">
@@ -70,13 +70,7 @@
 			</div>
 		</div>
 	</nav>
-<<<<<<< HEAD
-	<!-- <br>
-	<br>
-	<br> -->
-=======
 	<br>
 	<br>
 	<br>
 	<br>
->>>>>>> f2fcae25afd12da1d3038a642a06f11fd446de3b
