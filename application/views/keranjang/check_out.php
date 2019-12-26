@@ -73,19 +73,18 @@
       </div>
     </div>
 </div>
-</div>
+
 
 <!-- Modal -->
-<div class="modal fade checkout-modal-success" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<div class="modal fade checkout-modal-success" id="checkoutModal">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body text-center">
         <img src="<?= base_url(); ?>assets/img/checkout.png" class="mb-3">
         <h3>Checkout Berhasil</h3>
-        <p>Anda akan mendapatkan barang anda <br> dalam beberapa hari</p>
         <button type="button" class="btn btn-sm">Home</button>
       </div>
     </div>
   </div>
-</div>
 </div>

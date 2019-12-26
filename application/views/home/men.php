@@ -10,9 +10,6 @@
 
 <body>
 
-  <br>
-  <br>
-  <br>
   <div class="bg-light y-3 my-3">
   <div class="container">
     <div class="row">
@@ -43,15 +40,9 @@
       <div class="card-deck mt-4">
         <div class="card" style="width: 50rem;">
           <img src="<?= base_url(); ?>assets/img/men6.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button type="submit" class="btn btn-sm btn-success btn-center"><i class="fas fa-shopping-cart"></i> Beli Produk ini</button>
-          </div>
         </div>
         <div class="card" style="width: 50rem;">
           <img src="<?= base_url(); ?>assets/img/men7.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Beli Produk ini</button>
-          </div>
         </div>
       </div>
   </section>
@@ -60,15 +51,9 @@
       <div class="card-deck mt-4">
         <div class="card" style="width: 50rem;">
           <img src="<?= base_url(); ?>assets/img/men2.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button type="submit" class="btn btn-sm btn-success btn-center"><i class="fas fa-shopping-cart"></i> Beli Produk ini</button>
-          </div>
         </div>
         <div class="card" style="width: 50rem;">
           <img src="<?= base_url(); ?>assets/img/men3.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Beli Produk ini</button>
-          </div>
         </div>
       </div>
   </section>
@@ -78,15 +63,9 @@
       <div class="card-deck mt-4">
         <div class="card" style="width: 50rem;">
           <img src="<?= base_url(); ?>assets/img/men8.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button type="submit" class="btn btn-sm btn-success btn-center"><i class="fas fa-shopping-cart"></i> Beli Produk ini</button>
-          </div>
         </div>
         <div class="card" style="width: 50rem;">
           <img src="<?= base_url(); ?>assets/img/men10.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Beli Produk ini</button>
-          </div>
         </div>
       </div>
   </section>
@@ -96,9 +75,6 @@
       <div class="card-deck mt-4">
         <div class="card" style="width: 50rem;">
           <img src="<?= base_url(); ?>assets/img/baju1.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button type="submit" class="btn btn-sm btn-success btn-center"><i class="fas fa-shopping-cart"></i> Beli Produk ini</button>
-          </div>
         </div>
       </div>
   </section>

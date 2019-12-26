@@ -50,12 +50,12 @@ class Produk_model extends CI_Model
 	// }
 	public function getAllWarna()
 	{
-		return $this->db->get('warna')->result_array();
+		return $this->db->get('warna')->row_array();
 	}
-	// public function getAllUkuran()
-	// {
-	// 	return $this->db->get('ukuran')->result_array();
-	// }
+	public function getAllUkuran()
+	{
+		return $this->db->get('ukuran')->row_array();
+	}
 
 	// public function countAllkategori()
 	// {
@@ -110,7 +110,7 @@ class Produk_model extends CI_Model
 
 	public function getProdukById($idBaju)
 	{
-		$query = $this->db->query("SELECT * FROM produk a JOIN warna b ON a.idWarna=b.idWarnaBaju WHERE a.idBaju =" . $idBaju);
+		$query = $this->db->query("SELECT * FROM produk a JOIN warna b ON a.idWarna=b.idWarnaBaju JOIN ukuran c ON a.idUkuran=c.idUkuran WHERE a.idBaju =" . $idBaju);
 		if ($query->num_rows() != 0) {
 			return $query->row_array();
 		} else {

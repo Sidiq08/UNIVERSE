@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 26 Des 2019 pada 17.34
--- Versi server: 10.4.6-MariaDB
--- Versi PHP: 7.3.9
+-- Waktu pembuatan: 26 Des 2019 pada 19.00
+-- Versi server: 10.1.37-MariaDB
+-- Versi PHP: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -101,20 +101,20 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`idBaju`, `namaBaju`, `idUkuran`, `idWarna`, `idKategori`, `hargaBaju`, `stokBaju`, `gambarBaju`, `deskripsiBaju`) VALUES
-(1, 'Traveller Geographic', 3, 1, 36, 80000, 200, '4.png', 'Baju dengan gambar Traveller dari National Geographic'),
-(2, 'Off Road 4x4', 3, 1, 36, 90000, 0, '1.png', 'Baju dengan gambar Off Road 4x4'),
-(3, 'Professional Photographer', 3, 1, 36, 80000, 0, '3.jpg', 'Baju dengan gambar Professional Photographer'),
-(5, 'Becky Loose Shirt White', 2, 1, 36, 249000, 4, '279214_becky-loose-shirt-white', 'Tampil gaya dengan mengenakan atasan kemeja lengan panjang ini! Memiliki model simpel. Padankan dengan celana panjang slim fit dan loafers favoritmu!'),
-(6, 'Kaos Screaming Panda', 3, 6, 51, 99000, 2, '17885_l.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos.'),
-(7, 'Alev Twotone Shirt Black', 2, 6, 36, 179000, 3, '278657_alev-twotone-shirt-blac', 'Miliki atasan dengan motif menarik yang cocok dipadankan dengan celana slim fit serta chungky heels dan tas favoritmu! '),
-(8, 'Kaos A Good Day', 2, 1, 51, 95000, 5, '3834009_l.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos.'),
+(1, 'Traveller Geographic', 3, 1, 36, 80000, 200, 'img4.png', 'Baju dengan gambar Traveller dari National Geographic'),
+(2, 'Off Road 4x4', 3, 1, 36, 90000, 0, 'img1.png', 'Baju dengan gambar Off Road 4x4'),
+(3, 'Professional Photographer', 3, 1, 36, 80000, 0, 'img3.jpg', 'Baju dengan gambar Professional Photographer'),
+(5, 'Becky Loose Shirt White', 2, 1, 36, 249000, 4, 'img11.JPG', 'Tampil gaya dengan mengenakan atasan kemeja lengan panjang ini! Memiliki model simpel. Padankan dengan celana panjang slim fit dan loafers favoritmu!'),
+(6, 'Kaos Screaming Panda', 3, 6, 51, 99000, 2, 'img8.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos.'),
+(7, 'Alev Twotone Shirt Black', 2, 6, 36, 179000, 3, 'img12.JPG', 'Miliki atasan dengan motif menarik yang cocok dipadankan dengan celana slim fit serta chungky heels dan tas favoritmu! '),
+(8, 'Kaos A Good Day', 2, 1, 51, 95000, 5, 'img13.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos.'),
 (9, 'Kaos Japan Gate', 4, 1, 51, 95000, 3, '3834009_l.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos'),
-(10, 'Aliona Checkered Wool Outer Sh', 1, 6, 36, 209000, 1, '278640_aliona-checkered-wool-o', 'Tampil stylish dengan luaran yang memiliki motif menarik. Padankan dengan dalaman tank top serta celana slim fit dan'),
-(11, 'Kaos Cat Eyes', 3, 6, 51, 96000, 2, '20099_l.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos.'),
-(12, 'Tally Cropped Shirt White', 1, 1, 36, 179000, 4, '277592_tally-cropped-shirt-whi', 'Atasan kemeja lengan pendek untuk tampilan casual chic kamu! Memiliki motif prints dengan detail kancing. Padankan dengan celana panjang slim fit dan loafers favoritmu!'),
-(13, 'Sasha Jaquard Pants Cream', 2, 1, 52, 219000, 5, '276820_sasha-jaquard-pants-cre', 'Tampil chic dengan mengenakan celana panjang ini! Memiliki model simpel dari bahan jaquard. Padankan dengan atasan tanpa lengan dan heels favoritmu!'),
-(14, 'Marla Collar Shirt White', 1, 1, 51, 179000, 3, '277013_marla-collar-shirt-whit', 'Tampil cantik dengan atasan ini! Padankan dengan celana palazzo serta heels dan sling bag!'),
-(15, 'Kaos Riding My Bike', 4, 1, 51, 95000, 4, '1134096_l.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos.'),
+(10, 'Aliona Checkered Wool Outer Sh', 1, 6, 36, 209000, 1, 'img14.JPG', 'Tampil stylish dengan luaran yang memiliki motif menarik. Padankan dengan dalaman tank top serta celana slim fit dan'),
+(11, 'Kaos Cat Eyes', 3, 6, 51, 96000, 2, 'img9.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos.'),
+(12, 'Tally Cropped Shirt White', 1, 1, 36, 179000, 4, 'img15.JPG', 'Atasan kemeja lengan pendek untuk tampilan casual chic kamu! Memiliki motif prints dengan detail kancing. Padankan dengan celana panjang slim fit dan loafers favoritmu!'),
+(13, 'Sasha Jaquard Pants Cream', 2, 1, 52, 219000, 5, 'img10.JPG', 'Tampil chic dengan mengenakan celana panjang ini! Memiliki model simpel dari bahan jaquard. Padankan dengan atasan tanpa lengan dan heels favoritmu!'),
+(14, 'Marla Collar Shirt White', 1, 1, 51, 179000, 3, 'img16.JPG', 'Tampil cantik dengan atasan ini! Padankan dengan celana palazzo serta heels dan sling bag!'),
+(15, 'Kaos Riding My Bike', 4, 1, 51, 95000, 4, 'img17.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos.'),
 (16, 'Stacy Button Pants Olive', 2, 1, 51, 209000, 4, '277013_marla-collar-shirt-whit', 'Stacy Button Pants Olive\r\nTampil chic dengan mengenakan celana 7/8 ini! Memiliki model simpel dengan detail menarik. Padankan dengan atasan crop dan strap sandal favoritmu!');
 
 -- --------------------------------------------------------
@@ -448,25 +448,12 @@ ALTER TABLE `kategori`
   ADD CONSTRAINT `kategori_ibfk_1` FOREIGN KEY (`idJenisKelamin`) REFERENCES `jeniskelamin` (`idJenisKelamin`) ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `pembeli`
---
-ALTER TABLE `pembeli`
-  ADD CONSTRAINT `pembeli_ibfk_1` FOREIGN KEY (`id-alamat-pembeli`) REFERENCES `alamat-pembeli` (`id-alamat-pembeli`) ON UPDATE CASCADE;
-
---
 -- Ketidakleluasaan untuk tabel `produk`
 --
 ALTER TABLE `produk`
   ADD CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`idKategori`) REFERENCES `kategori` (`idKategoriBaju`) ON UPDATE CASCADE,
   ADD CONSTRAINT `produk_ibfk_2` FOREIGN KEY (`idUkuran`) REFERENCES `ukuran` (`idUkuran`) ON UPDATE CASCADE,
   ADD CONSTRAINT `produk_ibfk_3` FOREIGN KEY (`idWarna`) REFERENCES `warna` (`idWarnaBaju`) ON UPDATE CASCADE;
-
---
--- Ketidakleluasaan untuk tabel `transaksi-baju`
---
-ALTER TABLE `transaksi-baju`
-  ADD CONSTRAINT `transaksi-baju_ibfk_1` FOREIGN KEY (`id_pembeli`) REFERENCES `pembeli` (`id_pembeli`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `transaksi-baju_ibfk_2` FOREIGN KEY (`id_baju`) REFERENCES `produk` (`idBaju`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

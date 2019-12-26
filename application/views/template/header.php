@@ -26,7 +26,7 @@
 
 <body>
 
-		<!-- ftco_navbar ftco-navbar-dark -->
+	<!-- ftco_navbar ftco-navbar-dark -->
 	<!-- nav terbaru -->
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light " id="ftco-navbar">
 		<div class="container">
@@ -49,9 +49,6 @@
 								<a href="<?= base_url(); ?>home/index" class="nav-link text-dark">Home</a>
 							</li>
 							<li class="nav-item active">
-								<a href="" class="nav-link text-dark">New Arrival</a>
-							</li>
-							<li class="nav-item active">
 								<a href="<?= base_url(); ?>home/men" class="nav-link text-dark">Men</a>
 							</li>
 							<li class="nav-item active">
@@ -70,13 +67,6 @@
 			</div>
 		</div>
 	</nav>
-<<<<<<< HEAD
-	<!-- <br>
-	<br>
-	<br> -->
-=======
 	<br>
 	<br>
 	<br>
-	<br>
->>>>>>> f2fcae25afd12da1d3038a642a06f11fd446de3b
