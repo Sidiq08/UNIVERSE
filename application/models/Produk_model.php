@@ -35,9 +35,7 @@ class Produk_model extends CI_Model
 	{
 		$this->db->select('*');
 		$this->db->from('produk a');
-		// $this->db->join('warna b', 'b.idWarnaBaju=a.idWarna', 'left');
-		// $this->db->join('ukuran c', 'c.idUkuran=a.idUkuran', 'left');
-		$this->db->join('kategori d', 'd.idKategoriBaju=a.idKategori', 'left');
+		$this->db->join('warna b', 'b.idWarnaBaju=a.idWarna', 'left');
 		$query = $this->db->get();
 		if ($query->num_rows() != 0) {
 			return $query->result_array();
@@ -63,10 +61,10 @@ class Produk_model extends CI_Model
 	// {
 	// 	return $this->db->get('kategori')->num_rows();
 	// }
-	// public function countAllWarna()
-	// {
-	// 	return $this->db->get('warna')->num_rows();
-	// }
+	public function countAllWarna()
+	{
+		return $this->db->get('warna')->num_rows();
+	}
 	// public function countAllUkuran()
 	// {
 	// 	return $this->db->get('ukuran')->num_rows();
@@ -112,6 +110,11 @@ class Produk_model extends CI_Model
 
 	public function getProdukById($idBaju)
 	{
-		return $this->db->get_where('produk', ['idBaju' => $idBaju])->row_array();
+		$query = $this->db->query("SELECT * FROM produk a JOIN warna b ON a.idWarna=b.idWarnaBaju WHERE a.idBaju =" . $idBaju);
+		if ($query->num_rows() != 0) {
+			return $query->row_array();
+		} else {
+			return false;
+		}
 	}
 }

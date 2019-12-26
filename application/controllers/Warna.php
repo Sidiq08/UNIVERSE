@@ -77,9 +77,9 @@ class Warna extends CI_Controller
             $this->load->view('template/footer_admin');
         } else {
             $data = $this->Warna_model->ubahDataWarna();
-            var_dump($data);
+            // var_dump($data);
             $this->session->set_flashdata('flash', 'Diubah');
-            // redirect('warna');
+            redirect('warna');
             // echo json_encode($data);
         }
     }

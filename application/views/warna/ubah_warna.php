@@ -8,7 +8,7 @@
 
             <div class="card-body">
                 <form method="post" action="">
-                    <input type="hidden" id="idWarnaBaju" name="idWarnaBaju" class="idWarnaBaju">
+                    <input type="hidden" id="idWarnaBaju" value="<?= $warna['idWarnaBaju'] ?>" name="idWarnaBaju" class="idWarnaBaju">
                     <div class="form-group">
                         <label for="warnaBaju">Warna Baju</label>
                         <input type="text" id="warnaBaju" value="<?= $warna['warnaBaju'] ?>" name="warnaBaju" class="form-control warnaBaju">
