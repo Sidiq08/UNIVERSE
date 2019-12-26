@@ -1,7 +1,7 @@
 <div class="bg-light y-3 my-3">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 mb-0"><hr><hr><hr><hr><a href="<?= base_url();?>/Home" class="text-success">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Cart</strong></div>
+          <div class="col-md-12 mb-0"><hr><hr><hr><hr><a href="<?= base_url();?>/Home" class="text-success">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Keranjang</strong></div>
         </div>
       </div>
     </div>
@@ -53,22 +53,18 @@ foreach ($cart as $item):
         <input type="text" class="form-control input-sm" name="cart[<?php echo $item['id'];?>][qty]" value="<?php echo $item['qty'];?>" >
         </td>
         <td><?php echo number_format($item['subtotal'], 0,",",".") ?></td>
-        <td><a href="<?php echo base_url()?>keranjang/hapus/<?php echo $item['rowid'];?>" class="btn btn-sm btn-danger tombol-hapus">
-        <i class="fas fa-minus-circle"></i></a></td>
-<?php endforeach; ?>
+        <td>
+        <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalHapus">
+        <i class="fas fa-minus-circle"></i></button></td>
+        <?php endforeach; ?>
       </tr>
     <tr>
       <td colspan="3"><b>Order Total: Rp <?php echo number_format($grand_total, 0,",","."); ?></b></td>
       <td colspan="4" align="right">
-      <form method="post" action="<?php echo base_url()?>keranjang/hapus/all">
-      <!-- <a data-toggle="modal" data-target="#myModal"  class ='btn btn-sm btn-danger'>Kosongkan Cart</a> -->
-      <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#myModal">Kosongkan Cart</button>
-      <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-  Launch static backdrop modal
-</button> -->
-      <!-- <button type="post" class="btn btn-sm btn-danger" action="<?php echo base_url()?>keranjang/hapus_all">Kosongkan Cart</button> -->
-      <!-- <a href="<?php echo base_url()?>keranjang/hapus_all"  class ='btn btn-sm btn-danger'>Kosongkan Keranjang</a> -->
-    </form>
+      <!-- <form method="post" action="<?php echo base_url()?>keranjang/hapus/all">
+      
+    </form> -->
+    <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#myModal">Kosongkan Cart</button>
         <button class='btn btn-sm btn-success'  type="submit">Update Cart</button>
         <a href="<?php echo base_url()?>keranjang/check_out"  class ='btn btn-sm btn-primary'>Check Out</a>
     </tr>
@@ -88,24 +84,51 @@ foreach ($cart as $item):
   
 </div>
 
+<<!-- Modal Penilai -->
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-md">
       <!-- Modal content-->
       <div class="modal-content">
       	<form method="post" action="<?php echo base_url()?>keranjang/hapus_all">
         <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Kosongkan Keranjang</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Hapus semua isi keranjang</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
         <div class="modal-body">
-			Apakah anda yakin akan mengosongkan keranjang anda ?
+        Apa anda yakin ingin menghapus semua isi keranjang ?
         </div>
         <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
-        <button type="button" class="btn btn-primary">Ya</button>
-          
+          <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">Tidak</button>
+          <button type="submit" class="btn btn-sm btn-default">Ya</button>
+        </div>
+        
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <!--End Modal-->
+
+  <<!-- Modal Penilai -->
+<div class="modal fade" id="modalHapus" role="dialog">
+    <div class="modal-dialog modal-md">
+      <!-- Modal content-->
+      <div class="modal-content">
+      	<form method="post" action="<?php echo base_url()?>keranjang/hapus/<?php echo $item['rowid'];?>">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Hapus Produk ini dari keranjang ?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <div class="modal-body">
+        Apa anda yakin ingin menghapus produk ini dari keranjang ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">Tidak</button>
+          <button type="submit" class="btn btn-sm btn-default">Ya</button>
         </div>
         
         </form>
