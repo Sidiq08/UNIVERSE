@@ -19,7 +19,7 @@
   <section class="belanjadiuniverse" id="belanjadiuniverse">
     <div class="container-fluid">
       <div class="card-deck mt-3">
-        <div class="card" style="width: 50rem; height: 100rem;">
+        <div class="card" style="width: 50rem;">
           <img src="<?= base_url(); ?>assets/img/baju1.jpg" class="card-img-top" alt="...">
 
         </div>
@@ -29,13 +29,13 @@
   <section class="belanjadiuniverse" id="belanjadiuniverse">
     <div class="container-fluid">
       <div class="card-deck mt-4">
-        <div class="card" style="width: 50rem; height: 100rem;">
+        <div class="card" style="width: 50rem;">
           <img src="<?= base_url(); ?>assets/img/men2.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <button type="submit" class="btn btn-sm btn-success btn-center"><i class="fas fa-shopping-cart"></i> Beli Produk ini</button>
           </div>
         </div>
-        <div class="card" style="width: 50rem; height: 100rem;">
+        <div class="card" style="width: 50rem;">
           <img src="<?= base_url(); ?>assets/img/men3.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Beli Produk ini</button>
@@ -46,31 +46,13 @@
   <section class="belanjadiuniverse" id="belanjadiuniverse">
     <div class="container-fluid">
       <div class="card-deck mt-4">
-        <div class="card" style="width: 50rem; height: 100rem;">
+        <div class="card" style="width: 50rem;">
           <img src="<?= base_url(); ?>assets/img/men2.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <button type="submit" class="btn btn-sm btn-success btn-center"><i class="fas fa-shopping-cart"></i> Beli Produk ini</button>
           </div>
         </div>
-        <div class="card" style="width: 50rem; height: 100rem;">
-          <img src="<?= base_url(); ?>assets/img/men3.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Beli Produk ini</button>
-          </div>
-        </div>
-      </div>
-  </section>
-
-  <section class="belanjadiuniverse" id="belanjadiuniverse">
-    <div class="container-fluid">
-      <div class="card-deck mt-4">
-        <div class="card" style="width: 50rem; height: 100rem;">
-          <img src="<?= base_url(); ?>assets/img/men2.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button type="submit" class="btn btn-sm btn-success btn-center"><i class="fas fa-shopping-cart"></i> Beli Produk ini</button>
-          </div>
-        </div>
-        <div class="card" style="width: 50rem; height: 100rem;">
+        <div class="card" style="width: 50rem;">
           <img src="<?= base_url(); ?>assets/img/men3.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Beli Produk ini</button>
@@ -82,7 +64,25 @@
   <section class="belanjadiuniverse" id="belanjadiuniverse">
     <div class="container-fluid">
       <div class="card-deck mt-4">
-        <div class="card" style="width: 50rem; height: 100rem;">
+        <div class="card" style="width: 50rem;">
+          <img src="<?= base_url(); ?>assets/img/men2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <button type="submit" class="btn btn-sm btn-success btn-center"><i class="fas fa-shopping-cart"></i> Beli Produk ini</button>
+          </div>
+        </div>
+        <div class="card" style="width: 50rem;">
+          <img src="<?= base_url(); ?>assets/img/men3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Beli Produk ini</button>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="belanjadiuniverse" id="belanjadiuniverse">
+    <div class="container-fluid">
+      <div class="card-deck mt-4">
+        <div class="card" style="width: 50rem;">
           <img src="<?= base_url(); ?>assets/img/baju1.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <button type="submit" class="btn btn-sm btn-success btn-center"><i class="fas fa-shopping-cart"></i> Beli Produk ini</button>
