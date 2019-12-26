@@ -50,10 +50,10 @@ class Produk_model extends CI_Model
 	// {
 	// 	return $this->db->get('ketegori')->result_array();
 	// }
-	// public function getAllWarna()
-	// {
-	// 	return $this->db->get('warna')->result_array();
-	// }
+	public function getAllWarna()
+	{
+		return $this->db->get('warna')->result_array();
+	}
 	// public function getAllUkuran()
 	// {
 	// 	return $this->db->get('ukuran')->result_array();
@@ -81,6 +81,7 @@ class Produk_model extends CI_Model
 			'idWarna' => $this->input->post('idWarna', true),
 			'idKategori' => $this->input->post('idKategori', true),
 			'hargaBaju' => $this->input->post('hargaBaju', true),
+			'stokBaju' => $this->input->post('stokBaju', true),
 			'gambarBaju' => $this->input->post('gambarBaju', true),
 			'deskripsiBaju' => $this->input->post('deskripsiBaju', true)
 		];
@@ -95,6 +96,7 @@ class Produk_model extends CI_Model
 			'idWarna' => $this->input->post('idWarna', true),
 			'idKategori' => $this->input->post('idKategori', true),
 			'hargaBaju' => $this->input->post('hargaBaju', true),
+			'stokBaju' => $this->input->post('stokBaju', true),
 			'gambarBaju' => $this->input->post('gambarBaju', true),
 			'deskripsiBaju' => $this->input->post('deskripsiBaju', true)
 		];

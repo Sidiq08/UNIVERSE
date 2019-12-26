@@ -40,7 +40,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url(); ?>produk" class="nav-link">
+            <a href="<?= site_url(); ?>produk" class="nav-link">
               <i class="nav-icon fas fa-archive"></i>
               <p>
                 Product Baju

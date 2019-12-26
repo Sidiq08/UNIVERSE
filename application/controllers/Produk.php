@@ -19,7 +19,7 @@ class Produk extends CI_Controller
         $data['produk'] = $this->produk->getAllProduk();
         // $data['kategori'] = $this->produk->getAllKategori();
         // $data['ukuran'] = $this->produk->getAllUkuran();
-        // $data['warna'] = $this->produk->getAllWarna();
+        $data['warna'] = $this->produk->getAllWarna();
 
         $data['kategori'] = $this->db->get('kategori');
         // $data['warna'] = $this->db->get('warna')->num_rows();
@@ -30,13 +30,14 @@ class Produk extends CI_Controller
         $this->form_validation->set_rules('idWarna', 'IdWarna', 'required');
         $this->form_validation->set_rules('idKategori', 'IdKategori', 'required');
         $this->form_validation->set_rules('hargaBaju', 'HargaBaju', 'required');
+        $this->form_validation->set_rules('stokBaju', 'StokBaju', 'required');
         $this->form_validation->set_rules('gambarBaju', 'GambarBaju', 'required');
         $this->form_validation->set_rules('deskripsiBaju', 'DeskripsiBaju', 'required');
 
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('template/header_admin');
             $this->load->view('template/sidebar_admin');
-            $this->load->view('admin/index_produk', $data);
+            $this->load->view('admin/produk/index', $data);
             $this->load->view('template/footer_admin');
         } else {
             $this->Produk_model->tambahDataProduk();
@@ -86,6 +87,7 @@ class Produk extends CI_Controller
         $idWarna = $this->input->post('idWarna', true);
         $idKategori = $this->input->post('idKategori', true);
         $hargaBaju = $this->input->post('hargaBaju', true);
+        $stokBaju = $this->input->post('stokBaju', true);
         $gambarBaju = $this->input->post('gambarBaju', true);
         $deskripsiBaju = $this->input->post('deskripsiBaju', true);
 
@@ -95,6 +97,7 @@ class Produk extends CI_Controller
         $this->form_validation->set_rules('idWarna', 'IdWarna', 'required');
         $this->form_validation->set_rules('idKategori', 'IdKategori', 'required');
         $this->form_validation->set_rules('hargaBaju', 'HargaBaju', 'required');
+        $this->form_validation->set_rules('stokBaju', 'StokBaju', 'required');
         $this->form_validation->set_rules('gambarBaju', 'GambarBaju', 'required');
         $this->form_validation->set_rules('deskripsiBaju', 'DeskripsiBaju', 'required');
 
@@ -109,5 +112,16 @@ class Produk extends CI_Controller
             redirect('admin/index_produk');
             // echo json_encode($data);
         }
+    }
+
+    public function detail($idBaju)
+    {
+        $data['judul'] = 'Detail Data Mahasiswa';
+        $data['produk'] = $this->Produk_model->getProdukById($idBaju);
+        $data['warna'] = $this->Produk_model->getAllWarna();
+        $this->load->view('template/header_admin');
+        $this->load->view('template/sidebar_admin');
+        $this->load->view('admin/produk/detail_produk', $data);
+        $this->load->view('template/footer_admin');
     }
 }

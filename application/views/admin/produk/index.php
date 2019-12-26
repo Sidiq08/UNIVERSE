@@ -34,7 +34,7 @@
 <hr>
 <div class="row mt-6 m-2">
     <div class="col-md-12">
-        <a href="<?= base_url(); ?>produk/tambah" class="btn btn-lg btn-success btn-flat" data-toggle="modal" data-target="#modal-add">Tambah Data Kategori</a>
+        <a href="<?= base_url(); ?>produk/tambah" class="btn btn-lg btn-success btn-flat" data-toggle="modal" data-target="#modal-add">Tambah Data Produk</a>
     </div>
 </div>
 
@@ -46,10 +46,8 @@
                 <thead>
                     <tr>
                         <th>idBaju</th>
+                        <th>gambarBaju</th>
                         <th>namaBaju</th>
-                        <th>idUkuran</th>
-                        <th>idWarna</th>
-                        <th>idKategori</th>
                         <th>hargaBaju</th>
                         <th>Aksi</th>
                     </tr>
@@ -67,16 +65,15 @@
                     <?php foreach ($produk as $p) : ?>
                         <tr>
                             <td><?= $p['idBaju']; ?></td>
+                            <td><?= $p['gambarBaju']; ?></td>
                             <td><?= $p['namaBaju']; ?></td>
-                            <td><?= $p['idUkuran']; ?></td>
-                            <td><?= $p['idWarna']; ?></td>
-                            <td><?= $p['idKategori']; ?></td>
                             <td><?= $p['hargaBaju']; ?></td>
                             <td>
-                                <!-- <a href="<//?= base_url(); ?>kategori/ubah/<//?= $k['idKategoriBaju']; ?>" class="btn btn-sm btn-flat btn-info">Ubah Data</a> -->
-                                <!-- <a href="<//?= base_url(); ?>kategori/ubah/<//?= $k['idKategoriBaju']; ?>" class="btn btn-sm btn-flat btn-success" data-toggle="modal" data-target="#modal-default">edit</a> -->
+                                <!-- <a href="<//?= base_url(); ?>kategori/ubah/<//?= $k['idBaju']; ?>" class="btn btn-sm btn-flat btn-info">Ubah Data</a> -->
+                                <!-- <a href="<//?= base_url(); ?>kategori/ubah/<//?= $k['idBaju']; ?>" class="btn btn-sm btn-flat btn-success" data-toggle="modal" data-target="#modal-default">edit</a> -->
                                 <button type="button" class="btn btn-sm btn-flat btn-primary btn-edit" id="<?= $p['idBaju']; ?>" data-toggle="modal" data-target="#modal-default">Edit Data</button>
                                 <a href="<?= base_url(); ?>produk/hapus/<?= $p['idBaju']; ?>" class="btn btn-sm btn-flat btn-danger hapus-kategori">Hapus Data</a>
+                                <a href="<?= base_url(); ?>produk/detail/<?= $p['idBaju']; ?>" class="btn btn-sm btn-flat btn-warning">Detail Data</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -107,12 +104,12 @@
                 <div class="container">
                     <div class="card">
                         <div class="card-header">
-                            <h3>Form Tambah Data Kategori <span class="idKategori"></span></h3>
+                            <h3>Form Tambah Data Produk <span class="idBaju"></span></h3>
                         </div>
 
                         <div class="card-body">
                             <form method="post" action="">
-                                <input type="hidden" name="idKategoriBaju" class="idKategoriBaju">
+                                <input type="hidden" name="idBaju" class="idBaju">
                                 <div class="form-group">
                                     <label for="idJenisKelamin">Jenis Kelamin</label>
                                     <select class="form-control custom-select idJenisKelamin" name="idJenisKelamin">
@@ -168,7 +165,7 @@
 
                         <div class="card-body">
                             <form method="post" action="">
-                                <input type="hidden" id="idKategoriBaju" name="idKategoriBaju" class="idKategoriBaju">
+                                <input type="hidden" id="idBaju" name="idBaju" class="idBaju">
                                 <div class="form-group">
                                     <label for="idJenisKelamin">Jenis Kelamin</label>
                                     <select class="form-control custom-select idJenisKelamin" id="idJenisKelamin" name="idJenisKelamin">
@@ -217,7 +214,7 @@
                 data: "id=" + id,
                 dataType: 'JSON',
                 success: function(data) {
-                    $('.idKategoriBaju').val(data.list.idKategoriBaju);
+                    $('.idBaju').val(data.list.idBaju);
                     if (data.status == 202) {
                         $('.idJenisKelamin > option').each(function(i, v) {
                             if (data.list.idJenisKelamin == v.value) {
@@ -235,7 +232,7 @@
 
         // //Update Barang
         $('#btn_update').on('click', function() {
-            var idKategoriBaju = $('#idKategoriBaju').val();
+            var idBaju = $('#idBaju').val();
             var idJenisKelamin = $('#idJenisKelamin').val();
             var kategoriBaju = $('#kategoriBaju').val();
             $.ajax({
@@ -243,12 +240,12 @@
                 url: "<?php echo site_url('kategori/ubah') ?>",
                 dataType: "JSON",
                 data: {
-                    idKategoriBaju: idKategoriBaju,
+                    idBaju: idBaju,
                     idJenisKelamin: idJenisKelamin,
                     kategoriBaju: kategoriBaju
                 },
                 success: function(data) {
-                    $('[name="idKategoriBaju"]').val(data.idKategoriBaju);
+                    $('[name="idBaju"]').val(data.idBaju);
                     $('[name="idJenisKelamin"]').val(data.idJenisKelamin);
                     $('[name="kategoriBaju"]').val(data.kategoriBaju);
                     // $('#modal-default').modal('hide'); //belum jalan
@@ -280,7 +277,7 @@
 
         //   var modal = $(this)
         //   // modal.find('.idKategori').text('New message to ' + recipient)
-        //   modal.find('.idKategoriBaju').val(idkategori)
+        //   modal.find('.idBaju').val(idkategori)
         //   modal.find('.kategoriBaju').val(kategori)
         //   modal.find('.idJenisKelamin').val(idjeniskelamin)
 
