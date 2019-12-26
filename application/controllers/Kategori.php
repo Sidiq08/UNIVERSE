@@ -23,22 +23,6 @@ class Kategori extends CI_Controller
         $data['jeniskelaminP'] = $this->kategori->countJenisPerempuan();
         // $data['kategori'] = $this->kategori->getAllKategori();
         // $data['kategori'] = $this->kategori->getKategoriById($idKategoriBaju);
-        $this->load->view('template/header_admin');
-        $this->load->view('template/sidebar_admin');
-        $this->load->view('kategori/index', $data);
-        $this->load->view('template/footer_admin');
-    }
-
-    public function logout()
-    {
-        $this->session->unset_userdata('email');
-
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">You have been logged out!</div>');
-        redirect('auth');
-    }
-
-    public function tambah()
-    {
         // Tambah Data
         $data['judul'] = 'Tambah of Kategori';
         $this->form_validation->set_rules('idJenisKelamin', 'IdJenisKelamin', 'required');
@@ -47,7 +31,7 @@ class Kategori extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('template/header_admin');
             $this->load->view('template/sidebar_admin');
-            $this->load->view('kategori/tambah', $data);
+            $this->load->view('admin/index_kategori', $data);
             $this->load->view('template/footer_admin');
         } else {
             $this->Kategori_model->tambahDataKategori();
@@ -55,6 +39,18 @@ class Kategori extends CI_Controller
             redirect('kategori');
         }
         // akhir tambah
+        // $this->load->view('template/header_admin');
+        // $this->load->view('template/sidebar_admin');
+        // $this->load->view('kategori/index', $data);
+        // $this->load->view('template/footer_admin');
+    }
+
+    public function logout()
+    {
+        $this->session->unset_userdata('email');
+
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">You have been logged out!</div>');
+        redirect('auth');
     }
 
     public function hapus($idKategoriBaju)
@@ -87,12 +83,13 @@ class Kategori extends CI_Controller
         if ($this->form_validation->run() == false) {
             $this->load->view('template/header_admin');
             $this->load->view('template/sidebar_admin');
-            $this->load->view('kategori/index', $data);
+            $this->load->view('admin/index_kategori');
             $this->load->view('template/footer_admin');
         } else {
-            $this->Kategori_model->ubahDataKategori();
+            $data = $this->Kategori_model->ubahDataKategori();
             $this->session->set_flashdata('flash', 'Diubah');
-            redirect('kategori');
+            redirect('admin/index_kategori');
+            // echo json_encode($data);
         }
     }
 }

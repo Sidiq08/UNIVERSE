@@ -11,6 +11,10 @@
   <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.css">
   <!-- DataTables -->
   <link rel="stylesheet" href="<?= base_url(); ?>assets/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/plugins/toastr/toastr.min.css">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="<?= base_url(); ?>assets/plugins/fontawesome-free/css/all.min.css">
   <!-- overlayScrollbars -->

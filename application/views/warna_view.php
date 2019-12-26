@@ -233,7 +233,7 @@
                 var id_warna_baju = $('#id_warna_baju_delete').val();
                 $.ajax({
                     type: "POST",
-                    url: "<?= base_url('warna/delete') ?>",
+                    url: "<?= site_url('warna/delete') ?>",
                     dataType: "JSON",
                     data: {
                         id_warna_baju: id_warna_baju
