@@ -32,7 +32,7 @@ class Warna_model extends CI_Model{
    
     public function tambahDataWarna(){
         $data= [
-            'warnaBaju' => $this->input->post('warnaBaju',true)
+            'WarnaBaju' => $this->input->post('WarnaBaju',true)
         ];
         $this->db->insert('warna',$data);
     }
