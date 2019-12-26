@@ -47,13 +47,13 @@ class Ukuran extends CI_Controller
     {
         $this->Ukuran_model->hapusDataUkuran($idUkuran);
         $this->session->set_flashdata('flash', 'Dihapus');
-        redirect('Ukuran');
+        redirect('ukuran');
     }
 
     public function getData()
     {
         $id = $this->input->get('id');
-        $data = $this->ukuran_model->getWarnaById($id);
+        $data = $this->ukuran_model->getUkuraById($id);
 
         echo json_encode(['status' => 202, 'list' => $data]);
         return true;
@@ -61,25 +61,25 @@ class Ukuran extends CI_Controller
 
     public function ubah($idWarnaBaju)
     {
-        $data['ukuran'] = $this->Warna_model->getWarnaById($idWarnaBaju);
+        $data['ukuran'] = $this->Ukuran_model->getUkuranById($idWarnaBaju);
 
         // $idWarnaBaju = $this->input->post('idWarnaBaju');
         // $warnaBaju = $this->input->post('warnaBaju');
         // $data['JumlahWarna'] = $this->warna_model->countAllWarna();
         // $data['warna'] = $this->warna_model->getAllWarna();
 
-        $this->form_validation->set_rules('warnaBaju', 'WarnaBaju', 'required');
+        $this->form_validation->set_rules('UkuranBaju', 'UkuranBaju', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('template/header_admin');
             $this->load->view('template/sidebar_admin');
-            $this->load->view('ukuran/ubah_warna', $data);
+            $this->load->view('ukuran/ubah_ukuran', $data);
             $this->load->view('template/footer_admin');
         } else {
             $data = $this->Warna_model->ubahDataWarna();
             // var_dump($data);
             $this->session->set_flashdata('flash', 'Diubah');
-            redirect('warna');
+            redirect('ukuran');
             // echo json_encode($data);
         }
     }

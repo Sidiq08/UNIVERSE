@@ -3,17 +3,17 @@
 
         <div class="card">
             <div class="card-header">
-                <h3>Form Ubah Data Warna</h3>
+                <h3>Form Ubah Data Ukuran</h3>
             </div>
 
             <div class="card-body">
                 <form method="post" action="">
-                    <input type="hidden" id="idWarnaBaju" value="<?= $warna['idWarnaBaju'] ?>" name="idWarnaBaju" class="idWarnaBaju">
+                    <input type="hidden" id="idUkuran" value="<?= $ukuran['idUkuran'] ?>" name="idUkuran" class="idUkuran">
                     <div class="form-group">
-                        <label for="warnaBaju">Warna Baju</label>
-                        <input type="text" id="warnaBaju" value="<?= $warna['warnaBaju'] ?>" name="warnaBaju" class="form-control warnaBaju">
+                        <label for="ukuran">Ukuran Baju</label>
+                        <input type="text" id="ukuran" value="<?= $ukuran['ukuranBaju'] ?>" name="ukuran" class="form-control ukuran">
                         <small class="form-text text-danger">
-                            <?= form_error('warnaBaju'); ?>
+                            <?= form_error('ukuran'); ?>
                         </small>
                     </div>
                     <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Keluar</button>
