@@ -49,9 +49,6 @@
 								<a href="<?= base_url(); ?>home/index" class="nav-link text-dark">Home</a>
 							</li>
 							<li class="nav-item active">
-								<a href="" class="nav-link text-dark">New Arrival</a>
-							</li>
-							<li class="nav-item active">
 								<a href="<?= base_url(); ?>home/men" class="nav-link text-dark">Men</a>
 							</li>
 							<li class="nav-item active">
@@ -70,7 +67,6 @@
 			</div>
 		</div>
 	</nav>
-	<br>
 	<br>
 	<br>
 	<br>
