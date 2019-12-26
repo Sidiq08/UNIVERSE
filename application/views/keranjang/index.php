@@ -1,21 +1,11 @@
 <div class="bg-light y-3 my-3">
-<<<<<<< HEAD
   <div class="container">
     <div class="row">
-      <div class="col-md-12 mb-0">
-        <hr>
-        <hr>
-        <hr>
-        <hr><a href="<?= base_url(); ?>/Home" class="text-success">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Keranjang</strong></div>
-=======
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 mb-0"><a href="<?= base_url();?>/Home" class="text-success">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Keranjang</strong></div>
-        </div>
-      </div>
->>>>>>> 840bc560db42e5f702710d657a60fe2550ebbdba
+      <div class="col-md-12 mb-0"><a href="<?= base_url(); ?>/Home" class="text-success">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Keranjang</strong></div>
     </div>
   </div>
+</div>
+</div>
 </div>
 </div>
 
