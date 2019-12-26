@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 26 Des 2019 pada 14.05
--- Versi server: 10.1.37-MariaDB
--- Versi PHP: 7.3.1
+-- Waktu pembuatan: 26 Des 2019 pada 17.34
+-- Versi server: 10.4.6-MariaDB
+-- Versi PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,21 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `universedb`
 --
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `alamat-pembeli`
---
-
-CREATE TABLE `alamat-pembeli` (
-  `id-alamat-pembeli` int(11) NOT NULL,
-  `provinsi-pembeli` varchar(20) NOT NULL,
-  `kab-pembeli` varchar(20) NOT NULL,
-  `kec-pembeli` varchar(20) NOT NULL,
-  `kode-pos-pembeli` varchar(5) NOT NULL,
-  `keterangan-alamat` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -89,7 +74,6 @@ CREATE TABLE `pembeli` (
   `id_pembeli` int(11) NOT NULL,
   `nama` varchar(40) NOT NULL,
   `email` varchar(128) NOT NULL,
-  `alamat` varchar(128) NOT NULL,
   `telp` varchar(15) NOT NULL,
   `id-alamat-pembeli` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -120,18 +104,17 @@ INSERT INTO `produk` (`idBaju`, `namaBaju`, `idUkuran`, `idWarna`, `idKategori`,
 (1, 'Traveller Geographic', 3, 1, 36, 80000, 200, '4.png', 'Baju dengan gambar Traveller dari National Geographic'),
 (2, 'Off Road 4x4', 3, 1, 36, 90000, 0, '1.png', 'Baju dengan gambar Off Road 4x4'),
 (3, 'Professional Photographer', 3, 1, 36, 80000, 0, '3.jpg', 'Baju dengan gambar Professional Photographer'),
-(4, 'Kaos Monster Face (SB2TU)', 3, 6, 51, 96000, 3, '219103_l.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos.'),
 (5, 'Becky Loose Shirt White', 2, 1, 36, 249000, 4, '279214_becky-loose-shirt-white', 'Tampil gaya dengan mengenakan atasan kemeja lengan panjang ini! Memiliki model simpel. Padankan dengan celana panjang slim fit dan loafers favoritmu!'),
-(6, 'Kaos Screaming Panda (SB8D)', 3, 6, 51, 99000, 2, '17885_l.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos.'),
+(6, 'Kaos Screaming Panda', 3, 6, 51, 99000, 2, '17885_l.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos.'),
 (7, 'Alev Twotone Shirt Black', 2, 6, 36, 179000, 3, '278657_alev-twotone-shirt-blac', 'Miliki atasan dengan motif menarik yang cocok dipadankan dengan celana slim fit serta chungky heels dan tas favoritmu! '),
-(8, 'Kaos A Good Day (SBH4Q)', 2, 1, 51, 95000, 5, '3834009_l.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos.'),
-(9, 'Kaos Japan Gate (SB3ER)', 4, 1, 51, 95000, 3, '3834009_l.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos'),
+(8, 'Kaos A Good Day', 2, 1, 51, 95000, 5, '3834009_l.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos.'),
+(9, 'Kaos Japan Gate', 4, 1, 51, 95000, 3, '3834009_l.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos'),
 (10, 'Aliona Checkered Wool Outer Sh', 1, 6, 36, 209000, 1, '278640_aliona-checkered-wool-o', 'Tampil stylish dengan luaran yang memiliki motif menarik. Padankan dengan dalaman tank top serta celana slim fit dan'),
-(11, 'Kaos Cat Eyes (SB9M)', 3, 6, 51, 96000, 2, '20099_l.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos.'),
+(11, 'Kaos Cat Eyes', 3, 6, 51, 96000, 2, '20099_l.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos.'),
 (12, 'Tally Cropped Shirt White', 1, 1, 36, 179000, 4, '277592_tally-cropped-shirt-whi', 'Atasan kemeja lengan pendek untuk tampilan casual chic kamu! Memiliki motif prints dengan detail kancing. Padankan dengan celana panjang slim fit dan loafers favoritmu!'),
 (13, 'Sasha Jaquard Pants Cream', 2, 1, 52, 219000, 5, '276820_sasha-jaquard-pants-cre', 'Tampil chic dengan mengenakan celana panjang ini! Memiliki model simpel dari bahan jaquard. Padankan dengan atasan tanpa lengan dan heels favoritmu!'),
 (14, 'Marla Collar Shirt White', 1, 1, 51, 179000, 3, '277013_marla-collar-shirt-whit', 'Tampil cantik dengan atasan ini! Padankan dengan celana palazzo serta heels dan sling bag!'),
-(15, 'Kaos Riding My Bike (SB5A2)', 4, 1, 51, 95000, 4, '1134096_l.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos.'),
+(15, 'Kaos Riding My Bike', 4, 1, 51, 95000, 4, '1134096_l.JPG', 'Kaos O-Neck Unisex, Cotton Combed 24s, kualitas premium standar Distro Bandung.\r\nGambar disablon menggunakan teknologi Direct To Garment (DTG) terbaru.\r\nPesanan dikirim antara 1-3 hari setelah pembayaran diterima.\r\nPengiriman cepat ke seluruh daerah di Indonesia lewat JNE atau PT.Pos.'),
 (16, 'Stacy Button Pants Olive', 2, 1, 51, 209000, 4, '277013_marla-collar-shirt-whit', 'Stacy Button Pants Olive\r\nTampil chic dengan mengenakan celana 7/8 ini! Memiliki model simpel dengan detail menarik. Padankan dengan atasan crop dan strap sandal favoritmu!');
 
 -- --------------------------------------------------------
@@ -154,7 +137,15 @@ CREATE TABLE `tbl_detail_transaksi` (
 
 INSERT INTO `tbl_detail_transaksi` (`id`, `id_transaksi`, `id_produk`, `qty`, `harga`) VALUES
 (1, 0, 2, '1', 90000),
-(2, 0, 2, '1', 90000);
+(2, 0, 2, '1', 90000),
+(3, 0, 1, '2', 80000),
+(4, 0, 1, '1', 80000),
+(5, 0, 1, '1', 80000),
+(6, 0, 9, '1', 95000),
+(7, 0, 6, '1', 99000),
+(8, 0, 6, '1', 99000),
+(9, 0, 5, '1', 249000),
+(10, 0, 2, '1', 90000);
 
 -- --------------------------------------------------------
 
@@ -176,7 +167,16 @@ CREATE TABLE `tbl_pembeli` (
 
 INSERT INTO `tbl_pembeli` (`id`, `nama`, `email`, `alamat`, `telpon`) VALUES
 (1, 'awdaw', 'ridwanbader54@gmail.comrwa', 'jl.kaum rt05/  rw07 kec.cililin kab.bandung barat ', '7516851'),
-(2, 'awdaw', 'ridwanbader54@gmail.com', 'jl.kaum', '7516851');
+(2, 'awdaw', 'ridwanbader54@gmail.com', 'jl.kaum', '7516851'),
+(3, 'ridlwan', 'ridlwan@mail.unpas.ac.id', 'ijijdiwa', '89815'),
+(4, 'ridlwan', 'ridlwan@mail.unpas.ac.id', 'jdiwa', '9892'),
+(5, 'ridlwan', 'ridwanbader54@gmail.com', 'hdiwawia', '878741'),
+(6, 'ridlwandwdwadaw', 'ridwanwbader54@gmail.com', 'jl.kaum rt05/  rw07 kec.cililin kab.bandung barat ', '878741'),
+(7, 'aulia', 'aulia@gmail.com', 'cijerokaso', '085917'),
+(8, 'sidi', 'sidiq@gmail.com', 'cijerokaso', '975191'),
+(9, 'hd', 'ridwanbder54@gmail.com', 'jl.kaum rt05/  rw07 kec.cililin kab.bandung barat ', '98941'),
+(10, 'ridlwandwdwadaw', 'ridlwan@mail.unpas.ac.id', 'jl.kaum', '89815'),
+(11, 'ridlwandwdwadaw', 'ridlwan@mail.unpas.ac.id', 'jl.kaum', '89815');
 
 -- --------------------------------------------------------
 
@@ -196,7 +196,16 @@ CREATE TABLE `tbl_transaksi` (
 
 INSERT INTO `tbl_transaksi` (`id`, `tanggal_transaksi`, `pembeli`) VALUES
 (1, '2019-12-25', 0),
-(2, '2019-12-25', 2);
+(2, '2019-12-25', 2),
+(3, '2019-12-26', 3),
+(4, '2019-12-26', 4),
+(5, '2019-12-26', 5),
+(6, '2019-12-26', 6),
+(7, '2019-12-26', 7),
+(8, '2019-12-26', 8),
+(9, '2019-12-26', 9),
+(10, '2019-12-26', 10),
+(11, '2019-12-26', 11);
 
 -- --------------------------------------------------------
 
@@ -286,12 +295,6 @@ INSERT INTO `warna` (`idWarnaBaju`, `warnaBaju`) VALUES
 --
 
 --
--- Indeks untuk tabel `alamat-pembeli`
---
-ALTER TABLE `alamat-pembeli`
-  ADD PRIMARY KEY (`id-alamat-pembeli`);
-
---
 -- Indeks untuk tabel `jeniskelamin`
 --
 ALTER TABLE `jeniskelamin`
@@ -308,8 +311,7 @@ ALTER TABLE `kategori`
 -- Indeks untuk tabel `pembeli`
 --
 ALTER TABLE `pembeli`
-  ADD PRIMARY KEY (`id_pembeli`),
-  ADD KEY `id-alamat-pembeli` (`id-alamat-pembeli`);
+  ADD PRIMARY KEY (`id_pembeli`);
 
 --
 -- Indeks untuk tabel `produk`
@@ -370,12 +372,6 @@ ALTER TABLE `warna`
 --
 
 --
--- AUTO_INCREMENT untuk tabel `alamat-pembeli`
---
-ALTER TABLE `alamat-pembeli`
-  MODIFY `id-alamat-pembeli` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT untuk tabel `jeniskelamin`
 --
 ALTER TABLE `jeniskelamin`
@@ -403,19 +399,19 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT untuk tabel `tbl_detail_transaksi`
 --
 ALTER TABLE `tbl_detail_transaksi`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_pembeli`
 --
 ALTER TABLE `tbl_pembeli`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_transaksi`
 --
 ALTER TABLE `tbl_transaksi`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `transaksi-baju`
