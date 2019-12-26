@@ -18,9 +18,10 @@ class Produk extends CI_Controller
 
         $data['produk'] = $this->produk->getAllProduk();
         $data['jumlahWarna'] = $this->db->get('warna')->num_rows();
+        $data['jumlahKategori'] = $this->db->get('kategori')->num_rows();
         $data['warna'] = $this->produk->getAllWarna();
+        $data['ukuran'] = $this->produk->getAllUkuran();
         // $data['kategori'] = $this->produk->getAllKategori();
-        // $data['ukuran'] = $this->produk->getAllUkuran();
 
         // $data['kategori'] = $this->db->get('kategori');
         // $data['warna'] = $this->db->get('warna');
@@ -121,6 +122,7 @@ class Produk extends CI_Controller
         $data['judul'] = 'Detail Data Mahasiswa';
         $data['produk'] = $this->Produk_model->getProdukById($idBaju);
         // $data['produka'] = $this->Produk_model->getAllProduk();
+        $data['ukuran'] = $this->Produk_model->getAllUkuran();
         $data['warna'] = $this->Produk_model->getAllWarna();
         $this->load->view('template/header_admin');
         $this->load->view('template/sidebar_admin');

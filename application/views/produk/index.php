@@ -12,17 +12,17 @@
         <!-- /.info-box -->
     </div>
     <!-- /.info-col -->
-    <!-- <div class="col-md-3 col-sm-6 col-12">
+    <div class="col-md-3 col-sm-6 col-12">
         <div class="info-box bg-danger">
             <span class="info-box-icon"><i class="fas fa-venus"></i></span>
             <div class="info-box-content">
-                <span class="info-box-text">Perempuan</span>
-                <span class="info-box-number"><?= $jeniskelaminP ?></span>
-            </div> -->
-    <!-- /.info-box-content -->
-    <!-- </div> -->
-    <!-- /.info-box -->
-    <!-- </div> -->
+                <span class="info-box-text">Kategori</span>
+                <span class="info-box-number"><?= $jumlahKategori ?></span>
+            </div>
+            <!-- /.info-box-content -->
+        </div>
+        <!-- /.info-box -->
+    </div>
     <!-- /.info-col -->
 </div>
 <hr>
