@@ -36,6 +36,9 @@ class  Admin extends CI_Controller
 
     public function Ubah()
     {
+        if (!$this->session->userdata('email')) {
+            redirect('auth');
+        }
         $data['title'] = 'Edit Profile';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $this->form_validation->set_rules('name', 'Name', 'required|trim');

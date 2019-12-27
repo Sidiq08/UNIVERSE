@@ -1,4 +1,3 @@
-<?php var_dump($kategori) ?>
 <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
 <div class="row">
   <div class="col-md-3 col-sm-6 col-12">

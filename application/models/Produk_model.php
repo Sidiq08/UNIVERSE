@@ -44,17 +44,37 @@ class Produk_model extends CI_Model
 		}
 	}
 
-	// public function getAllKategori()
-	// {
-	// 	return $this->db->get('ketegori')->result_array();
-	// }
+	public function getAllKategoriF()
+	{
+		$this->db->select('*');
+		$this->db->from('kategori a');
+		$this->db->join('jeniskelamin b', 'b.idJenisKelamin=a.idJenisKelamin', 'left');
+		$query = $this->db->get();
+		if ($query->num_rows() != 0) {
+			return $query->result_array();
+		} else {
+			return false;
+		}
+	}
+	public function getAllKategori()
+	{
+		return $this->db->get('ketegori')->row_array();
+	}
 	public function getAllWarna()
 	{
 		return $this->db->get('warna')->row_array();
 	}
+	public function getAllWarnaF()
+	{
+		return $this->db->get('warna')->result_array();
+	}
 	public function getAllUkuran()
 	{
 		return $this->db->get('ukuran')->row_array();
+	}
+	public function getAllUkuranF()
+	{
+		return $this->db->get('ukuran')->result_array();
 	}
 
 	// public function countAllkategori()

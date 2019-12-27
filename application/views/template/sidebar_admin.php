@@ -11,14 +11,12 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="#" class="img-circle elevation-2" alt="..."><!-- Ambil dari Login -->
+          <img src="<?= base_url(); ?>assets/img/default.png" class="img-circle elevation-2">
         </div>
         <div class="info">
-          <a href="#" class="d-block"></a><!-- Ambil dari Login -->
-
-        </div>
-      </div>
-      <!-- Sidebar Menu -->
+          <a href="<?= base_url(); ?>/admin" class="d-block">ADMIN
+          </a> </div>
+      </div> <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
@@ -47,7 +45,7 @@
               </p>
             </a>
           </li>
-           <li class="nav-item">
+          <li class="nav-item">
             <a href="<?= site_url(); ?>ukuran" class="nav-link">
               <i class="nav-icon fas fa-plus-circle"></i>
               <p>

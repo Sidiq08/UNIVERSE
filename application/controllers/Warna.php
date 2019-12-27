@@ -9,6 +9,9 @@ class Warna extends CI_Controller
         parent::__construct();
         $this->load->model('Warna_model');
         $this->load->library('form_validation');
+        if (!$this->session->userdata('email')) {
+            redirect('auth');
+        }
     }
 
     public function index()

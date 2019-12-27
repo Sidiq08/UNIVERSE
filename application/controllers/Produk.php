@@ -9,6 +9,9 @@ class Produk extends CI_Controller
         parent::__construct();
         $this->load->model('Produk_model');
         $this->load->library('form_validation');
+        if (!$this->session->userdata('email')) {
+            redirect('auth');
+        }
     }
 
     public function index()
@@ -26,31 +29,10 @@ class Produk extends CI_Controller
         // $data['kategori'] = $this->db->get('kategori');
         // $data['warna'] = $this->db->get('warna');
         // $data['ukuran'] = $this->db->get('ukuran')->num_rows();
-        // Tambah Data
-        $this->form_validation->set_rules('namaBaju', 'NamaBaju', 'required');
-        $this->form_validation->set_rules('idUkuran', 'Id-ukuran', 'required');
-        $this->form_validation->set_rules('idWarna', 'IdWarna', 'required');
-        $this->form_validation->set_rules('idKategori', 'IdKategori', 'required');
-        $this->form_validation->set_rules('hargaBaju', 'HargaBaju', 'required');
-        $this->form_validation->set_rules('stokBaju', 'StokBaju', 'required');
-        $this->form_validation->set_rules('gambarBaju', 'GambarBaju', 'required');
-        $this->form_validation->set_rules('deskripsiBaju', 'DeskripsiBaju', 'required');
-
-        if ($this->form_validation->run() == FALSE) {
-            $this->load->view('template/header_admin');
-            $this->load->view('template/sidebar_admin');
-            $this->load->view('produk/index', $data);
-            $this->load->view('template/footer_admin');
-        } else {
-            $this->Produk_model->tambahDataProduk();
-            $this->session->set_flashdata('flash', 'Ditambahkan Diubah');
-            redirect('produk');
-        }
-        // akhir tambah
-        // $this->load->view('template/header_admin');
-        // $this->load->view('template/sidebar_admin');
-        // $this->load->view('kategori/index', $data);
-        // $this->load->view('template/footer_admin');
+        $this->load->view('template/header_admin');
+        $this->load->view('template/sidebar_admin');
+        $this->load->view('produk/index', $data);
+        $this->load->view('template/footer_admin');
     }
 
     public function logout()
@@ -76,23 +58,14 @@ class Produk extends CI_Controller
         echo json_encode(['status' => 202, 'list' => $data]);
         return true;
     }
-
-    public function ubah()
+    public function ubah($idBaju)
     {
-        // $data['kategori'] = $this->Produk_model->getkategoriById();
-
-        // $id = $this->input->post('idBaju');
-        // $jenisKelamin = $this->input->post('idJenisKelamin');
-        // $kategoriBaju = $this->input->post('kategoriBaju');
-        // $namaBaju = $this->input->post('namaBaju', true);
-        // $idUkuran = $this->input->post('idUkuran', true);
-        // $idWarna = $this->input->post('idWarna', true);
-        // $idKategori = $this->input->post('idKategori', true);
-        // $hargaBaju = $this->input->post('hargaBaju', true);
-        // $stokBaju = $this->input->post('stokBaju', true);
-        // $gambarBaju = $this->input->post('gambarBaju', true);
-        // $deskripsiBaju = $this->input->post('deskripsiBaju', true);
-
+        $data['produk'] = $this->Produk_model->getProdukById($idBaju);
+        $data['jumlahWarna'] = $this->db->get('warna')->num_rows();
+        $data['jumlahKategori'] = $this->db->get('kategori')->num_rows();
+        $data['warna'] = $this->Produk_model->getAllWarnaF();
+        $data['kategori'] = $this->Produk_model->getAllKategoriF();
+        $data['ukuran'] = $this->Produk_model->getAllUkuranF();
 
         $this->form_validation->set_rules('namaBaju', 'NamaBaju', 'required');
         $this->form_validation->set_rules('idUkuran', 'IdUkuran', 'required');
@@ -100,20 +73,51 @@ class Produk extends CI_Controller
         $this->form_validation->set_rules('idKategori', 'IdKategori', 'required');
         $this->form_validation->set_rules('hargaBaju', 'HargaBaju', 'required');
         $this->form_validation->set_rules('stokBaju', 'StokBaju', 'required');
-        $this->form_validation->set_rules('gambarBaju', 'GambarBaju', 'required');
         $this->form_validation->set_rules('deskripsiBaju', 'DeskripsiBaju', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('template/header_admin');
             $this->load->view('template/sidebar_admin');
-            $this->load->view('index_produk');
+            $this->load->view('produk/ubah', $data);
             $this->load->view('template/footer_admin');
         } else {
             $data = $this->Produk_model->ubahDataProduk();
             $this->session->set_flashdata('flash', 'Diubah');
-            redirect('index_produk');
+            redirect('produk');
             // echo json_encode($data);
         }
+    }
+
+    public function tambah()
+    {
+        $data['produk'] = $this->Produk_model->getAllProduk();
+        $data['jumlahWarna'] = $this->db->get('warna')->num_rows();
+        $data['jumlahKategori'] = $this->db->get('kategori')->num_rows();
+        $data['warna'] = $this->Produk_model->getAllWarnaF();
+        $data['kategori'] = $this->Produk_model->getAllKategoriF();
+        $data['ukuran'] = $this->Produk_model->getAllUkuranF();
+
+        // Tambah Data
+        $this->form_validation->set_rules('namaBaju', 'NamaBaju', 'required');
+        $this->form_validation->set_rules('idUkuran', 'Id-ukuran', 'required');
+        $this->form_validation->set_rules('idWarna', 'IdWarna', 'required');
+        $this->form_validation->set_rules('idKategori', 'IdKategori', 'required');
+        $this->form_validation->set_rules('hargaBaju', 'HargaBaju', 'required');
+        $this->form_validation->set_rules('stokBaju', 'StokBaju', 'required');
+        $this->form_validation->set_rules('gambarBaju', 'GambarBaju', 'required');
+        $this->form_validation->set_rules('deskripsiBaju', 'DeskripsiBaju', 'required');
+
+        if ($this->form_validation->run() == FALSE) {
+            $this->load->view('template/header_admin');
+            $this->load->view('template/sidebar_admin');
+            $this->load->view('produk/tambah', $data);
+            $this->load->view('template/footer_admin');
+        } else {
+            $this->Produk_model->tambahDataProduk();
+            $this->session->set_flashdata('flash', 'Ditambahkan Diubah');
+            redirect('produk');
+        }
+        // akhir tambah
     }
 
     public function detail($idBaju)

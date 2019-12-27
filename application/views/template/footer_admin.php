@@ -25,7 +25,8 @@
   <script src="<?= base_url(); ?>assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <!-- AdminLTE App -->
   <script src="<?= base_url(); ?>assets/dist/js/adminlte.js"></script>
-
+  <!-- bs-custom-file-input -->
+  <script src="<?= base_url(); ?>assets/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
   <!-- OPTIONAL SCRIPTS -->
   <script src="<?= base_url(); ?>assets/dist/js/demo.js"></script>
   <!-- PAGE PLUGINS -->

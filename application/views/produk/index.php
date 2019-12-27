@@ -34,7 +34,7 @@
 <hr>
 <div class="row mt-6 m-2">
     <div class="col-md-12">
-        <a href="<?= base_url(); ?>produk/tambah" class="btn btn-lg btn-success btn-flat" data-toggle="modal" data-target="#modal-add">Tambah Data Produk</a>
+        <a href="<?= base_url(); ?>produk/tambah" class="btn btn-lg btn-success btn-flat">Tambah Data Produk</a>
     </div>
 </div>
 
@@ -71,8 +71,8 @@
                             <td>
                                 <!-- <a href="<//?= base_url(); ?>kategori/ubah/<//?= $k['idBaju']; ?>" class="btn btn-sm btn-flat btn-info">Ubah Data</a> -->
                                 <!-- <a href="<//?= base_url(); ?>kategori/ubah/<//?= $k['idBaju']; ?>" class="btn btn-sm btn-flat btn-success" data-toggle="modal" data-target="#modal-default">edit</a> -->
-                                <button type="button" class="btn btn-sm btn-flat btn-primary btn-edit" id="<?= $p['idBaju']; ?>" data-toggle="modal" data-target="#modal-default">Edit Data</button>
-                                <a href="<?= base_url(); ?>produk/hapus/<?= $p['idBaju']; ?>" class="btn btn-sm btn-flat btn-danger hapus-kategori">Hapus Data</a>
+                                <a href="<?= base_url(); ?>produk/ubah/<?= $p['idBaju']; ?>" class=" btn btn-sm btn-flat btn-primary btn-edit">Edit Data</a>
+                                <a href=" <?= base_url(); ?>produk/hapus/<?= $p['idBaju']; ?>" class="btn btn-sm btn-flat btn-danger hapus-kategori">Hapus Data</a>
                                 <a href="<?= base_url(); ?>produk/detail/<?= $p['idBaju']; ?>" class="btn btn-sm btn-flat btn-warning">Detail Data</a>
                             </td>
                         </tr>
